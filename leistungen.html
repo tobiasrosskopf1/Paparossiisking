@@ -96,12 +96,19 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
-<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative z-50 bg-transparent">
-<div class="text-xl font-headline font-bold tracking-tighter text-primary"><a class="flex items-center gap-3" href="#">
-<img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugww_uLbk0RENYnVNH5wB4WO_bTMGiz-a8iU4gT30yAdqnbDKGVm7iSl1YpDz3mSKHfGwe9QAijWmJnhu7OwDeIKee36Vkqq8_j8kmi9oH9TYrkPhTzEv4I0-wXvE_TwCGbYjCDXsbUwgTtDMF7Mm4_A5F-XbAnDmA62vFvd8NhwyOuGns5GOIQxDVMDkF6OzZLCyVLSikucASTb3lPZHmYi0ft-uPCwm1Cs9BHR5gLFDUGCHsRiWsA_tvvPhZSWWCz038KC9Ucyg"/>
-<span class="font-headline font-bold text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
-</a></div>
+<div class="text-xl font-headline font-bold tracking-tighter text-primary">
+    <a class="flex items-center gap-3" href="index.html">
+        <img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugww_uLbk0RENYnVNH5wB4WO_bTMGiz-a8iU4gT30yAdqnbDKGVm7iSl1YpDz3mSKHfGwe9QAijWmJnhu7OwDeIKee36Vkqq8_j8kmi9oH9TYrkPhTzEv4I0-wXvE_TwCGbYjCDXsbUwgTtDMF7Mm4_A5F-XbAnDmA62vFvd8NhwyOuGns5GOIQxDVMDkF6OzZLCyVLSikucASTb3lPZHmYi0ft-uPCwm1Cs9BHR5gLFDUGCHsRiWsA_tvvPhZSWWCz038KC9Ucyg"/>
+        <span class="font-headline font-bold text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
+    </a>
+</div>
+
+<nav class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+    <a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="index.html">Startseite</a>
+    <a class="text-primary border-b-2 border-secondary pb-1" href="leistungen.html">Leistungen & Preise</a>
+    <a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="kontakt.html">Kontakt</a>
+    <a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#footer">Rechtliches</a>
+</nav>
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
     <a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="index.html">Startseite</a>
@@ -122,14 +129,14 @@
 <!-- Mobile Navigation Overlay -->
 <div class="fixed inset-x-0 top-0 bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 pt-24 pb-8 px-8 md:hidden shadow-xl" id="mobile-menu">
 <nav class="flex flex-col gap-6 font-headline font-bold text-lg tracking-tight">
-<a class="text-secondary/70" href="#" onclick="toggleMenu()">Startseite</a>
-<a class="text-primary" href="#" onclick="toggleMenu()">Leistungen &amp; Preise</a>
-<a class="text-secondary/70" href="#" onclick="toggleMenu()">Kontakt</a>
-<a class="text-secondary/70" href="#footer" onclick="toggleMenu()">Rechtliches</a>
-<hr class="border-outline-variant/30 my-2"/>
-<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-sm font-bold uppercase tracking-widest py-4 rounded-full">
-                Jetzt anfragen
-            </button>
+    <a class="text-secondary/70" href="index.html" onclick="toggleMenu()">Startseite</a>
+    <a class="text-primary" href="leistungen.html" onclick="toggleMenu()">Leistungen & Preise</a>
+    <a class="text-secondary/70" href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
+    <a class="text-secondary/70" href="#footer" onclick="toggleMenu()">Rechtliches</a>
+    <hr class="border-outline-variant/30 my-2"/>
+    <a href="kontakt.html" class="text-center w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-sm font-bold uppercase tracking-widest py-4 rounded-full">
+        Jetzt anfragen
+    </a>
 </nav>
 </div>
 </header>

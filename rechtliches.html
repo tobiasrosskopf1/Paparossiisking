@@ -1,3 +1,706 @@
+<!-- Design System -->
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#fad389",
+              "secondary-fixed-dim": "#e7c179",
+              "inverse-on-surface": "#f3f0ea",
+              "surface-variant": "#e5e2dc",
+              "surface-tint": "#765a1c",
+              "outline": "#7f7667",
+              "background": "#fcf9f3",
+              "tertiary": "#2e476f",
+              "on-secondary-container": "#795c1e",
+              "surface-container-high": "#ebe8e2",
+              "on-tertiary-fixed": "#001b3d",
+              "on-background": "#1c1c18",
+              "surface-container-low": "#f6f3ed",
+              "surface-dim": "#dcdad4",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#ffdea3",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#31312d",
+              "on-secondary-fixed": "#261900",
+              "tertiary-fixed": "#d6e3ff",
+              "surface-container-highest": "#e5e2dc",
+              "secondary": "#765a1c",
+              "error-container": "#ffdad6",
+              "primary-container": "#765a1c",
+              "on-primary": "#ffffff",
+              "surface-container": "#f0eee8",
+              "on-surface": "#1c1c18",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#e7c179",
+              "tertiary-container": "#465f88",
+              "primary-fixed-dim": "#e7c179",
+              "outline-variant": "#d1c5b4",
+              "on-surface-variant": "#4d4639",
+              "secondary-container": "#ffd88d",
+              "primary": "#5c4304",
+              "on-secondary-fixed-variant": "#5c4204",
+              "on-primary-fixed-variant": "#5c4304",
+              "tertiary-fixed-dim": "#aec7f6",
+              "surface": "#fcf9f3",
+              "primary-fixed": "#ffdea2",
+              "on-tertiary-fixed-variant": "#2e476f",
+              "on-tertiary-container": "#c6d9ff",
+              "on-primary-fixed": "#261900",
+              "surface-bright": "#fcf9f3"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+      }
+      .text-shadow-premium {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased" data-mode="connect">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 glass-nav">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-headline font-bold tracking-tighter drop-shadow-md text-white/90"><a class="flex items-center gap-3" href="#">
+<img alt="Paparossi Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiX39F_4KUlsyj6cdZHi1EXM5YfjmRhn9zLriPhn4zUuO_5s4iTNA3F1dT8Jz4S9pEZLGZTsz46Aach-fMKxPTTmnAdIS11vwU3SKeRe-hzG1g2sgGQwNAJBF3FZAcjcj6ko9FG5dOJGu9hlSvkM5-Eyf1GG0ZjvQ0ZcnBMKTzY44_5FiakwpJld2dHG6pTJKKdSY4Nv0tfx0FFiXVIW-cbIoga_ULX5VepqpQ1665z-sUTCXuM9Xfhafn06lpptu8rspG08lH0TQ"/>
+<span class="hidden sm:inline-block">Fotoboxverleih Roßkopf</span>
+</a></div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-medium tracking-tight text-sm text-white/90 border-b-2 border-primary pb-1 transition-colors duration-300" href="#">Startseite</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#leistungen">Leistungen &amp; Preise</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#kontakt">Kontakt</a>
+<a class="font-headline font-medium tracking-tight text-sm text-white/70 hover:text-white transition-colors duration-300" href="#rechtliches">Rechtliches</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs uppercase tracking-widest font-bold py-3 px-8 rounded-full shadow-lg scale-95 active:scale-90 transition-transform">
+                Jetzt anfragen
+            </button>
+</div>
+</nav>
+<main>
+<!-- Cinematic Hero Section -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+<!-- Background Image Container -->
+<div class="absolute inset-0 z-0">
+<img alt="Professional photobooth setup with atmospheric event lighting" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO-qhcYa7UtxIgDGsxODTsthqxqqFG_gDNJFgIvPOTUeI-sga47lHmI4rKB1OABsw01TmMkACOnS9PL0aBZUdfesWxWpwSAKW2G93BuvwdvAU8mHV9JMxfn2uRY34X9CFzrKe0YjWdlA7BPgxduKnJmnU0l20hUCo66RY5z8eJ2DKuDBRLQha-Ae5-elgFkjgB3w6iXSNXiL2TdovT2R8t3MEYLPB7-0bN9nLCABoYjIfPOmbodh8cGRIAIyOMAHDZMwSZ71QhVqw"/>
+<!-- Cinematic Dark Gradient Overlays -->
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 w-full z-10">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1 mb-6 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary-fixed-dim font-label text-xs font-bold uppercase tracking-widest">
+                        Verleih von Fotoboxen und Zubehör
+                    </span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-8 text-shadow-premium">
+                        Paparossi Fotobox – <span class="text-secondary-fixed italic">das Highlight</span> auf jeder Party
+                    </h1>
+<p class="text-white/90 text-lg md:text-xl leading-relaxed max-w-xl mb-10 text-shadow-premium">
+                        Momente für die Ewigkeit. Wir verwandeln Ihr Event in ein unvergessliches Erlebnis mit erstklassiger Technik und stilvollem Design.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label py-4 px-10 rounded-full font-bold uppercase text-xs tracking-widest transition-all hover:shadow-2xl hover:scale-105 active:scale-95 shadow-xl">
+                            Termin anfragen
+                        </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white font-label py-4 px-10 rounded-full font-bold uppercase text-xs tracking-widest transition-all hover:bg-white/20">
+                            Infos zu den Produkten
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section (Editorial Style) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-label text-primary font-bold uppercase tracking-[0.2em] mb-4">Unser Versprechen</h2>
+<h3 class="font-headline text-4xl md:text-5xl font-bold text-on-surface">Qualität zum fairen Preis.</h3>
+</div>
+<div class="pb-2">
+<p class="text-on-surface-variant font-body max-w-sm italic">"Wir setzen auf Technik, die den Unterschied macht – für Ergebnisse, die begeistern."</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl transition-all duration-500 hover:-translate-y-2 group">
+<div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="camera_enhance">camera_enhance</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-4 text-on-surface">DSLR Technik &amp; Studioblitz</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Keine Kompromisse bei der Bildqualität. Wir kombinieren echte Canon Spiegelreflexkameras mit professionellen Studioblitzen für perfekt ausgeleuchtete, gestochen scharfe Aufnahmen in jeder Umgebung.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> 24.1 MP &amp; High-End Optik
+                            </li>
+<li class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Weiches, professionelles Licht
+                            </li>
+</ul>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl transition-all duration-500 hover:-translate-y-2 group">
+<div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="print">print</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-4 text-on-surface">Sofortdruck</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Druckzeit ca. 10 Sekunden. Dank hoher Kapazität des Thermosublimationsdruckers müssen Medien nicht ständig gewechselt werden – für ungestörten Fotospaß in Laborqualität.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Hohe Medienkapazität
+                            </li>
+<li class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Wasserfeste Premium-Drucke
+                            </li>
+</ul>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl transition-all duration-500 hover:-translate-y-2 group">
+<div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="support_agent">support_agent</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-4 text-on-surface">Service</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Die Fotoboxen werden fachgerecht aufgebaut und wieder abgebaut. Während der gesamten Veranstaltung wird ein telefonischer Support für einen reibungslosen Ablauf gewährt.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Fachgerechter Auf- &amp; Abbau
+                            </li>
+<li class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Telefon-Support inklusive
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section (Bento Style) -->
+<section class="py-32 bg-background">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="font-label text-primary font-bold uppercase tracking-[0.2em] mb-4">Investition in Erinnerungen</h2>
+<h3 class="font-headline text-4xl md:text-5xl font-bold text-on-surface">Unsere Pakete</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch mb-16">
+<!-- Klassik -->
+<div class="md:col-span-4 bg-surface-container p-10 rounded-xl flex flex-col border border-outline-variant/10">
+<h4 class="font-headline text-2xl font-bold text-on-surface mb-2">Einsteiger</h4>
+<p class="text-on-surface-variant text-sm mb-8">Der perfekte Einstieg für private Feiern.</p>
+<div class="text-3xl font-headline font-extrabold text-primary mb-10">ab 175€</div>
+<ul class="space-y-5 mb-12 flex-grow">
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+                                Digitale Fotoflatrate und Requisiten</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+                                Online Galerie</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+                                Auf- und Abbau sowie telefonischer Support</li>
+</ul>
+<button class="w-full py-4 rounded-full border border-primary text-primary font-label font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">weitere Informationen</button>
+</div>
+<!-- Premium -->
+<div class="md:col-span-4 bg-gradient-to-br from-primary to-primary-container p-10 rounded-xl flex flex-col text-on-primary shadow-2xl scale-105 z-10 relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-on-primary text-primary px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-md">Beliebteste Wahl</div>
+<h4 class="font-headline text-2xl font-bold mb-2">Klassik</h4>
+<p class="text-on-primary-container text-sm mb-8">Das Rundum Sorglos Paket</p>
+<div class="text-3xl font-headline font-extrabold mb-10 text-secondary-fixed">ab 289€</div>
+<ul class="space-y-5 mb-12 flex-grow">
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-on-primary" data-icon="check">check</span>
+                                alle Einsteiger Leistungen</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-on-primary" data-icon="check">check</span>
+                                Fotodrucker inkl. 350 gedruckte Bilder</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-on-primary" data-icon="check">check</span>Personalisiertes Druck-Layout</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-on-primary" data-icon="check">check</span>
+                                Telefonischer Support
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-full bg-on-primary text-primary font-label font-bold text-xs uppercase tracking-widest shadow-xl hover:scale-105 transition-all">weitere Informationen</button>
+</div>
+<!-- Business -->
+<div class="md:col-span-4 bg-surface-container p-10 rounded-xl flex flex-col border border-outline-variant/10">
+<h4 class="font-headline text-2xl font-bold text-on-surface mb-2">Komplettpaket</h4>
+<p class="text-on-surface-variant text-sm mb-8">Alles was deine Party braucht</p>
+<div class="text-3xl font-headline font-extrabold text-primary mb-10">ab 349 Euro</div>
+<ul class="space-y-5 mb-12 flex-grow">
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+                                alle Einsteiger und Klassik Leistungen</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>Fotohintergrundsystem (freie Auswahl)</li>
+<li class="flex items-start gap-3 text-sm leading-snug">
+<span class="material-symbols-outlined text-primary" data-icon="check">check</span>
+                                Audio Gästebuch</li>
+</ul>
+<button class="w-full py-4 rounded-full border border-primary text-primary font-label font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">weitere Informationen</button>
+</div>
+</div>
+<!-- Info Text Block -->
+<div class="w-full mt-24">
+<div class="bg-surface-container-low border-y border-outline-variant/10 shadow-sm py-12">
+<div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row items-center md:items-start gap-10">
+<div class="flex-shrink-0 bg-primary/5 p-4 rounded-full border border-primary/10">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="info">info</span>
+</div>
+<div class="flex-grow text-center md:text-left">
+<h4 class="font-headline text-2xl font-bold text-on-surface mb-4 tracking-tight">Wichtige Informationen zur Buchung</h4>
+<div class="space-y-4 font-body text-on-surface-variant leading-relaxed max-w-4xl">
+<p class="text-lg">Detaillierte Informationen zu unseren Produkten und Paketen finden Sie auf der Seite <a class="text-primary font-semibold hover:underline decoration-2 underline-offset-4" href="#leistungen">"Leistungen &amp; Preise"</a>.</p>
+<p class="text-sm opacity-80 uppercase tracking-wide font-medium">Bitte beachten Sie, dass bei allen Paketen Fahrtkosten in Höhe von <strong class="text-on-surface">0,40 € pro gefahrenem Kilometer</strong> ab dem Standort 85135 Titting (Ortsteil Altdorf) anfallen.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Google Reviews Section -->
+<section class="py-32 bg-surface-container-low border-y border-outline-variant/5">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<svg class="w-8 h-8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-on-surface">Was unsere Kunden sagen</h2>
+</div>
+<p class="text-on-surface-variant font-medium">Bewertungen von Fotoboxverleih Roßkopf</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2 bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-2">
+<span class="text-3xl font-extrabold text-on-surface">5,0</span>
+<div class="flex text-[#fbbc04]">
+<span class="material-symbols-outlined text-2xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-2xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-2xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-2xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-2xl" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Basierend auf Google Rezensionen</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed text-lg">MS</div>
+<div>
+<p class="font-bold text-on-surface">Maximilian S.</p>
+<div class="flex text-[#fbbc04]">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<div class="ml-auto opacity-20">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path></svg>
+</div>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6 flex-grow">"Top Service! Die Fotobox war das Highlight auf unserer Hochzeit. Super Qualität der Bilder."</p>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">vor 2 Monaten</p>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container text-lg">LW</div>
+<div>
+<p class="font-bold text-on-surface">Laura W.</p>
+<div class="flex text-[#fbbc04]">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<div class="ml-auto opacity-20">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path></svg>
+</div>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6 flex-grow">"Paparossi Fotobox ist einfach klasse. Der Studioblitz macht wirklich einen Riesen Unterschied, die Fotos sehen aus wie vom Profi-Fotografen."</p>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">vor 3 Wochen</p>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-on-tertiary-fixed text-lg">RK</div>
+<div>
+<p class="font-bold text-on-surface">Ralf K.</p>
+<div class="flex text-[#fbbc04]">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<div class="ml-auto opacity-20">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path></svg>
+</div>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6 flex-grow">"Hatten die Box für unser Firmenevent. Branding und Support waren erstklassig. Die Mitarbeiter hatten extrem viel Spaß. Vielen Dank!"</p>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">vor 5 Tagen</p>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-8 transition-all" href="#">
+                        Alle Google Rezensionen lesen
+                        <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-background">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<div class="bg-surface-container-highest p-16 rounded-[2rem] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<h2 class="font-headline text-4xl font-bold mb-6">Bereit für unvergessliche Momente?</h2>
+<p class="text-on-surface-variant mb-10 text-lg">Sichern Sie sich jetzt Ihren Wunschtermin für Ihr nächstes Event. Wir beraten Sie gerne bei der Wahl des passenden Pakets.</p>
+<button class="bg-primary text-on-primary font-label py-5 px-12 rounded-full font-bold uppercase text-sm tracking-widest shadow-xl hover:scale-105 transition-all">
+                        Unverbindliches Angebot anfordern
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full py-12 px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<div class="font-headline font-bold text-primary">Fotoboxverleih Roßkopf</div>
+<div class="text-secondary/60 text-sm font-body">© 2024 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.</div>
+</div>
+<div class="flex gap-8">
+<a class="text-secondary/60 font-body text-sm hover:text-primary underline transition-all" href="#">Impressum</a>
+<a class="text-secondary/60 font-body text-sm hover:text-primary underline transition-all" href="#">Datenschutz</a>
+<a class="text-secondary/60 font-body text-sm hover:text-primary underline transition-all" href="#">AGB</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-all" data-icon="camera_alt">camera_alt</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-all" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-all" data-icon="call">call</span>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Design System -->
+<!DOCTYPE html><html class="light" lang="de"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f3;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#fad389",
+              "secondary-fixed-dim": "#e7c179",
+              "inverse-on-surface": "#f3f0ea",
+              "surface-variant": "#e5e2dc",
+              "surface-tint": "#765a1c",
+              "outline": "#7f7667",
+              "background": "#fcf9f3",
+              "tertiary": "#2e476f",
+              "on-secondary-container": "#795c1e",
+              "surface-container-high": "#ebe8e2",
+              "on-tertiary-fixed": "#001b3d",
+              "on-background": "#1c1c18",
+              "surface-container-low": "#f6f3ed",
+              "surface-dim": "#dcdad4",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#ffdea3",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#31312d",
+              "on-secondary-fixed": "#261900",
+              "tertiary-fixed": "#d6e3ff",
+              "surface-container-highest": "#e5e2dc",
+              "secondary": "#765a1c",
+              "error-container": "#ffdad6",
+              "primary-container": "#765a1c",
+              "on-primary": "#ffffff",
+              "surface-container": "#f0eee8",
+              "on-surface": "#1c1c18",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#e7c179",
+              "tertiary-container": "#465f88",
+              "primary-fixed-dim": "#e7c179",
+              "outline-variant": "#d1c5b4",
+              "on-surface-variant": "#4d4639",
+              "secondary-container": "#ffd88d",
+              "primary": "#5c4304",
+              "on-secondary-fixed-variant": "#5c4204",
+              "on-primary-fixed-variant": "#5c4304",
+              "tertiary-fixed-dim": "#aec7f6",
+              "surface": "#fcf9f3",
+              "primary-fixed": "#ffdea2",
+              "on-tertiary-fixed-variant": "#2e476f",
+              "on-tertiary-container": "#c6d9ff",
+              "on-primary-fixed": "#261900",
+              "surface-bright": "#fcf9f3"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-bottom-6{bottom:-1.5rem}.-left-6{left:-1.5rem}.top-0{top:0px}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-24{margin-bottom:6rem}.mb-32{margin-bottom:8rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/5\]{aspect-ratio:4/5}.h-10{height:2.5rem}.h-14{height:3.5rem}.h-2{height:0.5rem}.h-full{height:100%}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-2{width:0.5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-\[200px\]{max-width:200px}.max-w-screen-2xl{max-width:1536px}.max-w-screen-xl{max-width:1280px}.rotate-2{--tw-rotate:2deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-95{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:0.75rem}.rounded-xl{border-radius:0.5rem}.border{border-width:1px}.border-0{border-width:0px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-\[\#765a1c\]{--tw-border-opacity:1;border-color:rgb(118 90 28 / var(--tw-border-opacity, 1))}.border-\[\#d1c5b4\]\/20{border-color:rgb(209 197 180 / 0.2)}.border-outline-variant\/10{border-color:rgb(209 197 180 / 0.1)}.border-outline-variant\/20{border-color:rgb(209 197 180 / 0.2)}.border-outline-variant\/40{border-color:rgb(209 197 180 / 0.4)}.border-transparent{border-color:transparent}.bg-\[\#f0eee8\]{--tw-bg-opacity:1;background-color:rgb(240 238 232 / var(--tw-bg-opacity, 1))}.bg-\[\#fcf9f3\]\/70{background-color:rgb(252 249 243 / 0.7)}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(92 67 4 / var(--tw-bg-opacity, 1))}.bg-primary-container\/10{background-color:rgb(118 90 28 / 0.1)}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(240 238 232 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(246 243 237 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-primary{--tw-gradient-from:#5c4304 var(--tw-gradient-from-position);--tw-gradient-to:rgb(92 67 4 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-primary-container{--tw-gradient-to:#765a1c var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-10{padding:2.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-0{padding-left:0px;padding-right:0px}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-1{padding-bottom:0.25rem}.pb-24{padding-bottom:6rem}.pt-12{padding-top:3rem}.pt-32{padding-top:8rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-\[\'Inter\'\]{font-family:'Inter'}.font-\[\'Plus_Jakarta_Sans\'\]{font-family:'Plus Jakarta Sans'}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-relaxed{line-height:1.625}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-\[\#5c4304\]{--tw-text-opacity:1;color:rgb(92 67 4 / var(--tw-text-opacity, 1))}.text-\[\#765a1c\]{--tw-text-opacity:1;color:rgb(118 90 28 / var(--tw-text-opacity, 1))}.text-\[\#765a1c\]\/60{color:rgb(118 90 28 / 0.6)}.text-\[\#765a1c\]\/70{color:rgb(118 90 28 / 0.7)}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(28 28 24 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(77 70 57 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(92 67 4 / var(--tw-text-opacity, 1))}.text-secondary{--tw-text-opacity:1;color:rgb(118 90 28 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.shadow-\[0_20_40px_rgba\(121\2c 92\2c 30\2c 0\.06\)\]{--tw-shadow:0 20 40px rgba(121,92,30,0.06);--tw-shadow-colored:0 20 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-secondary-container *::selection{--tw-bg-opacity:1;background-color:rgb(255 216 141 / var(--tw-bg-opacity, 1))}.selection\:bg-secondary-container::selection{--tw-bg-opacity:1;background-color:rgb(255 216 141 / var(--tw-bg-opacity, 1))}.hover\:border-outline-variant\/20:hover{border-color:rgb(209 197 180 / 0.2)}.hover\:bg-surface-container-lowest:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-\[\#5c4304\]:hover{--tw-text-opacity:1;color:rgb(92 67 4 / var(--tw-text-opacity, 1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-primary:focus{--tw-border-opacity:1;border-color:rgb(92 67 4 / var(--tw-border-opacity, 1))}.focus\:ring-0:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.active\:scale-90:active{--tw-scale-x:.9;--tw-scale-y:.9;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group[open] .group-open\:rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.dark\:text-\[\#f6f3ed\]:is(.dark *){--tw-text-opacity:1;color:rgb(246 243 237 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:p-12{padding:3rem}.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:text-left{text-align:left}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-24{margin-bottom:6rem}.mb-32{margin-bottom:8rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-32{height:8rem}.h-\[716px\]{height:716px}.h-full{height:100%}.min-h-\[600px\]{min-height:600px}.min-h-\[800px\]{min-height:800px}.w-2{width:0.5rem}.w-20{width:5rem}.w-3\/4{width:75%}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-screen-2xl{max-width:1536px}.max-w-screen-xl{max-width:1280px}.flex-grow{flex-grow:1}.scale-95{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded-full{border-radius:0.75rem}.rounded-lg{border-radius:0.25rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.5rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-\[\#d1c5b4\]\/20{border-color:rgb(209 197 180 / 0.2)}.border-outline-variant\/10{border-color:rgb(209 197 180 / 0.1)}.border-outline-variant\/20{border-color:rgb(209 197 180 / 0.2)}.bg-\[\#f0eee8\]{--tw-bg-opacity:1;background-color:rgb(240 238 232 / var(--tw-bg-opacity, 1))}.bg-\[\#fcf9f3\]\/70{background-color:rgb(252 249 243 / 0.7)}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-outline-variant\/20{background-color:rgb(209 197 180 / 0.2)}.bg-primary{--tw-bg-opacity:1;background-color:rgb(92 67 4 / var(--tw-bg-opacity, 1))}.bg-primary\/10{background-color:rgb(92 67 4 / 0.1)}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(240 238 232 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(246 243 237 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest\/80{background-color:rgb(255 255 255 / 0.8)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-\[\#fcf9f3\]\/90{--tw-gradient-from:rgb(252 249 243 / 0.9) var(--tw-gradient-from-position);--tw-gradient-to:rgb(252 249 243 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-primary{--tw-gradient-from:#5c4304 var(--tw-gradient-from-position);--tw-gradient-to:rgb(92 67 4 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-\[\#fcf9f3\]\/40{--tw-gradient-to:rgb(252 249 243 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(252 249 243 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-primary-container{--tw-gradient-to:#765a1c var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.p-10{padding:2.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-24{padding-bottom:6rem}.pt-12{padding-top:3rem}.pt-24{padding-top:6rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-\[\'Inter\'\]{font-family:'Inter'}.font-\[\'Plus_Jakarta_Sans\'\]{font-family:'Plus Jakarta Sans'}.font-headline{font-family:Plus Jakarta Sans}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-relaxed{line-height:1.625}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-\[\#5c4304\]{--tw-text-opacity:1;color:rgb(92 67 4 / var(--tw-text-opacity, 1))}.text-\[\#765a1c\]{--tw-text-opacity:1;color:rgb(118 90 28 / var(--tw-text-opacity, 1))}.text-\[\#765a1c\]\/60{color:rgb(118 90 28 / 0.6)}.text-\[\#765a1c\]\/70{color:rgb(118 90 28 / 0.7)}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(28 28 24 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(77 70 57 / var(--tw-text-opacity, 1))}.text-on-surface-variant\/60{color:rgb(77 70 57 / 0.6)}.text-primary{--tw-text-opacity:1;color:rgb(92 67 4 / var(--tw-text-opacity, 1))}.text-primary\/60{color:rgb(92 67 4 / 0.6)}.text-secondary{--tw-text-opacity:1;color:rgb(118 90 28 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.opacity-30{opacity:0.3}.shadow-\[0_20_40px_rgba\(121\2c 92\2c 30\2c 0\.06\)\]{--tw-shadow:0 20 40px rgba(121,92,30,0.06);--tw-shadow-colored:0 20 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-secondary-container *::selection{--tw-bg-opacity:1;background-color:rgb(255 216 141 / var(--tw-bg-opacity, 1))}.selection\:bg-secondary-container::selection{--tw-bg-opacity:1;background-color:rgb(255 216 141 / var(--tw-bg-opacity, 1))}.hover\:text-\[\#5c4304\]:hover{--tw-text-opacity:1;color:rgb(92 67 4 / var(--tw-text-opacity, 1))}.active\:scale-90:active{--tw-scale-x:.9;--tw-scale-y:.9;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group[open] .group-open\:rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.dark\:text-\[\#f6f3ed\]:is(.dark *){--tw-text-opacity:1;color:rgb(246 243 237 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:flex{display:flex}.md\:flex-row{flex-direction:row}.md\:p-6{padding:1.5rem}.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:text-left{text-align:left}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}}</style></head>
+<body class="text-on-surface selection:bg-secondary-container" data-mode="connect">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#d1c5b4]/20 bg-[#fcf9f3]/70 backdrop-blur-xl shadow-[0_20_40px_rgba(121,92,30,0.06)]">
+<nav class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="font-headline font-bold tracking-tight text-[#5c4304] dark:text-[#f6f3ed] text-lg">
+<a class="flex items-center gap-3" href="#">
+<img alt="Paparossi Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugww_uLbk0RENYnVNH5wB4WO_bTMGiz-a8iU4gT30yAdqnbDKGVm7iSl1YpDz3mSKHfGwe9QAijWmJnhu7OwDeIKee36Vkqq8_j8kmi9oH9TYrkPhTzEv4I0-wXvE_TwCGbYjCDXsbUwgTtDMF7Mm4_A5F-XbAnDmA62vFvd8NhwyOuGns5GOIQxDVMDkF6OzZLCyVLSikucASTb3lPZHmYi0ft-uPCwm1Cs9BHR5gLFDUGCHsRiWsA_tvvPhZSWWCz038KC9Ucyg">
+<span class="block whitespace-nowrap">Fotoboxverleih Roßkopf</span>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-medium tracking-tight text-sm"><a class="text-[#765a1c]/70 hover:text-[#5c4304] transition-colors duration-300" href="#">Startseite</a>
+<a class="text-[#765a1c]/70 hover:text-[#5c4304] transition-colors duration-300" href="#services">Leistungen &amp; Preise</a>
+<a class="text-[#765a1c]/70 hover:text-[#5c4304] transition-colors duration-300" href="#request">Kontakt</a>
+<a class="text-[#765a1c]/70 hover:text-[#5c4304] transition-colors duration-300" href="#legal">Rechtliches</a></div>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest scale-95 active:scale-90 transition-transform" href="#request">
+                Jetzt anfragen
+            </a>
+</nav>
+</header>
+<main class="pt-24 pb-24 mx-auto">
+<!-- Cohesive Hero Section -->
+<section class="relative mb-24 h-[716px] min-h-[600px] overflow-hidden flex items-center" data-stitch-vh="h-[716px]===h-[70vh]">
+<div class="absolute inset-0">
+<img alt="Premium Fotobox Setup" class="w-full h-full object-cover" data-alt="Elegant close-up of a high-end, modern white photo booth in a luxury event setting like a wedding or gala." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhXqrIODb4LeazDCbiPN3HLKe9rM964oWGdYCts7F0kbAmPbDcoVtK-51nI5Asjihtsv9t9vSubQ7r3MjuE-ivgSv58Ho8wIbHLsTIc49Nw1sHQLxfLvl_1PqRSLkhlZIaedu1QrjTF8Dyg_142zQFkVTmyDDcUarMrdoZ8SzLWv7ltcP2RStBd4slai5pZOEPTwTPo731dWQVtwVARbQyV50OPfJJYitDj45dCy4_GOMQmX_nMUep_D7-JW58AI28QSjX1QB9bD0">
+<div class="absolute inset-0 bg-gradient-to-r from-[#fcf9f3]/90 via-[#fcf9f3]/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-6 md:px-12 max-w-screen-xl mx-auto w-full">
+<div class="max-w-3xl">
+<span class="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6 block">Anfrage &amp; Kontakt</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-primary mb-8 text-shadow-sm">
+                    Lass uns feiern – <br>Unverbindliche Anfrage
+                </h1>
+<p class="text-lg md:text-xl text-on-surface leading-relaxed max-w-2xl font-medium">
+                    Wir machen deine Momente unvergesslich. Erzähl uns von deinem Event, und wir erstellen dir ein maßgeschneidertes Angebot für die perfekte Fotobox-Experience in Ingolstadt und Umgebung.
+                </p>
+<div class="mt-8 flex gap-4 items-center">
+<div class="bg-surface-container-lowest/80 backdrop-blur px-6 py-3 rounded-xl border border-outline-variant/20 shadow-sm">
+<p class="text-xs font-bold text-primary tracking-widest uppercase mb-1">Standort</p>
+<p class="text-sm font-medium">Ingolstadt &amp; Umgebung</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Multi-Step Inquiry Form (Bento Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32 px-6 md:px-12 max-w-screen-xl mx-auto" id="request">
+<div class="lg:col-span-8 bg-surface-container p-4 md:p-6 rounded-xl shadow-sm overflow-hidden min-h-[800px] flex flex-col">
+<!-- Google Forms Placeholder Integration -->
+<div class="flex-grow relative bg-surface-container-low rounded-lg border border-outline-variant/20 overflow-hidden">
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+<div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="description">description</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4">Anfrageformular</h3>
+<p class="text-on-surface-variant max-w-md mb-8">
+                            Hier wird dein Google Formular eingebunden. 
+                            <br><span class="text-xs font-medium uppercase tracking-widest text-primary/60">Vorschau des Iframe-Bereichs</span>
+</p>
+<div class="w-full max-w-lg space-y-4 opacity-30">
+<div class="h-10 bg-outline-variant/20 rounded-md w-full"></div>
+<div class="h-10 bg-outline-variant/20 rounded-md w-3/4"></div>
+<div class="h-32 bg-outline-variant/20 rounded-md w-full"></div>
+<div class="h-12 bg-primary rounded-full w-full"></div>
+</div>
+</div>
+<!-- This is where the actual iframe would go -->
+<!-- <iframe src="YOUR_GOOGLE_FORMS_URL" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe> -->
+</div>
+<div class="mt-6 text-center">
+<p class="text-xs text-on-surface-variant/60 uppercase tracking-widest font-bold">Sichere Übertragung via Google Forms</p>
+</div>
+</div>
+<!-- Contact Info Sidebar -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 h-full flex flex-col justify-between">
+<div class="">
+<h4 class="text-xl font-bold mb-8">Direktkontakt</h4>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Schreib uns</p>
+<p class="text-lg font-medium">paparossi-fotobox@gmx.de</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="smartphone">smartphone</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Besuch uns</p>
+<p class="text-lg font-medium">85049 Ingolstadt, Bayern</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-12 border-t border-outline-variant/20">
+<p class="text-sm italic text-on-surface-variant mb-6">"Wir melden uns innerhalb von 24 Stunden mit einem persönlichen Angebot bei dir."</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+<span class="text-xs font-bold uppercase tracking-widest"><br></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto mb-12 px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-primary">Noch Fragen offen?</h2>
+<p class="text-on-surface-variant">Alles, was du über unseren Service wissen musst.</p>
+</div>
+<div class="space-y-4">
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-6 cursor-pointer overflow-hidden transition-all">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                        Wann sollte ich die Fotobox buchen?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/10">
+                        So früh wie möglich! Besonders für Samstage in der Sommer- und Hochzeitssaison empfehlen wir eine Buchung 6 bis 12 Monate im Voraus, um sicherzustellen, dass dein Wunschtermin noch frei ist.
+                    </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-6 cursor-pointer overflow-hidden transition-all">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                        Ist der Auf- und Abbau inklusive?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/10">
+                        Ja, bei Hochzeiten und Events in Ingolstadt und Umgebung ist unser Full-Service inklusive. Wir kümmern uns um den kompletten Auf- und Abbau sowie eine kurze Einweisung vor Ort, damit alles reibungslos läuft.
+                    </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-6 cursor-pointer overflow-hidden transition-all">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                        Wie viele Ausdrucke sind möglich?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/10">
+                        Je nach gewähltem Paket sind beispielsweise 300 bis 400 hochwertige Sofortausdrucke im Format 10x15cm enthalten. Eine digitale Flatrate für alle Bilder ist in jedem Paket grundsätzlich inklusive.
+                    </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-6 cursor-pointer overflow-hidden transition-all">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                        Was passiert bei technischen Problemen?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/10">
+                        Wir bieten einen telefonischen Support an und sind im Notfall schnell vor Ort. Da wir jedoch ausschließlich professionelles Equipment wie DSLR-Kameras und Studioblitze verwenden, ist unsere Technik äußerst zuverlässig.
+                    </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 p-6 cursor-pointer overflow-hidden transition-all">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                        Wie viel Platz wird benötigt?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-4 text-on-surface-variant leading-relaxed pt-4 border-t border-outline-variant/10">
+                        Für einen optimalen Betrieb der Fotobox inklusive Hintergrundsystem empfehlen wir eine Fläche von etwa 3x3 Metern. So haben deine Gäste genug Platz für lustige Gruppenfotos.
+                    </div>
+</details>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f0eee8] w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-['Plus_Jakarta_Sans'] font-bold text-[#5c4304]">
+                Fotoboxverleih Roßkopf
+            </div>
+<div class="text-[#765a1c] font-['Inter'] text-sm leading-relaxed text-center md:text-left">
+                © 2024 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
+            </div>
+<div class="flex gap-6 font-['Inter'] text-sm leading-relaxed">
+<a class="text-[#765a1c]/60 hover:text-[#5c4304] underline transition-all" href="#">Impressum</a>
+<a class="text-[#765a1c]/60 hover:text-[#5c4304] underline transition-all" href="#">Datenschutz</a>
+<a class="text-[#765a1c]/60 hover:text-[#5c4304] underline transition-all" href="#">AGB</a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Design System -->
 <!DOCTYPE html><html class="light" lang="de"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -264,6 +967,684 @@
 <span class="material-symbols-outlined text-[#765a1c]/40 text-lg">photo_camera</span>
 <span class="material-symbols-outlined text-[#765a1c]/40 text-lg">celebration</span>
 </div>
+</div>
+</footer>
+</body></html>
+
+<!-- Startseite (Optimiertes Info-Feld) -->
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "on-primary-container": "#fad389",
+                  "secondary-fixed-dim": "#e7c179",
+                  "inverse-on-surface": "#f3f0ea",
+                  "surface-variant": "#e5e2dc",
+                  "surface-tint": "#765a1c",
+                  "outline": "#7f7667",
+                  "background": "#fcf9f3",
+                  "tertiary": "#2e476f",
+                  "on-secondary-container": "#795c1e",
+                  "surface-container-high": "#ebe8e2",
+                  "on-tertiary-fixed": "#001b3d",
+                  "on-background": "#1c1c18",
+                  "surface-container-low": "#f6f3ed",
+                  "surface-dim": "#dcdad4",
+                  "error": "#ba1a1a",
+                  "on-error-container": "#93000a",
+                  "on-error": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "secondary-fixed": "#ffdea3",
+                  "on-tertiary": "#ffffff",
+                  "inverse-surface": "#31312d",
+                  "on-secondary-fixed": "#261900",
+                  "tertiary-fixed": "#d6e3ff",
+                  "surface-container-highest": "#e5e2dc",
+                  "secondary": "#765a1c",
+                  "error-container": "#ffdad6",
+                  "primary-container": "#765a1c",
+                  "on-primary": "#ffffff",
+                  "surface-container": "#f0eee8",
+                  "on-surface": "#1c1c18",
+                  "on-secondary": "#ffffff",
+                  "inverse-primary": "#e7c179",
+                  "tertiary-container": "#465f88",
+                  "primary-fixed-dim": "#e7c179",
+                  "outline-variant": "#d1c5b4",
+                  "on-surface-variant": "#4d4639",
+                  "secondary-container": "#ffd88d",
+                  "primary": "#5c4304",
+                  "on-secondary-fixed-variant": "#5c4204",
+                  "on-primary-fixed-variant": "#5c4304",
+                  "tertiary-fixed-dim": "#aec7f6",
+                  "surface": "#fcf9f3",
+                  "primary-fixed": "#ffdea2",
+                  "on-tertiary-fixed-variant": "#2e476f",
+                  "on-tertiary-container": "#c6d9ff",
+                  "on-primary-fixed": "#261900",
+                  "surface-bright": "#fcf9f3"
+                },
+                fontFamily: {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(121, 92, 30, 0.06);
+        }
+        .glass-nav {
+            background-color: rgba(252, 249, 243, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
+        }
+        .product-image-filter {
+            filter: contrast(1.05) brightness(1.02) saturate(1.1);
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative z-50 bg-transparent">
+<div class="text-xl font-headline font-bold tracking-tighter text-primary"><a class="flex items-center gap-3" href="#">
+<img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugww_uLbk0RENYnVNH5wB4WO_bTMGiz-a8iU4gT30yAdqnbDKGVm7iSl1YpDz3mSKHfGwe9QAijWmJnhu7OwDeIKee36Vkqq8_j8kmi9oH9TYrkPhTzEv4I0-wXvE_TwCGbYjCDXsbUwgTtDMF7Mm4_A5F-XbAnDmA62vFvd8NhwyOuGns5GOIQxDVMDkF6OzZLCyVLSikucASTb3lPZHmYi0ft-uPCwm1Cs9BHR5gLFDUGCHsRiWsA_tvvPhZSWWCz038KC9Ucyg"/>
+<span class="font-headline font-bold text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
+</a></div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#">Startseite</a>
+<a class="text-primary border-b-2 border-secondary pb-1" href="#">Leistungen &amp; Preise</a>
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#">Kontakt</a>
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#footer">Rechtliches</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full scale-95 active:scale-90 transition-transform">
+                Jetzt anfragen
+            </button>
+<!-- Hamburger Menu Button -->
+<button aria-label="Menu" class="md:hidden p-2 text-primary focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Overlay -->
+<div class="fixed inset-x-0 top-0 bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 pt-24 pb-8 px-8 md:hidden shadow-xl" id="mobile-menu">
+<nav class="flex flex-col gap-6 font-headline font-bold text-lg tracking-tight">
+<a class="text-secondary/70" href="#" onclick="toggleMenu()">Startseite</a>
+<a class="text-primary" href="#" onclick="toggleMenu()">Leistungen &amp; Preise</a>
+<a class="text-secondary/70" href="#" onclick="toggleMenu()">Kontakt</a>
+<a class="text-secondary/70" href="#footer" onclick="toggleMenu()">Rechtliches</a>
+<hr class="border-outline-variant/30 my-2"/>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-sm font-bold uppercase tracking-widest py-4 rounded-full">
+                Jetzt anfragen
+            </button>
+</nav>
+</div>
+</header>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+            menuIcon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        } else {
+            menuIcon.textContent = 'menu';
+            document.body.style.overflow = '';
+        }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+</script>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] min-h-[600px] overflow-hidden mb-0">
+<!-- Background Image with Logo Area Masked -->
+<div class="absolute inset-0">
+<img alt="Paparossi Fotoboxen Kollektion" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/ADBb0uh5vPLqJtipxF7T1AFRi0JoVQbXyrTr4y3Qj-mYbip4EatdjFF2u-92WmXaPLEXSL7TXOaDYZFePDZ851KvgyzImRE-tZpkNfxIvY0Mcl3lQb3-daAvXbhkFiW2hdvMW_gGT5ci3gLcjOuV-u7KQ6gDLZOJLhw_dlqBvQPb0Koi-9boQSffXtIJ5zdQhQ8UolHSp8cMGtW1N_z5EH6jI1_7s3AGFFSY2ruc1mPlmKaQ25EOFVS2EiWc6wkaTebj7wKs_Gc_HwOkrw"/>
+<!-- Dark Overlay and Gradual Mask to hide the logo in the top right -->
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black/10 to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative h-full px-8 max-w-screen-2xl mx-auto flex flex-col justify-center">
+<div class="max-w-3xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-white/90 mb-4 block drop-shadow-md">Exklusive Erinnerungen</span>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-none text-white mb-8 drop-shadow-2xl">
+                    Leistungen <br/> <span class="ml-12 md:ml-24 italic font-light text-secondary-fixed"> &amp; </span> Technik
+                </h1>
+<p class="font-body text-lg md:text-2xl text-white/95 leading-relaxed max-w-xl drop-shadow-md font-medium">
+                    Wir vereinen hochwertige Technik mit einem nahtlosen Erlebnis für Ihre Gäste. Entdecken Sie unsere kuratierten Pakete für Hochzeiten, Firmenevents und private Feiern.
+                </p>
+</div>
+</div>
+</section>
+<!-- Included Services: Minimalist Grid -->
+<section class="bg-surface-container py-24 px-8 mb-32">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-3xl font-bold text-primary tracking-tight">Immer inklusive</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">cloud_done</span>
+<h3 class="font-headline text-lg font-bold mb-2">Digital-Flatrate</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">photo_library</span>
+<h3 class="font-headline text-lg font-bold mb-2">Online-Galerie</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Passwortgeschützter Zugang für Sie und Ihre Gäste zum Downloaden.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">theater_comedy</span>
+<h3 class="font-headline text-lg font-bold mb-2">Profi-Requisiten</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Hochwertige Accessoires, die über das übliche Papp-Sortiment hinausgehen.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">local_shipping</span>
+<h3 class="font-headline text-lg font-bold mb-2">Aufbau-Service</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Wir kümmern uns um die Technik, damit Sie sich um Ihre Gäste kümmern können.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Tiles Grid -->
+<section class="py-32 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-4 block">Ausstattungsdetails</span>
+<h2 class="font-headline text-4xl font-extrabold text-primary tracking-tight">Paketoptionen &amp; Add-ons</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- 1. Unsere Fotoboxen -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Unsere Fotoboxen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ui7WCYX_zTQoXKoojE9ByLGybm16HI5XdoQHSmLW5RxSUsQzwM60tp5jNlItfDa-zI3VpFIw_hMAMj8zHj9N4lQfE7U1oSf3zOwnOnv0pAd__eaiKDSstqhE00gdI2-gF5pImNO4l8pNAhsakd4YRxUeuhbx-IrvsCAi5x6_CIGmmjKHLFWVtFmFKIRQFlrYdmA4lTthgNTQKRkvRYMqxEKHFozPhczPGTTbfi329QFfvfjjkUqBdZiW9ruXJVK_ESjIbnXoNIS6g"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 175€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Unsere Fotoboxen</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        High-End Hardware mit Canon Spiegelreflexkameras und Studioblitzen für Bilder auf Profi-Niveau. Intuitiv bedienbar via Touchscreen.
+                    </p>
+</div>
+<!-- 2. Fotorequisiten -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotorequisiten" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ujK2WPHD7EAWOpEYq9x-0sen-ObqqHGYM6MSgvYr8TBIo73PWVxacuJIipxy25fGm0kCseO1iEr0sfmLI745iCw1bNQkEmwLo2w6nO3gBorKao3qPZW0J1J7b7ga0HK1AIsOHh1xJSoZk9FdvGjPtiw2Ta-omU1pmbvPSbPRPSVzAdoT3pW0JntPMOB4vp3K7EPq7pRj-lnAPHQkilCw0Lj-u2y9ohIJl_W83gf-YKih9GjvgzCOkP12uY0jNtKd8MV8OtgFpReoA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/60 pointer-events-none mix-blend-overlay"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">inklusive</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotorequisiten</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Kuratierte Auswahl an hochwertigen Accessoires wie edlen Hüten und Vintage-Brillen statt billiger Papp-Schilder.
+                    </p>
+</div>
+<!-- 3. Fotohintergründe -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotohintergründe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ugsgt74xd6kHz1raZFeT73Avv-xrHQkO9YLcLnWf687VmjASjxzIa9jWEvLWLgNjt6u5ClhJdZafq1b03g1gZtDcXoYjfXYK5PdGCyGzeJr8cwOLnk0tJ3cgy_Zq3C9_QO5f5EkqaG2sQORDFQ2vJyEDJaa8V5gzZ1pb8G7M0KdjYQ6k-a3x04YL3mSKblyHrwgyRW0-ePnQWM-IudJAP9KbKK3ggCbs67QOkpPBEK4dMQSv1iiLidKEmIDSJfYbtAPzGJsUHRFfA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 25€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotohintergründe</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Stabile Hintergrundsysteme in verschiedenen Looks – von Editorial-Clean bis rustikalem Holz-Print.
+                    </p>
+</div>
+<!-- 4. Audio Gästebuch -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Audio Gästebuch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ug0LzkWYFKj5nz4DNCjQ1ht-NgZ_Eopg3SdF8j36i3jqV_7lxuZ0Ab6k2hyFU4TRnN65UKyYdAAULXalGfePHP2ik6P0Q8noQSjUw3XFRWSAI_0OeILvmkP8gyHNz2-CoSkJX80A0_5lNoqb713VTGKG_bvJnYGDkbdW0umqZmuMxVO_JYHoFCCYBJtX4uJjv2RnAcsjPtvbNLegeg0BLRgYJHyn75QvNETLPCL3u2N0RUPGiCwgeAMMJenRDWQGs3R5OTeAX_K"/>
+<div class="absolute inset-0 bg-gradient-to-bl from-white/90 via-transparent to-transparent h-1/4 w-1/4 right-0 pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 40€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Audio Gästebuch</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Vintage-Telefon fängt emotionale Sprachnachrichten Ihrer Gäste ein. Eine bleibende Erinnerung für die Ohren.
+                    </p>
+</div>
+<!-- 5. Sofortbildkamera -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Sofortbildkamera" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uikOIkDuEKpnjA7JYfjZb15kvxYiqvLW8_2JtaPGxha-saJsfZc4Ra-DReERo_GGKfJrauJw-FjUQnORt0OGG8Ij-DcMbk2J2ZjKMnXgNktOJ6DUzy3gd07nEnw2g7WRflFdPSLVYBYIQhudMmL850ws8b0G4ZLWgkoi8IqC6J8Nbpv-_gxLzTJoqpCPcgI-kQcTN0R8FuMb-8pkINjHGjk4jnZqM__1wQfRzp2LdVbByE83ojLmmEzBT-XQOa1tu5JLZRIoGC2JA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 25€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Sofortbildkamera</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Klassischer Retroschick für haptische Fotomomente. Ideal für spontane Schnappschüsse direkt in die Hand.
+                    </p>
+</div>
+<!-- 6. Individuelle Drucklayouts -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Individuelle Drucklayouts" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ugXtOM-EJFDFUIemsePUAZ6Tf2B2FSZGrFEBUy26KRLx_1WFDavfb9o-0Pj2HrsOlFEKr6hiX-6s_-aQwgDbTgCTwnbLH7NmcCR_RjOH1VZI2HT96FvDAC8pUGWap3GKboS5DyviyAbk0G3J2xwFYl6oWUVoHhYOf4SZiEdUFCBY01wHopR4y7Y5jyEWOQUIXToEyAbroWM22-6Aw1r0kSG6w5kYnnnvgY1d6VVHh3Y3oTAqrGZPjJ0D7bzp3m26GbNG0FjGn73UA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 10€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Individuelle Layouts</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Maßgeschneiderte Designs für Ihre Foto-Ausdrucke, passend zu Einladungen oder Corporate Branding.
+                    </p>
+</div>
+<!-- 7. Fotodrucker -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotodrucker" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uiU3oyT794V_N87CbUzEvcBmDJX9SRZyyVeTuYSL7ZuxQs1HQUoRuEuqJgr91XvY0FSBNX1Qd3FDW8VEc1yi_99hN-xgU-uRNrghj9fAqKe3Vp-8pxVbBNMeReKfoGCqs9xlyMDtMCFFgdy7DfQbYrnF-vJPv9cmM2EFtpuhZgAfaDXpJBnrL7QhVtF_DZxDRV5QWBOFLUTKz0ZnBbLhXC_qdavQr6PWv5PeiX3X0RDBSBVKNV4EFdYjiQQo5huwpz50MsK2Joy4A"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 50€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotodrucker</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Hochgeschwindigkeits-Thermosublimationsdrucker für sofortige Erinnerungen in Laborqualität. In Sekunden gedruckt.
+                    </p>
+</div>
+<!-- 8. Fotoboxaufgaben -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotoboxaufgaben" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ui1d3papUs_h1c0H3Yeu5gpBmaFInHeWbz0Uwj41wKIKwf7A-xgLNsYE63nureLvhigOhXN7jHzN3lsQ3pvgycWgMlo5wW2D6X63KzLycqvO6oi0ViTnWZW6BOkPZ132inb8tfX7SxZOPT9z2Z2Hbsju2slNa-6apNezQTc9G90EQTIzUTlDH6DAPsYLY-nYjRcN9hDF9BEvKhj71UNb5_C2bZBqI16hPzheQu7D3Qx_PTEhfAhIEruTh9FELQqkWkPfXYGFa-I1A"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 10€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotoboxaufgaben</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Kreative Aufgabenkarten, die das Eis brechen und für lustige, spontane Interaktionen vor der Kamera sorgen.
+                    </p>
+</div>
+<!-- 9. Weiteres Zubehör -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Weiteres Zubehör" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uhqIiYiCsC0cM1VT53FHl8vnjCEm4Klfi49Ho0i3Z22mt0fiD9DRm9cBRGSKYmikzBJK0YQRj6m8iqOj9BHShMSwNJZdJcbEd_GGP7rxjraXi-ek-yTjW1mzhBrPCM418QE9Bm7ILJC1BQCQ4_D17vCjihrtLek7T1g6pt27kxj97J92wGDklyCSDYfvW-f7VPffI9cp4dt4J1OjR5zt-s5oTrdKulzhh9vh4Q5dwbRZCRLoETf138xp4eJQ4KRgmGe-znMy8hVXQ"/>
+<div class="absolute inset-0 bg-gradient-to-bl from-white/95 via-transparent to-transparent h-1/4 w-1/3 right-0 pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">Auf Anfrage</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Weiteres Zubehör</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Von LED-Beleuchtung über Event-Teppiche bis hin zu personalisierten Gästebüchern – alles für das perfekte Event.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full py-12 px-8" id="footer">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-headline font-bold text-primary"><img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiX39F_4KUlsyj6cdZHi1EXM5YfjmRhn9zLriPhn4zUuO_5s4iTNA3F1dT8Jz4S9pEZLGZTsz46Aach-fMKxPTTmnAdIS11vwU3SKeRe-hzG1g2sgGQwNAJBF3FZAcjcj6ko9FG5dOJGu9hlSvkM5-Eyf1GG0ZjvQ0ZcnBMKTzY44_5FiakwpJld2dHG6pTJKKdSY4Nv0tfx0FFiXVIW-cbIoga_ULX5VepqpQ1665z-sUTCXuM9Xfhafn06lpptu8rspG08lH0TQ"/></div>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm text-secondary/60">
+<a class="hover:text-primary underline transition-all" href="#">Impressum</a>
+<a class="hover:text-primary underline transition-all" href="#">Datenschutz</a>
+<a class="hover:text-primary underline transition-all" href="#">AGB</a>
+</div>
+<div class="font-body text-sm text-secondary/60">
+            © 2024 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
+        </div>
+</div>
+</footer>
+</body></html>
+
+<!-- Kontakt & Anfrage (Logo-Update) -->
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "on-primary-container": "#fad389",
+                  "secondary-fixed-dim": "#e7c179",
+                  "inverse-on-surface": "#f3f0ea",
+                  "surface-variant": "#e5e2dc",
+                  "surface-tint": "#765a1c",
+                  "outline": "#7f7667",
+                  "background": "#fcf9f3",
+                  "tertiary": "#2e476f",
+                  "on-secondary-container": "#795c1e",
+                  "surface-container-high": "#ebe8e2",
+                  "on-tertiary-fixed": "#001b3d",
+                  "on-background": "#1c1c18",
+                  "surface-container-low": "#f6f3ed",
+                  "surface-dim": "#dcdad4",
+                  "error": "#ba1a1a",
+                  "on-error-container": "#93000a",
+                  "on-error": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "secondary-fixed": "#ffdea3",
+                  "on-tertiary": "#ffffff",
+                  "inverse-surface": "#31312d",
+                  "on-secondary-fixed": "#261900",
+                  "tertiary-fixed": "#d6e3ff",
+                  "surface-container-highest": "#e5e2dc",
+                  "secondary": "#765a1c",
+                  "error-container": "#ffdad6",
+                  "primary-container": "#765a1c",
+                  "on-primary": "#ffffff",
+                  "surface-container": "#f0eee8",
+                  "on-surface": "#1c1c18",
+                  "on-secondary": "#ffffff",
+                  "inverse-primary": "#e7c179",
+                  "tertiary-container": "#465f88",
+                  "primary-fixed-dim": "#e7c179",
+                  "outline-variant": "#d1c5b4",
+                  "on-surface-variant": "#4d4639",
+                  "secondary-container": "#ffd88d",
+                  "primary": "#5c4304",
+                  "on-secondary-fixed-variant": "#5c4204",
+                  "on-primary-fixed-variant": "#5c4304",
+                  "tertiary-fixed-dim": "#aec7f6",
+                  "surface": "#fcf9f3",
+                  "primary-fixed": "#ffdea2",
+                  "on-tertiary-fixed-variant": "#2e476f",
+                  "on-tertiary-container": "#c6d9ff",
+                  "on-primary-fixed": "#261900",
+                  "surface-bright": "#fcf9f3"
+                },
+                fontFamily: {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(121, 92, 30, 0.06);
+        }
+        .glass-nav {
+            background-color: rgba(252, 249, 243, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(252, 249, 243, 0) 0%, rgba(252, 249, 243, 0.4) 100%);
+        }
+        .product-image-filter {
+            filter: contrast(1.05) brightness(1.02) saturate(1.1);
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative z-50 bg-transparent">
+<div class="text-xl font-headline font-bold tracking-tighter text-primary"><a class="flex items-center gap-3" href="#">
+<img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugww_uLbk0RENYnVNH5wB4WO_bTMGiz-a8iU4gT30yAdqnbDKGVm7iSl1YpDz3mSKHfGwe9QAijWmJnhu7OwDeIKee36Vkqq8_j8kmi9oH9TYrkPhTzEv4I0-wXvE_TwCGbYjCDXsbUwgTtDMF7Mm4_A5F-XbAnDmA62vFvd8NhwyOuGns5GOIQxDVMDkF6OzZLCyVLSikucASTb3lPZHmYi0ft-uPCwm1Cs9BHR5gLFDUGCHsRiWsA_tvvPhZSWWCz038KC9Ucyg"/>
+<span class="font-headline font-bold text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
+</a></div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#">Startseite</a>
+<a class="text-primary border-b-2 border-secondary pb-1" href="#">Leistungen &amp; Preise</a>
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#">Kontakt</a>
+<a class="text-secondary/70 hover:text-primary transition-colors duration-300" href="#footer">Rechtliches</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full scale-95 active:scale-90 transition-transform">
+                Jetzt anfragen
+            </button>
+<!-- Hamburger Menu Button -->
+<button aria-label="Menu" class="md:hidden p-2 text-primary focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Overlay -->
+<div class="fixed inset-x-0 top-0 bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 pt-24 pb-8 px-8 md:hidden shadow-xl" id="mobile-menu">
+<nav class="flex flex-col gap-6 font-headline font-bold text-lg tracking-tight">
+<a class="text-secondary/70" href="#" onclick="toggleMenu()">Startseite</a>
+<a class="text-primary" href="#" onclick="toggleMenu()">Leistungen &amp; Preise</a>
+<a class="text-secondary/70" href="#" onclick="toggleMenu()">Kontakt</a>
+<a class="text-secondary/70" href="#footer" onclick="toggleMenu()">Rechtliches</a>
+<hr class="border-outline-variant/30 my-2"/>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-sm font-bold uppercase tracking-widest py-4 rounded-full">
+                Jetzt anfragen
+            </button>
+</nav>
+</div>
+</header>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+            menuIcon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        } else {
+            menuIcon.textContent = 'menu';
+            document.body.style.overflow = '';
+        }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+</script>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] min-h-[600px] overflow-hidden mb-0">
+<!-- Background Image Replacement -->
+<div class="absolute inset-0">
+<img alt="Paparossi Fotoboxen Kollektion" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/ADBb0ujpm_y5emNeBAKJK4NrE9qPazo3dwOjqDT2bCEqQPDEsC8fbYhO9MtGGaqts9FH7eTDNz-Q5BZPT0PVYR3lJ3ubZWdHDNmSEEv9eVJ_oW-Auc33bWAZ5qp8wdf0xxZ2CKKhnAkkj02OLmY-J_RTBRKcB2fcyAgWghCmKON7zTqTkVTYO6wzCqoQD4ShsrONW49JmGzDiElfe3XWFoTg6X5G33KtgtbvyVeH0S09PRcUZJFrZ-4mD3dg60Ms8bQwbIx5drDEv6V7Hw"/>
+<!-- Soft Overlays for Legibility -->
+<div class="absolute inset-0 bg-gradient-to-r from-background/60 via-background/20 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative h-full px-8 max-w-screen-2xl mx-auto flex flex-col justify-center">
+<div class="max-w-3xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 block font-bold">Exklusive Erinnerungen</span>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-none text-primary mb-8 drop-shadow-sm">
+                    Leistungen <br/> <span class="ml-12 md:ml-24 italic font-light text-secondary"> &amp; </span> Technik
+                </h1>
+<p class="font-body text-lg md:text-2xl text-on-surface-variant leading-relaxed max-w-xl font-medium">
+                    Wir vereinen hochwertige Technik mit einem nahtlosen Erlebnis für Ihre Gäste. Entdecken Sie unsere kuratierten Pakete für Hochzeiten, Firmenevents und private Feiern.
+                </p>
+</div>
+</div>
+</section>
+<!-- Included Services: Minimalist Grid -->
+<section class="bg-surface-container py-24 px-8 mb-32">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-3xl font-bold text-primary tracking-tight">Immer inklusive</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">cloud_done</span>
+<h3 class="font-headline text-lg font-bold mb-2">Digital-Flatrate</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">photo_library</span>
+<h3 class="font-headline text-lg font-bold mb-2">Online-Galerie</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Passwortgeschützter Zugang für Sie und Ihre Gäste zum Downloaden.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">theater_comedy</span>
+<h3 class="font-headline text-lg font-bold mb-2">Profi-Requisiten</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Hochwertige Accessoires, die über das übliche Papp-Sortiment hinausgehen.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">local_shipping</span>
+<h3 class="font-headline text-lg font-bold mb-2">Aufbau-Service</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Wir kümmern uns um die Technik, damit Sie sich um Ihre Gäste kümmern können.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Tiles Grid -->
+<section class="py-32 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-4 block">Ausstattungsdetails</span>
+<h2 class="font-headline text-4xl font-extrabold text-primary tracking-tight">Paketoptionen &amp; Add-ons</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- 1. Unsere Fotoboxen -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Unsere Fotoboxen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ui7WCYX_zTQoXKoojE9ByLGybm16HI5XdoQHSmLW5RxSUsQzwM60tp5jNlItfDa-zI3VpFIw_hMAMj8zHj9N4lQfE7U1oSf3zOwnOnv0pAd__eaiKDSstqhE00gdI2-gF5pImNO4l8pNAhsakd4YRxUeuhbx-IrvsCAi5x6_CIGmmjKHLFWVtFmFKIRQFlrYdmA4lTthgNTQKRkvRYMqxEKHFozPhczPGTTbfi329QFfvfjjkUqBdZiW9ruXJVK_ESjIbnXoNIS6g"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 175€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Unsere Fotoboxen</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        High-End Hardware mit Canon Spiegelreflexkameras und Studioblitzen für Bilder auf Profi-Niveau. Intuitiv bedienbar via Touchscreen.
+                    </p>
+</div>
+<!-- 2. Fotorequisiten -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotorequisiten" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ujK2WPHD7EAWOpEYq9x-0sen-ObqqHGYM6MSgvYr8TBIo73PWVxacuJIipxy25fGm0kCseO1iEr0sfmLI745iCw1bNQkEmwLo2w6nO3gBorKao3qPZW0J1J7b7ga0HK1AIsOHh1xJSoZk9FdvGjPtiw2Ta-omU1pmbvPSbPRPSVzAdoT3pW0JntPMOB4vp3K7EPq7pRj-lnAPHQkilCw0Lj-u2y9ohIJl_W83gf-YKih9GjvgzCOkP12uY0jNtKd8MV8OtgFpReoA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/60 pointer-events-none mix-blend-overlay"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">inklusive</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotorequisiten</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Kuratierte Auswahl an hochwertigen Accessoires wie edlen Hüten und Vintage-Brillen statt billiger Papp-Schilder.
+                    </p>
+</div>
+<!-- 3. Fotohintergründe -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotohintergründe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ugsgt74xd6kHz1raZFeT73Avv-xrHQkO9YLcLnWf687VmjASjxzIa9jWEvLWLgNjt6u5ClhJdZafq1b03g1gZtDcXoYjfXYK5PdGCyGzeJr8cwOLnk0tJ3cgy_Zq3C9_QO5f5EkqaG2sQORDFQ2vJyEDJaa8V5gzZ1pb8G7M0KdjYQ6k-a3x04YL3mSKblyHrwgyRW0-ePnQWM-IudJAP9KbKK3ggCbs67QOkpPBEK4dMQSv1iiLidKEmIDSJfYbtAPzGJsUHRFfA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 25€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotohintergründe</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Stabile Hintergrundsysteme in verschiedenen Looks – von Editorial-Clean bis rustikalem Holz-Print.
+                    </p>
+</div>
+<!-- 4. Audio Gästebuch -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Audio Gästebuch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ug0LzkWYFKj5nz4DNCjQ1ht-NgZ_Eopg3SdF8j36i3jqV_7lxuZ0Ab6k2hyFU4TRnN65UKyYdAAULXalGfePHP2ik6P0Q8noQSjUw3XFRWSAI_0OeILvmkP8gyHNz2-CoSkJX80A0_5lNoqb713VTGKG_bvJnYGDkbdW0umqZmuMxVO_JYHoFCCYBJtX4uJjv2RnAcsjPtvbNLegeg0BLRgYJHyn75QvNETLPCL3u2N0RUPGiCwgeAMMJenRDWQGs3R5OTeAX_K"/>
+<div class="absolute inset-0 bg-gradient-to-bl from-white/90 via-transparent to-transparent h-1/4 w-1/4 right-0 pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 40€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Audio Gästebuch</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Vintage-Telefon fängt emotionale Sprachnachrichten Ihrer Gäste ein. Eine bleibende Erinnerung für die Ohren.
+                    </p>
+</div>
+<!-- 5. Sofortbildkamera -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Sofortbildkamera" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uikOIkDuEKpnjA7JYfjZb15kvxYiqvLW8_2JtaPGxha-saJsfZc4Ra-DReERo_GGKfJrauJw-FjUQnORt0OGG8Ij-DcMbk2J2ZjKMnXgNktOJ6DUzy3gd07nEnw2g7WRflFdPSLVYBYIQhudMmL850ws8b0G4ZLWgkoi8IqC6J8Nbpv-_gxLzTJoqpCPcgI-kQcTN0R8FuMb-8pkINjHGjk4jnZqM__1wQfRzp2LdVbByE83ojLmmEzBT-XQOa1tu5JLZRIoGC2JA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 25€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Sofortbildkamera</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Klassischer Retroschick für haptische Fotomomente. Ideal für spontane Schnappschüsse direkt in die Hand.
+                    </p>
+</div>
+<!-- 6. Individuelle Drucklayouts -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Individuelle Drucklayouts" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ugXtOM-EJFDFUIemsePUAZ6Tf2B2FSZGrFEBUy26KRLx_1WFDavfb9o-0Pj2HrsOlFEKr6hiX-6s_-aQwgDbTgCTwnbLH7NmcCR_RjOH1VZI2HT96FvDAC8pUGWap3GKboS5DyviyAbk0G3J2xwFYl6oWUVoHhYOf4SZiEdUFCBY01wHopR4y7Y5jyEWOQUIXToEyAbroWM22-6Aw1r0kSG6w5kYnnnvgY1d6VVHh3Y3oTAqrGZPjJ0D7bzp3m26GbNG0FjGn73UA"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 10€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Individuelle Layouts</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Maßgeschneiderte Designs für Ihre Foto-Ausdrucke, passend zu Einladungen oder Corporate Branding.
+                    </p>
+</div>
+<!-- 7. Fotodrucker -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotodrucker" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uiU3oyT794V_N87CbUzEvcBmDJX9SRZyyVeTuYSL7ZuxQs1HQUoRuEuqJgr91XvY0FSBNX1Qd3FDW8VEc1yi_99hN-xgU-uRNrghj9fAqKe3Vp-8pxVbBNMeReKfoGCqs9xlyMDtMCFFgdy7DfQbYrnF-vJPv9cmM2EFtpuhZgAfaDXpJBnrL7QhVtF_DZxDRV5QWBOFLUTKz0ZnBbLhXC_qdavQr6PWv5PeiX3X0RDBSBVKNV4EFdYjiQQo5huwpz50MsK2Joy4A"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 50€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotodrucker</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Hochgeschwindigkeits-Thermosublimationsdrucker für sofortige Erinnerungen in Laborqualität. In Sekunden gedruckt.
+                    </p>
+</div>
+<!-- 8. Fotoboxaufgaben -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Fotoboxaufgaben" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0ui1d3papUs_h1c0H3Yeu5gpBmaFInHeWbz0Uwj41wKIKwf7A-xgLNsYE63nureLvhigOhXN7jHzN3lsQ3pvgycWgMlo5wW2D6X63KzLycqvO6oi0ViTnWZW6BOkPZ132inb8tfX7SxZOPT9z2Z2Hbsju2slNa-6apNezQTc9G90EQTIzUTlDH6DAPsYLY-nYjRcN9hDF9BEvKhj71UNb5_C2bZBqI16hPzheQu7D3Qx_PTEhfAhIEruTh9FELQqkWkPfXYGFa-I1A"/>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">ab 10€</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Fotoboxaufgaben</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Kreative Aufgabenkarten, die das Eis brechen und für lustige, spontane Interaktionen vor der Kamera sorgen.
+                    </p>
+</div>
+<!-- 9. Weiteres Zubehör -->
+<div class="group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-xl overflow-hidden mb-6 editorial-shadow relative border border-outline-variant/20">
+<img alt="Weiteres Zubehör" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 product-image-filter" src="https://lh3.googleusercontent.com/aida/ADBb0uhqIiYiCsC0cM1VT53FHl8vnjCEm4Klfi49Ho0i3Z22mt0fiD9DRm9cBRGSKYmikzBJK0YQRj6m8iqOj9BHShMSwNJZdJcbEd_GGP7rxjraXi-ek-yTjW1mzhBrPCM418QE9Bm7ILJC1BQCQ4_D17vCjihrtLek7T1g6pt27kxj97J92wGDklyCSDYfvW-f7VPffI9cp4dt4J1OjR5zt-s5oTrdKulzhh9vh4Q5dwbRZCRLoETf138xp4eJQ4KRgmGe-znMy8hVXQ"/>
+<div class="absolute inset-0 bg-gradient-to-bl from-white/95 via-transparent to-transparent h-1/4 w-1/3 right-0 pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-lg font-headline font-bold">Auf Anfrage</div>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3">Weiteres Zubehör</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-4">
+                        Von LED-Beleuchtung über Event-Teppiche bis hin zu personalisierten Gästebüchern – alles für das perfekte Event.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full py-12 px-8" id="footer">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="font-headline font-bold text-primary"><img alt="Fotoboxverleih Roßkopf Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiX39F_4KUlsyj6cdZHi1EXM5YfjmRhn9zLriPhn4zUuO_5s4iTNA3F1dT8Jz4S9pEZLGZTsz46Aach-fMKxPTTmnAdIS11vwU3SKeRe-hzG1g2sgGQwNAJBF3FZAcjcj6ko9FG5dOJGu9hlSvkM5-Eyf1GG0ZjvQ0ZcnBMKTzY44_5FiakwpJld2dHG6pTJKKdSY4Nv0tfx0FFiXVIW-cbIoga_ULX5VepqpQ1665z-sUTCXuM9Xfhafn06lpptu8rspG08lH0TQ"/></div>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm text-secondary/60">
+<a class="hover:text-primary underline transition-all" href="#">Impressum</a>
+<a class="hover:text-primary underline transition-all" href="#">Datenschutz</a>
+<a class="hover:text-primary underline transition-all" href="#">AGB</a>
+</div>
+<div class="font-body text-sm text-secondary/60">
+            © 2024 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
+        </div>
 </div>
 </footer>
 </body></html>

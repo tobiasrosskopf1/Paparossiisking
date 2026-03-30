@@ -29,9 +29,10 @@
           }
     </script>
     <style>
-        .glass-nav { background-color: rgba(252, 249, 243, 0.8); backdrop-filter: blur(20px); }
+        .glass-nav { background-color: rgba(252, 249, 243, 0.85); backdrop-filter: blur(20px); }
         .product-card { transition: all 0.3s ease; }
         .product-card:hover { transform: translateY(-5px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body">
@@ -56,14 +57,45 @@
 </header>
 
 <main class="pt-20">
-    <section class="relative h-[60vh] min-h-[450px] overflow-hidden">
+    <section class="relative h-[50vh] min-h-[400px] overflow-hidden">
         <div class="absolute inset-0">
             <img alt="Hero" class="w-full h-full object-cover" src="img/hero-leistungen.jpg"/>
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
         <div class="relative h-full px-8 max-w-screen-2xl mx-auto flex flex-col justify-center">
             <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white mb-4">Leistungen & Technik</h1>
-            <p class="text-white/90 text-lg max-w-xl font-medium">Entdecke unsere vielfältigen Optionen für dein perfektes Event-Erlebnis.</p>
+            <p class="text-white/90 text-lg max-w-xl font-medium">Profi-Equipment und Rundum-Service für dein Event.</p>
+        </div>
+    </section>
+
+    <section class="bg-surface-container/50 py-16 px-8">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="mb-12">
+                <h2 class="font-headline text-3xl font-bold text-primary tracking-tight">Immer inklusive</h2>
+                <div class="h-1 w-20 bg-primary mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
+                    <span class="material-symbols-outlined text-primary mb-4 text-4xl">cloud_done</span>
+                    <h3 class="font-headline text-lg font-bold mb-2 text-primary">Digital-Flatrate</h3>
+                    <p class="text-sm text-secondary/70 leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
+                    <span class="material-symbols-outlined text-primary mb-4 text-4xl">photo_library</span>
+                    <h3 class="font-headline text-lg font-bold mb-2 text-primary">Online-Galerie</h3>
+                    <p class="text-sm text-secondary/70 leading-relaxed">Passwortgeschützter Zugang für dich und deine Gäste zum Download.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
+                    <span class="material-symbols-outlined text-primary mb-4 text-4xl">theater_comedy</span>
+                    <h3 class="font-headline text-lg font-bold mb-2 text-primary">Profi-Requisiten</h3>
+                    <p class="text-sm text-secondary/70 leading-relaxed">Hochwertige Accessoires, die über das übliche Sortiment hinausgehen.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
+                    <span class="material-symbols-outlined text-primary mb-4 text-4xl">local_shipping</span>
+                    <h3 class="font-headline text-lg font-bold mb-2 text-primary">Aufbau-Service</h3>
+                    <p class="text-sm text-secondary/70 leading-relaxed">Wir kümmern uns um die Technik, damit du entspannt feiern kannst.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,92 +107,55 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
             <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Fotoboxen" class="w-full h-full object-cover" src="img/fotobox.jpg"/>
                     <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 175€</div>
                 </div>
                 <h3 class="font-headline text-xl font-bold text-primary">Unsere Fotoboxen</h3>
-                <p class="text-sm text-secondary/80 mt-2">Canon Spiegelreflexkameras und Studioblitze für Profi-Ergebnisse.</p>
+                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">High-End Hardware mit Canon Spiegelreflexkameras und Studioblitzen für Ergebnisse auf Profi-Niveau.</p>
             </div>
 
             <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Requisiten" class="w-full h-full object-cover" src="img/requisiten.jpg"/>
                     <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Inklusive</div>
                 </div>
                 <h3 class="font-headline text-xl font-bold text-primary">Fotorequisiten</h3>
-                <p class="text-sm text-secondary/80 mt-2">Kuratierte Auswahl an hochwertigen Accessoires wie Hüten und Brillen.</p>
+                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Kuratierte Auswahl an hochwertigen Accessoires wie edlen Hüten und Vintage-Brillen.</p>
             </div>
 
             <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Hintergründe" class="w-full h-full object-cover" src="img/hintergrund.jpg"/>
                     <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 25€</div>
                 </div>
                 <h3 class="font-headline text-xl font-bold text-primary">Fotohintergründe</h3>
-                <p class="text-sm text-secondary/80 mt-2">Stabile Systeme in verschiedenen Looks von Clean bis Rustikal.</p>
+                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Stabile Hintergrundsysteme in verschiedenen Looks – von Editorial-Clean bis rustikal.</p>
             </div>
 
             <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="img/gaestebuch.jpg"/>
                     <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 40€</div>
                 </div>
                 <h3 class="font-headline text-xl font-bold text-primary">Audio Gästebuch</h3>
-                <p class="text-sm text-secondary/80 mt-2">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein.</p>
+                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein. Eine bleibende Erinnerung.</p>
             </div>
 
             <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Instax" class="w-full h-full object-cover" src="img/instax.jpg"/>
                     <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 25€</div>
                 </div>
                 <h3 class="font-headline text-xl font-bold text-primary">Sofortbildkamera</h3>
-                <p class="text-sm text-secondary/80 mt-2">Klassischer Retroschick für haptische Fotomomente direkt in die Hand.</p>
+                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Klassischer Retroschick für haptische Fotomomente. Ideal für spontane Schnappschüsse.</p>
             </div>
 
             <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Layouts" class="w-full h-full object-cover" src="img/layouts.jpg"/>
                     <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
                 </div>
                 <h3 class="font-headline text-xl font-bold text-primary">Individuelle Layouts</h3>
-                <p class="text-sm text-secondary/80 mt-2">Maßgeschneiderte Designs für deine Ausdrucke, passend zum Event-Branding.</p>
-            </div>
-
-            <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                    <img alt="Drucker" class="w-full h-full object-cover" src="img/drucker.jpg"/>
-                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 50€</div>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-primary">Fotodrucker</h3>
-                <p class="text-sm text-secondary/80 mt-2">High-Speed Druck in Sekunden – Laborqualität direkt vor Ort.</p>
-            </div>
-
-            <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                    <img alt="Aufgaben" class="w-full h-full object-cover" src="img/aufgaben.jpg"/>
-                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-primary">Fotoboxaufgaben</h3>
-                <p class="text-sm text-secondary/80 mt-2">Kreative Karten, die das Eis brechen und für lustige Interaktionen sorgen.</p>
-            </div>
-
-            <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                    <img alt="Zubehör" class="w-full h-full object-cover" src="img/zubehoer.jpg"/>
-                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Auf Anfrage</div>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-primary">Weiteres Zubehör</h3>
-                <p class="text-sm text-secondary/80 mt-2">Von LED-Beleuchtung bis zu personalisierten Gästebüchern.</p>
-            </div>
-
-        </div>
-    </section>
-</main>
-
-<footer class="bg-white border-t border-outline-variant/20 py-10">
-    <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-secondary/60 text-sm">© 2026 Fotoboxverle
+                <p class="

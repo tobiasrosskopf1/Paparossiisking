@@ -176,54 +176,24 @@
     menuToggle.addEventListener('click', toggleMenu);
 </script>
 <main class="pt-20">
-<!-- Hero Section -->
 <section class="relative h-[85vh] min-h-[600px] overflow-hidden mb-0">
-  <div class="absolute inset-0">
-    <img alt="Paparossi Fotoboxen Kollektion" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/ADBb0uh5vPLqJtipxF7T1AFRi0JoVQbXyrTr4y3Qj-mYbip4EatdjFF2u-92WmXaPLEXSL7TXOaDYZFePDZ851KvgyzImRE-tZpkNfxIvY0Mcl3lQb3-daAvXbhkFiW2hdvMW_gGT5ci3gLcjOuV-u7KQ6gDLZOJLhw_dlqBvQPb0Koi-9boQSffXtIJ5zdQhQ8UolHSp8cMGtW1N_z5EH6jI1_7s3AGFFSY2ruc1mPlmKaQ25EOFVS2EiWc6wkaTebj7wKs_Gc_HwOkrw"/>
-<!-- Dark Overlay and Gradual Mask to hide the logo in the top right -->
-<div class="absolute inset-0 bg-black/30"></div>
-<div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black/10 to-transparent"></div>
+<!-- Background Image Replacement -->
+<div class="absolute inset-0">
+<img alt="Paparossi Fotoboxen Kollektion" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/ADBb0ujpm_y5emNeBAKJK4NrE9qPazo3dwOjqDT2bCEqQPDEsC8fbYhO9MtGGaqts9FH7eTDNz-Q5BZPT0PVYR3lJ3ubZWdHDNmSEEv9eVJ_oW-Auc33bWAZ5qp8wdf0xxZ2CKKhnAkkj02OLmY-J_RTBRKcB2fcyAgWghCmKON7zTqTkVTYO6wzCqoQD4ShsrONW49JmGzDiElfe3XWFoTg6X5G33KtgtbvyVeH0S09PRcUZJFrZ-4mD3dg60Ms8bQwbIx5drDEv6V7Hw"/>
+<!-- Soft Overlays for Legibility -->
+<div class="absolute inset-0 bg-gradient-to-r from-background/60 via-background/20 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
+</div>
 <!-- Content -->
 <div class="relative h-full px-8 max-w-screen-2xl mx-auto flex flex-col justify-center">
 <div class="max-w-3xl">
-<span class="font-label text-xs uppercase tracking-[0.2em] text-white/90 mb-4 block drop-shadow-md">Exklusive Erinnerungen</span>
-<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-none text-white mb-8 drop-shadow-2xl">
-                    Leistungen <br/> <span class="ml-12 md:ml-24 italic font-light text-secondary-fixed"> &amp; </span> Technik
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 block font-bold">Exklusive Erinnerungen</span>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-none text-primary mb-8 drop-shadow-sm">
+                    Leistungen <br/> <span class="ml-12 md:ml-24 italic font-light text-secondary"> &amp; </span> Technik
                 </h1>
-<p class="font-body text-lg md:text-2xl text-white/95 leading-relaxed max-w-xl drop-shadow-md font-medium">
+<p class="font-body text-lg md:text-2xl text-on-surface-variant leading-relaxed max-w-xl font-medium">
                     Wir vereinen hochwertige Technik mit einem nahtlosen Erlebnis für Ihre Gäste. Entdecken Sie unsere kuratierten Pakete für Hochzeiten, Firmenevents und private Feiern.
                 </p>
-</div>
-</div>
-</section>
-<!-- Included Services: Minimalist Grid -->
-<section class="bg-surface-container py-24 px-8 mb-32">
-<div class="max-w-screen-2xl mx-auto">
-<div class="mb-16">
-<h2 class="font-headline text-3xl font-bold text-primary tracking-tight">Immer inklusive</h2>
-<div class="h-1 w-24 bg-primary mt-4"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-4 text-3xl">cloud_done</span>
-<h3 class="font-headline text-lg font-bold mb-2">Digital-Flatrate</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
-</div>
-<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-4 text-3xl">photo_library</span>
-<h3 class="font-headline text-lg font-bold mb-2">Online-Galerie</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Passwortgeschützter Zugang für Sie und Ihre Gäste zum Downloaden.</p>
-</div>
-<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-4 text-3xl">theater_comedy</span>
-<h3 class="font-headline text-lg font-bold mb-2">Profi-Requisiten</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Hochwertige Accessoires, die über das übliche Papp-Sortiment hinausgehen.</p>
-</div>
-<div class="p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/10 hover:border-primary/20 transition-all">
-<span class="material-symbols-outlined text-primary mb-4 text-3xl">local_shipping</span>
-<h3 class="font-headline text-lg font-bold mb-2">Aufbau-Service</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Wir kümmern uns um die Technik, damit Sie sich um Ihre Gäste kümmern können.</p>
-</div>
 </div>
 </div>
 </section>

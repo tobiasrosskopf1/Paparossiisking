@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
           tailwind.config = {
-            darkMode: "class",
             theme: {
               extend: {
                 colors: {
@@ -19,127 +18,149 @@
                   "surface-container": "#f0eee8",
                   "on-surface": "#1c1c18",
                   "on-primary": "#ffffff",
-                  "primary-container": "#765a1c",
-                  "secondary-fixed": "#ffdea3",
                   "outline-variant": "#d1c5b4"
                 },
                 fontFamily: {
                   "headline": ["Plus Jakarta Sans"],
-                  "body": ["Inter"],
-                  "label": ["Inter"]
+                  "body": ["Inter"]
                 }
               }
             }
           }
     </script>
     <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
         .glass-nav { background-color: rgba(252, 249, 243, 0.8); backdrop-filter: blur(20px); }
-        #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateY(-100%); }
-        #mobile-menu.active { transform: translateY(0); }
+        .product-card { transition: all 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-secondary/20">
+<body class="bg-background text-on-surface font-body">
 
 <header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
-    <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto relative z-50">
+    <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
         <a class="flex items-center gap-3" href="index.html">
             <div class="h-10 w-10 bg-primary rounded-full flex items-center justify-center text-white">
                 <span class="material-symbols-outlined">photo_camera</span>
             </div>
             <span class="font-headline font-bold text-lg tracking-tight text-primary uppercase hidden sm:block">Fotoboxverleih Roßkopf</span>
         </a>
-
         <nav class="hidden md:flex items-center gap-10 font-headline font-medium text-sm">
             <a class="text-secondary/70 hover:text-primary transition-colors" href="index.html">Startseite</a>
             <a class="text-primary border-b-2 border-primary pb-1" href="leistungen.html">Leistungen & Preise</a>
             <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
         </nav>
-
-        <div class="flex items-center gap-4">
-            <a href="kontakt.html" class="hidden sm:block bg-primary text-white font-label text-[10px] font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:scale-105 transition-transform">
-                Jetzt anfragen
-            </a>
-            <button aria-label="Menu" class="md:hidden p-2 text-primary" id="menu-toggle">
-                <span class="material-symbols-outlined text-3xl">menu</span>
-            </button>
-        </div>
-    </div>
-
-    <div class="fixed inset-x-0 top-0 bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 pt-24 pb-8 px-8 md:hidden shadow-xl" id="mobile-menu">
-        <nav class="flex flex-col gap-6 font-headline font-bold text-lg">
-            <a href="index.html" onclick="toggleMenu()">Startseite</a>
-            <a class="text-primary" href="leistungen.html" onclick="toggleMenu()">Leistungen & Preise</a>
-            <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
-            <hr class="border-outline-variant/30 my-2"/>
-            <a href="kontakt.html" class="text-center bg-primary text-white font-label text-sm font-bold uppercase tracking-widest py-4 rounded-full">
-                Jetzt anfragen
-            </a>
-        </nav>
+        <a href="kontakt.html" class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:opacity-90 transition-all">
+            Jetzt anfragen
+        </a>
     </div>
 </header>
 
 <main class="pt-20">
-    <section class="relative h-[70vh] min-h-[500px] overflow-hidden">
+    <section class="relative h-[60vh] min-h-[450px] overflow-hidden">
         <div class="absolute inset-0">
-            <img alt="Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uh5vPLqJtipxF7T1AFRi0JoVQbXyrTr4y3Qj-mYbip4EatdjFF2u-92WmXaPLEXSL7TXOaDYZFePDZ851KvgyzImRE-tZpkNfxIvY0Mcl3lQb3-daAvXbhkFiW2hdvMW_gGT5ci3gLcjOuV-u7KQ6gDLZOJLhw_dlqBvQPb0Koi-9boQSffXtIJ5zdQhQ8UolHSp8cMGtW1N_z5EH6jI1_7s3AGFFSY2ruc1mPlmKaQ25EOFVS2EiWc6wkaTebj7wKs_Gc_HwOkrw"/>
+            <img alt="Hero" class="w-full h-full object-cover" src="img/hero-leistungen.jpg"/>
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
         <div class="relative h-full px-8 max-w-screen-2xl mx-auto flex flex-col justify-center">
-            <span class="font-label text-xs uppercase tracking-widest text-white/90 mb-4 block">Exklusive Erinnerungen</span>
-            <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white mb-6">
-                Leistungen <span class="italic font-light text-secondary-fixed">&</span> Technik
-            </h1>
-            <p class="font-body text-lg text-white/95 max-w-xl">
-                Hochwertige Technik trifft auf nahtlosen Service. Entdecke unsere Pakete für dein nächstes Event.
-            </p>
+            <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white mb-4">Leistungen & Technik</h1>
+            <p class="text-white/90 text-lg max-w-xl font-medium">Entdecke unsere vielfältigen Optionen für dein perfektes Event-Erlebnis.</p>
         </div>
     </section>
 
-    <section class="py-24 px-8 max-w-screen-2xl mx-auto">
-        <div class="mb-16">
-            <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-2 block">Ausstattungsdetails</span>
+    <section class="py-20 px-8 max-w-screen-2xl mx-auto">
+        <div class="mb-12">
+            <span class="text-secondary text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Ausstattungsdetails</span>
             <h2 class="font-headline text-4xl font-extrabold text-primary">Paketoptionen & Add-ons</h2>
-            <div class="h-1 w-24 bg-primary mt-4"></div>
+            <div class="h-1 w-20 bg-primary mt-4"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="group">
-                <div class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-6 relative border border-outline-variant/20">
-                    <img alt="Fotobox" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida/ADBb0ui7WCYX_zTQoXKoojE9ByLGybm16HI5XdoQHSmLW5RxSUsQzwM60tp5jNlItfDa-zI3VpFIw_hMAMj8zHj9N4lQfE7U1oSf3zOwnOnv0pAd__eaiKDSstqhE00gdI2-gF5pImNO4l8pNAhsakd4YRxUeuhbx-IrvsCAi5x6_CIGmmjKHLFWVtFmFKIRQFlrYdmA4lTthgNTQKRkvRYMqxEKHFozPhczPGTTbfi329QFfvfjjkUqBdZiW9ruXJVK_ESjIbnXoNIS6g"/>
-                    <div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-lg font-bold">ab 175€</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Fotoboxen" class="w-full h-full object-cover" src="img/fotobox.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 175€</div>
                 </div>
-                <h3 class="font-headline text-2xl font-bold text-primary">Unsere Fotoboxen</h3>
-                <p class="text-sm text-secondary/80 mt-2">Spiegelreflextechnik und Studioblitze für Profi-Ergebnisse.</p>
+                <h3 class="font-headline text-xl font-bold text-primary">Unsere Fotoboxen</h3>
+                <p class="text-sm text-secondary/80 mt-2">Canon Spiegelreflexkameras und Studioblitze für Profi-Ergebnisse.</p>
             </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Requisiten" class="w-full h-full object-cover" src="img/requisiten.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Inklusive</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Fotorequisiten</h3>
+                <p class="text-sm text-secondary/80 mt-2">Kuratierte Auswahl an hochwertigen Accessoires wie Hüten und Brillen.</p>
             </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Hintergründe" class="w-full h-full object-cover" src="img/hintergrund.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 25€</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Fotohintergründe</h3>
+                <p class="text-sm text-secondary/80 mt-2">Stabile Systeme in verschiedenen Looks von Clean bis Rustikal.</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="img/gaestebuch.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 40€</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Audio Gästebuch</h3>
+                <p class="text-sm text-secondary/80 mt-2">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein.</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Instax" class="w-full h-full object-cover" src="img/instax.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 25€</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Sofortbildkamera</h3>
+                <p class="text-sm text-secondary/80 mt-2">Klassischer Retroschick für haptische Fotomomente direkt in die Hand.</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Layouts" class="w-full h-full object-cover" src="img/layouts.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Individuelle Layouts</h3>
+                <p class="text-sm text-secondary/80 mt-2">Maßgeschneiderte Designs für deine Ausdrucke, passend zum Event-Branding.</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Drucker" class="w-full h-full object-cover" src="img/drucker.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 50€</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Fotodrucker</h3>
+                <p class="text-sm text-secondary/80 mt-2">High-Speed Druck in Sekunden – Laborqualität direkt vor Ort.</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Aufgaben" class="w-full h-full object-cover" src="img/aufgaben.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Fotoboxaufgaben</h3>
+                <p class="text-sm text-secondary/80 mt-2">Kreative Karten, die das Eis brechen und für lustige Interaktionen sorgen.</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                    <img alt="Zubehör" class="w-full h-full object-cover" src="img/zubehoer.jpg"/>
+                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Auf Anfrage</div>
+                </div>
+                <h3 class="font-headline text-xl font-bold text-primary">Weiteres Zubehör</h3>
+                <p class="text-sm text-secondary/80 mt-2">Von LED-Beleuchtung bis zu personalisierten Gästebüchern.</p>
+            </div>
+
+        </div>
     </section>
 </main>
 
-<footer class="bg-surface-container py-12 px-8" id="footer">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
-        <div class="font-headline font-bold text-primary uppercase">Fotoboxverleih Roßkopf</div>
-        <nav class="flex gap-8 text-sm font-body text-secondary/60">
-            <a class="hover:text-primary underline" href="rechtliches.html">Impressum</a>
-            <a class="hover:text-primary underline" href="rechtliches.html">Datenschutz</a>
-            <a class="hover:text-primary underline" href="rechtliches.html">AGB</a>
-        </nav>
-        <div class="text-sm text-secondary/60">© 2026 Fotoboxverleih Roßkopf.</div>
-    </div>
-</footer>
-
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
-
-    function toggleMenu() {
-        mobileMenu.classList.toggle('active');
-        menuIcon.textContent = mobileMenu.classList.contains('active') ? 'close' : 'menu';
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    }
-    menuToggle.addEventListener('click', toggleMenu);
-</script>
-
-</body>
-</html>
+<footer class="bg-white border-t border-outline-variant/20 py-10">
+    <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-secondary/60 text-sm">© 2026 Fotoboxverle

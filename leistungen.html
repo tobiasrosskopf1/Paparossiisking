@@ -14,9 +14,14 @@
                 extend: {
                     colors: {
                         "primary": "#5c4304",
+                        "primary-container": "#765a1c",
+                        "on-primary": "#ffffff",
                         "secondary": "#765a1c",
                         "background": "#fcf9f3",
                         "surface": "#ffffff",
+                        "on-surface": "#1c1c18",
+                        "surface-container": "#f0eee8",
+                        "on-surface-variant": "#4d4639",
                         "outline-variant": "#d1c5b4"
                     },
                     fontFamily: {
@@ -30,159 +35,152 @@
 
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fcf9f3; }
-        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass-nav { background-color: rgba(28, 28, 24, 0.85); backdrop-filter: blur(20px); }
+        .glass-nav { background: rgba(28, 28, 24, 0.9); backdrop-filter: blur(20px); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
         #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .menu-open { overflow: hidden; }
     </style>
 </head>
 
-<body class="pt-24 selection:bg-secondary/20">
+<body class="pt-24 antialiased">
 
-    <header class="fixed top-0 w-full z-[100] border-b border-white/10 glass-nav">
-        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
+    <nav class="fixed top-0 w-full z-[100] border-b border-white/10 glass-nav">
+        <div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
             <a href="index.html" class="flex items-center gap-4 z-[110]">
                 <img src="Logo.png" alt="Logo" class="h-12 w-auto object-contain">
-                <div class="flex flex-col justify-center border-l border-white/20 pl-4 text-left">
+                <div class="flex flex-col justify-center border-l border-white/20 pl-4">
                     <span class="text-white font-headline font-bold text-sm md:text-base uppercase tracking-wider leading-tight">Fotoboxverleih</span>
                     <span class="text-[#ffdea3] font-headline font-extrabold text-sm md:text-base uppercase tracking-wider leading-tight">Roßkopf</span>
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a href="index.html" class="text-white/70 hover:text-white transition-colors uppercase tracking-widest text-xs">Startseite</a>
-                <a href="leistungen.html" class="text-white border-b-2 border-[#ffdea3] pb-1 uppercase tracking-widest text-xs">Leistungen & Preise</a>
-                <a href="kontakt.html" class="text-white/70 hover:text-white transition-colors uppercase tracking-widest text-xs">Kontakt</a>
-            </nav>
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="text-white/70 text-xs uppercase tracking-widest hover:text-white transition-colors">Startseite</a>
+                <a href="leistungen.html" class="text-white text-xs uppercase tracking-widest font-bold border-b-2 border-[#ffdea3] pb-1">Leistungen</a>
+                <a href="kontakt.html" class="text-white/70 text-xs uppercase tracking-widest hover:text-white transition-colors">Kontakt</a>
+            </div>
 
-            <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-white focus:outline-none">
+            <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-white">
                 <span id="menu-icon" class="material-symbols-outlined text-4xl">menu</span>
             </button>
 
             <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-2xl z-[105] flex flex-col items-center justify-center gap-8 translate-x-full md:hidden">
-                <a class="text-white/60 text-3xl font-headline font-bold" href="index.html">Startseite</a>
-                <a class="text-white text-3xl font-headline font-bold border-b-4 border-[#ffdea3]" href="leistungen.html">Leistungen & Preise</a>
-                <a class="text-white/60 text-3xl font-headline font-bold" href="kontakt.html">Kontakt</a>
+                <a href="index.html" class="text-white text-3xl font-headline font-bold">Startseite</a>
+                <a href="leistungen.html" class="text-white text-3xl font-headline font-bold border-b-4 border-[#ffdea3]">Leistungen</a>
+                <a href="kontakt.html" class="text-white/70 text-3xl font-headline font-bold">Kontakt</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="max-w-screen-2xl mx-auto px-6 md:px-12 py-16">
+    <main class="max-w-screen-2xl mx-auto px-6 py-16">
         
-        <div class="text-center mb-20">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-primary mb-6 uppercase tracking-tighter">Leistungen & Preise</h1>
-            <p class="text-lg text-secondary/70 max-w-2xl mx-auto">Kombiniere unsere Pakete ganz nach deinen Wünschen für ein unvergessliches Event.</p>
+        <div class="text-center mb-16">
+            <h1 class="font-headline text-4xl md:text-6xl font-extrabold text-primary mb-4 uppercase tracking-tighter">Leistungen & Preise</h1>
+            <p class="text-secondary max-w-2xl mx-auto text-lg">Wähle dein passendes Paket und ergänze es mit unseren Upgrades.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all">
-                <div class="h-64 overflow-hidden">
-                    <img src="box-schwarz.jpg" alt="Fotobox Einsteiger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Fotobox "Einsteiger"</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">175 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Die digitale Lösung für jede Party. Inklusive Online-Galerie und Profi-Equipment.</p>
-                </div>
+            <div class="bg-white p-8 rounded-[2.5rem] border border-outline-variant/30 shadow-sm flex flex-col overflow-hidden group">
+                <img src="box-schwarz.jpg" alt="Einsteiger" class="rounded-2xl mb-6 h-56 w-full object-cover group-hover:scale-105 transition-transform">
+                <h3 class="text-2xl font-bold text-primary mb-2">Einsteiger</h3>
+                <div class="text-3xl font-black text-secondary mb-4">175 €</div>
+                <p class="text-sm text-on-surface-variant flex-grow">Digitale Fotoflatrate. Ideal für kleinere Feiern, bei denen Bilder direkt online geteilt werden sollen.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border-2 border-primary shadow-lg hover:shadow-2xl transition-all relative">
-                <div class="absolute top-4 right-4 bg-primary text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase z-10">Beliebteste Wahl</div>
-                <div class="h-64 overflow-hidden">
-                    <img src="box-gold.jpg" alt="Fotobox Klassik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Fotobox "Klassik"</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">289 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Der Klassiker inkl. 350 Sofortdrucken, individuellem Layout und großer Requisitenbox.</p>
-                </div>
+            <div class="bg-white p-8 rounded-[2.5rem] border-2 border-primary shadow-xl flex flex-col overflow-hidden relative group">
+                <div class="absolute top-4 right-4 bg-primary text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">Empfehlung</div>
+                <img src="box-gold.jpg" alt="Klassik" class="rounded-2xl mb-6 h-56 w-full object-cover group-hover:scale-105 transition-transform">
+                <h3 class="text-2xl font-bold text-primary mb-2">Klassik</h3>
+                <div class="text-3xl font-black text-secondary mb-4">289 €</div>
+                <p class="text-sm text-on-surface-variant flex-grow">Inklusive 350 Sofortdrucke (10x15cm), individuellem Layout und einer großen Requisitenbox.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all">
-                <div class="h-64 overflow-hidden">
-                    <img src="box-komplett.jpg" alt="Fotobox Komplett" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Fotobox "Komplett"</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">349 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Das All-in-One Paket inklusive Audio-Gästebuch und Hintergrundsystem.</p>
-                </div>
+            <div class="bg-white p-8 rounded-[2.5rem] border border-outline-variant/30 shadow-sm flex flex-col overflow-hidden group">
+                <img src="box-komplett.jpg" alt="Komplett" class="rounded-2xl mb-6 h-56 w-full object-cover group-hover:scale-105 transition-transform">
+                <h3 class="text-2xl font-bold text-primary mb-2">Komplett</h3>
+                <div class="text-3xl font-black text-secondary mb-4">349 €</div>
+                <p class="text-sm text-on-surface-variant flex-grow">Das Rundum-Sorglos-Paket inklusive Audio-Gästebuch, Hintergrundsystem und 350 Drucken.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all">
-                <div class="h-64 overflow-hidden">
-                    <img src="telefon.jpg" alt="Audio Gästebuch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Audio-Gästebuch</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">80 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Das Retro-Telefon für unvergessliche Sprachnachrichten deiner Gäste.</p>
-                </div>
+            <div class="bg-surface-container p-8 rounded-[2.5rem] flex flex-col overflow-hidden group">
+                <img src="telefon.jpg" alt="Audio-Gästebuch" class="rounded-2xl mb-6 h-48 w-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                <h3 class="text-xl font-bold text-primary mb-1">Audio-Gästebuch</h3>
+                <div class="text-2xl font-black text-secondary mb-3">80 €</div>
+                <p class="text-xs text-on-surface-variant">Das Retro-Telefon für Sprachnachrichten deiner Gäste. Einzigartige Erinnerungen zum Anhören.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all">
-                <div class="h-64 overflow-hidden">
-                    <img src="hintergrund.jpg" alt="Hintergrundsystem" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Hintergrundsystem</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">35 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Wähle aus verschiedenen professionellen Hintergründen für dein Wunschmotiv.</p>
-                </div>
+            <div class="bg-surface-container p-8 rounded-[2.5rem] flex flex-col overflow-hidden group">
+                <img src="hintergrund.jpg" alt="Hintergrund" class="rounded-2xl mb-6 h-48 w-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                <h3 class="text-xl font-bold text-primary mb-1">Hintergrundsystem</h3>
+                <div class="text-2xl font-black text-secondary mb-3">35 €</div>
+                <p class="text-xs text-on-surface-variant">Wähle aus verschiedenen Motiven (Holz-Optik, Gold, Glitzer) für den perfekten Look.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all">
-                <div class="h-64 overflow-hidden">
-                    <img src="props.jpg" alt="Requisiten" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="bg-surface-container p-8 rounded-[2.5rem] flex flex-col overflow-hidden group text-center">
+                <div class="h-48 flex items-center justify-center bg-white/50 rounded-2xl mb-6">
+                    <span class="material-symbols-outlined text-6xl text-primary">print_connect</span>
                 </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Requisiten "Premium"</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">20 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Noch mehr Auswahl an hochwertigen Brillen, Hüten und witzigen Schildern.</p>
-                </div>
+                <h3 class="text-xl font-bold text-primary mb-1">Druck-Flatrate</h3>
+                <div class="text-2xl font-black text-secondary mb-3">50 €</div>
+                <p class="text-xs text-on-surface-variant">Upgrade von 350 auf 700 Ausdrucke. Perfekt für sehr große Veranstaltungen.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all">
-                <div class="h-64 overflow-hidden">
-                    <img src="usb.jpg" alt="USB Stick" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">USB-Stick</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">15 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Alle digitalen Aufnahmen direkt am Ende der Feier auf einem USB-Stick.</p>
-                </div>
+            <div class="bg-surface-container p-8 rounded-[2.5rem] flex flex-col overflow-hidden group">
+                <img src="usb.jpg" alt="USB" class="rounded-2xl mb-6 h-48 w-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                <h3 class="text-xl font-bold text-primary mb-1">USB-Stick</h3>
+                <div class="text-2xl font-black text-secondary mb-3">15 €</div>
+                <p class="text-xs text-on-surface-variant">Alle Aufnahmen deiner Feier direkt nach dem Event auf einem physischen USB-Stick.</p>
             </div>
 
-            <div class="group bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all text-center">
-                <div class="h-64 bg-secondary/10 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-7xl text-secondary">print_connect</span>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-primary mb-2">Druck-Flatrate</h3>
-                    <div class="text-2xl font-black text-secondary mb-4">50 €</div>
-                    <p class="text-sm text-secondary/60 mb-6">Upgrade auf 700 Ausdrucke für extra langen Foto-Spaß auf deiner Feier.</p>
-                </div>
+            <div class="bg-surface-container p-8 rounded-[2.5rem] flex flex-col overflow-hidden group">
+                <img src="props.jpg" alt="Props" class="rounded-2xl mb-6 h-48 w-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                <h3 class="text-xl font-bold text-primary mb-1">Requisiten Premium</h3>
+                <div class="text-2xl font-black text-secondary mb-3">20 €</div>
+                <p class="text-xs text-on-surface-variant">Noch mehr Vielfalt an hochwertigen Accessoires für noch lustigere Bilder.</p>
             </div>
 
-            <div class="group bg-primary rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all text-white flex flex-col justify-center p-8">
-                <div class="text-center">
-                    <span class="material-symbols-outlined text-6xl mb-4">local_shipping</span>
-                    <h3 class="text-2xl font-bold mb-2">Lieferung</h3>
-                    <div class="text-3xl font-black mb-4">0,40 €/km</div>
-                    <p class="text-sm opacity-80">Berechnet ab 85135 Titting. Inklusive Auf- und Abbau sowie kurzer Einweisung.</p>
-                </div>
+            <div class="bg-primary p-8 rounded-[2.5rem] flex flex-col items-center justify-center text-center text-white">
+                <span class="material-symbols-outlined text-6xl mb-4">local_shipping</span>
+                <h3 class="text-2xl font-bold mb-1 uppercase tracking-tight">Lieferung</h3>
+                <div class="text-3xl font-black mb-4">0,40 €/km</div>
+                <p class="text-xs opacity-80 max-w-[200px]">Berechnet ab 85135 Titting. Aufbau und Abholung immer inklusive.</p>
             </div>
-
         </div>
+
+        <div class="bg-surface-container rounded-[3rem] p-10 md:p-16 mb-24">
+            <h3 class="font-headline text-3xl font-bold text-primary mb-12 text-center">Bei jedem Paket inklusive</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">pumping_station</span>
+                    <h4 class="font-bold text-primary mb-2">Service</h4>
+                    <p class="text-sm text-on-surface-variant">Stressfreier Auf- und Abbau der Fotobox an deinem Wunschort.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">cloud_done</span>
+                    <h4 class="font-bold text-primary mb-2">Online-Galerie</h4>
+                    <p class="text-sm text-on-surface-variant">Sicherer Download aller Bilder über eine passwortgeschützte Galerie.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">high_quality</span>
+                    <h4 class="font-bold text-primary mb-2">Profiqualität</h4>
+                    <p class="text-sm text-on-surface-variant">Canon Spiegelreflexkamera und Studioblitz für erstklassige Ergebnisse.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">support_agent</span>
+                    <h4 class="font-bold text-primary mb-2">Support</h4>
+                    <p class="text-sm text-on-surface-variant">Wir sind während deines Events telefonisch für dich erreichbar.</p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="bg-surface-container-highest border-t border-outline-variant/20 py-16">
         <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
             
-            <div class="flex flex-col items-center mb-16 pb-16 border-b border-outline-variant/10 text-center">
-                <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-primary mb-6">Bereit für unvergessliche Momente?</h3>
+            <div class="flex flex-col items-center mb-16 pb-16 border-b border-outline-variant/10 text-center text-left">
+                <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-primary mb-6">Paket gefunden?</h3>
                 <a href="kontakt.html" class="bg-primary hover:bg-primary-container text-on-primary font-bold uppercase px-12 py-5 rounded-full transition-all shadow-xl hover:scale-105 active:scale-95 flex items-center gap-3 group">
                     <span class="material-symbols-outlined group-hover:animate-bounce">celebration</span>
                     Jetzt anfragen
@@ -190,28 +188,28 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <div class="flex flex-col items-center md:items-start">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white">
                             <span class="material-symbols-outlined text-sm">photo_camera</span>
                         </div>
                         <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Fotoboxverleih Roßkopf</span>
                     </div>
-                    <p class="text-secondary/60 text-sm leading-relaxed max-w-xs">Professioneller Fotoboxverleih für unvergessliche Momente.</p>
+                    <p class="text-secondary/60 text-sm leading-relaxed max-w-xs text-center md:text-left">Professioneller Fotoboxverleih für unvergessliche Augenblicke in Titting und Umgebung.</p>
                 </div>
 
                 <div class="flex flex-col items-center md:items-start gap-4">
                     <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Kontakt</h4>
-                    <a href="mailto:paparossi-fotobox@gmx.de" class="text-sm text-secondary/70 hover:text-primary transition-colors">paparossi-fotobox@gmx.de</a>
-                    <a href="tel:+4915228494252" class="text-sm text-secondary/70 hover:text-primary transition-colors">+49 1522 8494252</a>
+                    <a href="mailto:paparossi-fotobox@gmx.de" class="text-sm text-secondary/70 hover:text-primary">paparossi-fotobox@gmx.de</a>
+                    <a href="tel:+4915228494252" class="text-sm text-secondary/70 hover:text-primary">+49 1522 8494252</a>
                 </div>
 
                 <div class="flex flex-col items-center md:items-start gap-4">
                     <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Navigation</h4>
                     <nav class="flex flex-col items-center md:items-start gap-2">
-                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                        <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Kontakt</a>
-                        <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline underline-offset-4 decoration-primary/30">Impressum</a>
+                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary">Startseite</a>
+                        <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary">Kontakt</a>
+                        <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary underline underline-offset-4 decoration-primary/20">Impressum & Datenschutz</a>
                     </nav>
                 </div>
             </div>

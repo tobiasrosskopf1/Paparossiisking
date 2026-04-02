@@ -18,7 +18,8 @@
                         "secondary": "#765a1c",
                         "background": "#fcf9f3",
                         "surface": "#ffffff",
-                        "outline-variant": "#d1c5b4"
+                        "outline-variant": "#d1c5b4",
+                        "secondary-fixed": "#e7c179"
                     },
                     fontFamily: {
                         "headline": ["Plus Jakarta Sans"],
@@ -38,7 +39,6 @@
             backdrop-filter: blur(20px); 
         }
 
-        /* Sicherstellen, dass Material Symbols als Icons gerendert werden */
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
@@ -62,11 +62,17 @@
     <header class="fixed top-0 w-full z-[100] border-b border-outline-variant/20 glass-nav">
         <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
             
-            <a href="index.html" class="flex items-center gap-3 z-[110]">
-                <div class="h-10 w-10 bg-primary rounded-full flex items-center justify-center text-white">
-                    <span class="material-symbols-outlined">photo_camera</span>
+            <a href="index.html" class="flex items-center gap-4 z-[110]">
+                <img src="Logo.png" alt="Logo" class="h-12 w-auto object-contain">
+                
+                <div class="flex flex-col justify-center border-l border-primary/20 pl-4">
+                    <span class="text-primary font-headline font-bold text-sm md:text-base uppercase tracking-wider leading-tight">
+                        Fotoboxverleih
+                    </span>
+                    <span class="text-secondary font-headline font-extrabold text-sm md:text-base uppercase tracking-wider leading-tight">
+                        Roßkopf
+                    </span>
                 </div>
-                <span class="font-headline font-bold text-lg tracking-tight text-primary uppercase hidden xs:block">Paparossi</span>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
@@ -94,17 +100,64 @@
             
             <div class="lg:col-span-8">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-2 leading-tight">Lass uns feiern!</h1>
-                <p class="text-secondary/70 mb-8 max-w-xl">Fülle das Formular möglichst detailliert aus. Wir kontaktieren dich im Anschluss an die angegebene Mail.</p>
+                <p class="text-secondary/70 mb-8 max-w-xl">Fülle das Formular möglichst detailliert aus. Wir senden dir so schnell wie möglich ein unverbindliches Angebot.</p>
                 
-                <div class="rounded-2xl overflow-hidden border border-outline-variant/30 shadow-xl bg-white">
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSdvER0s5I41lWpJ5NzSnKcVUhtOPReG2SJhUQCz4xAAz6Bk4w/viewform?embedded=true" 
-                        class="w-full min-h-[900px]" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                        Wird geladen…
-                    </iframe>
+                <div class="rounded-2xl p-8 border border-outline-variant/30 shadow-xl bg-white">
+                    <form action="https://formspree.io/f/mbdpaobd" method="POST" class="space-y-6">
+                        
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Dein Name</label>
+                                <input type="text" name="name" required placeholder="Vor- und Nachname" 
+                                       class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">E-Mail Adresse</label>
+                                <input type="email" name="email" required placeholder="beispiel@mail.de" 
+                                       class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Datum der Feier</label>
+                                <input type="date" name="datum" required 
+                                       class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Ort der Feier</label>
+                                <input type="text" name="ort" placeholder="z.B. Titting, Eichstätt..." 
+                                       class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Gewünschtes Paket</label>
+                            <select name="paket" class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
+                                <option value="Einsteiger">Einsteiger (ab 175€)</option>
+                                <option value="Klassik" selected>Klassik (ab 289€)</option>
+                                <option value="Komplettpaket">Komplettpaket (ab 349€)</option>
+                                <option value="Individuell">Individuelle Anfrage</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Deine Nachricht</label>
+                            <textarea name="nachricht" rows="5" placeholder="Erzähl uns kurz von deiner Feier (Anlass, Gästeanzahl, etc.)..." 
+                                      class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold uppercase py-5 rounded-xl transition-all shadow-lg hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 group">
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+                            Unverbindliche Anfrage senden
+                        </button>
+
+                        <p class="text-[10px] text-secondary/40 text-center uppercase tracking-tighter">
+                            Mit dem Absenden erklärst du dich mit der Verarbeitung deiner Daten einverstanden.
+                        </p>
+                    </form>
                 </div>
             </div>
 
@@ -246,7 +299,6 @@
 
         btn.addEventListener('click', () => {
             const isHidden = menu.classList.contains('translate-x-full');
-            
             if (isHidden) {
                 menu.classList.remove('translate-x-full');
                 icon.innerText = 'close';

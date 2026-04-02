@@ -6,7 +6,8 @@
     <title>Kontakt - Fotoboxverleih Roßkopf</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
     <script>
         tailwind.config = {
@@ -37,7 +38,18 @@
             backdrop-filter: blur(20px); 
         }
 
-        /* Mobile Menu Animation */
+        /* Sicherstellen, dass Material Symbols als Icons gerendert werden */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+
         #mobile-menu {
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -246,7 +258,6 @@
             }
         });
 
-        // Schließen bei Klick auf Links
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('translate-x-full');

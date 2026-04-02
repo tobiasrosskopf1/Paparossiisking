@@ -7,7 +7,7 @@
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -19,6 +19,10 @@
                         "background": "#fcf9f3",
                         "surface": "#ffffff",
                         "outline-variant": "#d1c5b4"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"]
                     }
                 }
             }
@@ -27,69 +31,88 @@
 
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fcf9f3; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass-nav { background-color: rgba(252, 249, 243, 0.9); backdrop-filter: blur(10px); }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .glass-nav { 
+            background-color: rgba(252, 249, 243, 0.9); 
+            backdrop-filter: blur(20px); 
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .menu-open { overflow: hidden; }
     </style>
 </head>
 
-<body class="pt-20">
+<body class="pt-20 selection:bg-secondary/20">
 
-    <header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
+    <header class="fixed top-0 w-full z-[100] border-b border-outline-variant/20 glass-nav">
         <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-3">
+            
+            <a href="index.html" class="flex items-center gap-3 z-[110]">
                 <div class="h-10 w-10 bg-primary rounded-full flex items-center justify-center text-white">
                     <span class="material-symbols-outlined">photo_camera</span>
                 </div>
-                <span class="font-bold text-lg tracking-tight text-primary uppercase hidden sm:block">Fotoboxverleih Roßkopf</span>
+                <span class="font-headline font-bold text-lg tracking-tight text-primary uppercase hidden xs:block">Paparossi</span>
             </a>
 
-            <nav class="hidden md:flex items-center gap-10 font-medium text-sm">
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
                 <a href="index.html" class="text-secondary/70 hover:text-primary transition-colors">Startseite</a>
                 <a href="leistungen.html" class="text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
                 <a href="kontakt.html" class="text-secondary/70 hover:text-primary transition-colors">Kontakt</a>
             </nav>
 
-            <a href="kontakt.html" class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 rounded-full hover:opacity-90 transition-all">
-                Anfrage senden
-            </a>
+            <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-primary focus:outline-none">
+                <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+
+            <div id="mobile-menu" class="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[105] flex flex-col items-center justify-center gap-8 translate-x-full md:hidden">
+                <a class="text-primary/60 text-3xl font-headline font-bold" href="index.html">Startseite</a>
+                <a class="text-primary/60 text-3xl font-headline font-bold" href="leistungen.html">Leistungen & Preise</a>
+                <a class="text-primary/60 text-3xl font-headline font-bold" href="kontakt.html">Kontakt</a>
+                <div class="h-px w-20 bg-primary/20 my-4"></div>
+                <a href="rechtliches.html" class="text-primary text-xl font-headline font-bold border-b-2 border-primary">Impressum & Datenschutz</a>
+            </div>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 py-16">
-        <h1 class="text-4xl font-extrabold text-primary mb-12 text-center">Rechtliche Hinweise</h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-12 text-center leading-tight">Rechtliche Hinweise</h1>
 
         <div class="space-y-20">
             <section id="impressum">
                 <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2">Impressum</h2>
-                <div class="text-secondary/80 space-y-4 leading-relaxed">
+                <div class="text-secondary/80 space-y-6 leading-relaxed">
                     <div>
-                        <p class="font-bold text-on-surface">Angaben gemäß § 5 DDG:</p>
-                        <p>Tobias Roßkopf</p>
+                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-2">Angaben gemäß § 5 DDG:</p>
+                        <p class="text-lg">Tobias Roßkopf</p>
                         <p>Fotoboxverleih Roßkopf</p>
                         <p>Dr.-Kurz-Platz 5</p>
                         <p>85135 Titting</p>
                     </div>
                     
                     <div>
-                        <p class="font-bold text-on-surface">Kontakt:</p>
+                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-2">Kontakt:</p>
                         <p>Telefon: +49 1522 8494252</p>
                         <p>E-Mail: paparossi-fotobox@gmx.de</p>
                     </div>
 
-                    <div class="bg-primary/5 p-4 rounded-lg border border-primary/10">
-                        <p class="font-bold text-primary">Umsatzsteuer-Hinweis:</p>
+                    <div class="bg-primary/5 p-6 rounded-2xl border border-primary/10">
+                        <p class="font-bold text-primary mb-1">Umsatzsteuer-Hinweis:</p>
                         <p class="text-sm italic">Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet.</p>
                     </div>
 
                     <div>
-                        <p class="font-bold text-on-surface">Redaktionell verantwortlich:</p>
+                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-2">Redaktionell verantwortlich:</p>
                         <p>Tobias Roßkopf, Dr.-Kurz-Platz 5, 85135 Titting</p>
                     </div>
 
                     <div>
-                        <p class="font-bold text-on-surface">EU-Streitschlichtung:</p>
+                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-2">EU-Streitschlichtung:</p>
                         <p class="text-sm">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                            <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="text-primary underline">https://ec.europa.eu/consumers/odr</a>.<br>
+                            <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="text-primary underline font-medium">https://ec.europa.eu/consumers/odr</a>.<br>
                             Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
                     </div>
                 </div>
@@ -97,49 +120,49 @@
 
             <section id="datenschutz">
                 <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2">Datenschutzerklärung</h2>
-                <div class="text-secondary/80 space-y-6 text-sm leading-relaxed">
+                <div class="text-secondary/80 space-y-8 text-sm leading-relaxed">
                     <div>
-                        <h3 class="font-bold text-primary text-base mb-2">1. Datenschutz auf einen Blick</h3>
+                        <h3 class="font-bold text-primary text-base mb-3 italic">1. Datenschutz auf einen Blick</h3>
                         <p>Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO) sowie dieser Datenschutzerklärung. Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben.</p>
                     </div>
 
                     <div>
-                        <h3 class="font-bold text-primary text-base mb-2">2. Datenerfassung auf unserer Website</h3>
-                        <p><strong>Kontaktformular:</strong> Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-                        <p class="mt-2"><strong>Server-Log-Dateien:</strong> Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (IP-Adresse, Browsertyp, Zeitstempel).</p>
+                        <h3 class="font-bold text-primary text-base mb-3 italic">2. Datenerfassung auf unserer Website</h3>
+                        <p><strong>Kontaktformular:</strong> Wenn Sie uns per Kontaktformular (Google Forms) Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+                        <p class="mt-4"><strong>Server-Log-Dateien:</strong> Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (IP-Adresse, Browsertyp, Zeitstempel).</p>
                     </div>
 
                     <div>
-                        <h3 class="font-bold text-primary text-base mb-2">3. Ihre Rechte</h3>
+                        <h3 class="font-bold text-primary text-base mb-3 italic">3. Ihre Rechte</h3>
                         <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.</p>
                     </div>
 
-                    <div class="bg-secondary/5 p-4 rounded-lg">
-                        <h3 class="font-bold text-primary text-base mb-2">Besonderer Hinweis zur Fotobox-Nutzung</h3>
-                        <p>Bei Anmietung der Fotobox werden Bilder auf dem lokalen Speicher des Geräts gesichert. Der Mieter ist dafür verantwortlich, seine Gäste über die Aufnahme und Speicherung der Bilder zu informieren. Nach Rückgabe der Fotobox werden die Daten nach Bereitstellung an den Kunden (z.B. via Online-Galerie oder USB) innerhalb von 30 Tagen von unseren Systemen gelöscht, sofern keine andere Vereinbarung vorliegt.</p>
+                    <div class="bg-secondary/5 p-6 rounded-2xl border border-outline-variant/20">
+                        <h3 class="font-bold text-primary text-base mb-3">Besonderer Hinweis zur Fotobox-Nutzung</h3>
+                        <p>Bei Anmietung der Fotobox werden Bilder auf dem lokalen Speicher des Geräts gesichert. Der Mieter ist dafür verantwortlich, seine Gäste über die Aufnahme und Speicherung der Bilder zu informieren. Nach Rückgabe der Fotobox werden die Daten nach Bereitstellung an den Kunden (z.B. via Online-Galerie) innerhalb von 30 Tagen gelöscht.</p>
                     </div>
                 </div>
             </section>
 
             <section id="agb">
-                <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2">Allgemeine Geschäftsbedingungen</h2>
+                <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2">Mietbedingungen (AGB)</h2>
                 <div class="text-secondary/80 space-y-6 text-sm leading-relaxed">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
+                        <div class="bg-white p-6 rounded-xl border border-outline-variant/20">
                             <h3 class="font-bold text-primary mb-2">§1 Vertragsgegenstand</h3>
                             <p>Gegenstand des Vertrages ist die mietweise Überlassung einer Fotobox nebst Zubehör für einen vereinbarten Zeitraum.</p>
                         </div>
-                        <div>
+                        <div class="bg-white p-6 rounded-xl border border-outline-variant/20">
                             <h3 class="font-bold text-primary mb-2">§2 Haftung & Schäden</h3>
-                            <p>Der Mieter haftet für alle während der Mietzeit entstandenen Schäden an der Fotobox und dem Zubehör (z.B. durch Umkippen, unsachgemäße Bedienung oder grobe Verschmutzung). Bei Diebstahl haftet der Mieter zum Neuwert.</p>
+                            <p>Der Mieter haftet für alle während der Mietzeit entstandenen Schäden an der Fotobox und dem Zubehör. Bei Diebstahl haftet der Mieter zum Neuwert.</p>
                         </div>
-                        <div>
+                        <div class="bg-white p-6 rounded-xl border border-outline-variant/20">
                             <h3 class="font-bold text-primary mb-2">§3 Zahlung & Stornierung</h3>
-                            <p>Die Zahlung erfolgt per Rechnung oder bar bei Übergabe. Stornierungen sind bis 14 Tage vor dem Termin kostenfrei. Danach behalten wir uns vor, eine Aufwandsentschädigung von 30% des Mietpreises zu berechnen.</p>
+                            <p>Die Zahlung erfolgt per Rechnung oder bar. Stornierungen bis 14 Tage vorher sind kostenfrei, danach werden 30% des Preises fällig.</p>
                         </div>
-                        <div>
+                        <div class="bg-white p-6 rounded-xl border border-outline-variant/20">
                             <h3 class="font-bold text-primary mb-2">§4 Pflichten des Mieters</h3>
-                            <p>Der Mieter sorgt für einen ebenen Untergrund und einen Stromanschluss (230V). Die Fotobox ist im Außenbereich zwingend vor Witterung (Regen, direkte Sonne) zu schützen.</p>
+                            <p>Der Mieter sorgt für einen ebenen Untergrund und Strom (230V). Die Fotobox muss vor Witterung (Regen, Sonne) geschützt werden.</p>
                         </div>
                     </div>
                 </div>
@@ -147,58 +170,83 @@
         </div>
     </main>
 
-<footer class="bg-surface-container-highest border-t border-outline-variant/20 py-16 mt-20">
-    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white">
-                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+    <footer class="bg-white border-t border-outline-variant/20 py-16 mt-20">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-sm">photo_camera</span>
+                        </div>
+                        <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Paparossi Fotobox</span>
                     </div>
-                    <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Paparossi Fotobox</span>
+                    <p class="text-secondary/60 text-sm leading-relaxed max-w-xs">
+                        Professioneller Fotoboxverleih für unvergessliche Momente in Titting und Umgebung.
+                    </p>
                 </div>
-                <p class="text-secondary/60 text-sm leading-relaxed max-w-xs">
-                    Professioneller Fotoboxverleih für unvergessliche Momente in Titting und Umgebung.
+
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Kontakt</h4>
+                    <a href="mailto:paparossi-fotobox@gmx.de" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
+                        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+                        <span class="text-sm font-medium">paparossi-fotobox@gmx.de</span>
+                    </a>
+                    <a href="https://instagram.com/paparossi_fotobox" target="_blank" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
+                        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">camera_enhance</span>
+                        <span class="text-sm font-medium">@paparossi_fotobox</span>
+                    </a>
+                    <a href="tel:+4915228494252" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
+                        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">smartphone</span>
+                        <span class="text-sm font-medium">+49 1522 8494252</span>
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Navigation</h4>
+                    <nav class="flex flex-col items-center md:items-start gap-2">
+                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Startseite</a>
+                        <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
+                        <a href="rechtliches.html" class="text-sm text-primary font-bold underline decoration-primary/30 underline-offset-4">Impressum & Datenschutz</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-outline-variant/10 flex justify-center md:justify-start">
+                <p class="text-secondary/40 text-[10px] uppercase tracking-widest">
+                    © 2026 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
                 </p>
             </div>
-
-            <div class="flex flex-col items-center md:items-start gap-4">
-                <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Kontakt</h4>
-                
-                <a href="mailto:paparossi-fotobox@gmx.de" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
-                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
-                    <span class="text-sm font-medium">paparossi-fotobox@gmx.de</span>
-                </a>
-
-                <a href="https://instagram.com/paparossi_fotobox" target="_blank" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
-                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">camera_enhance</span>
-                    <span class="text-sm font-medium">@paparossi_fotobox</span>
-                </a>
-
-                <a href="tel:+4915228494252" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
-                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">smartphone</span>
-                    <span class="text-sm font-medium">+49 1522 8494252</span>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center md:items-start gap-4">
-                <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Navigation</h4>
-                <nav class="flex flex-col items-center md:items-start gap-2">
-                    <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                    <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                    <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline decoration-primary/30 underline-offset-4">Impressum & Datenschutz</a>
-                </nav>
-            </div>
         </div>
+    </footer>
 
-        <div class="pt-8 border-t border-outline-variant/10 flex justify-center md:justify-start">
-            <p class="text-secondary/40 text-[10px] uppercase tracking-widest">
-                © 2026 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
-            </p>
-        </div>
-    </div>
-</footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        const body = document.body;
+
+        btn.addEventListener('click', () => {
+            const isHidden = menu.classList.contains('translate-x-full');
+            if (isHidden) {
+                menu.classList.remove('translate-x-full');
+                icon.innerText = 'close';
+                body.classList.add('menu-open');
+            } else {
+                menu.classList.add('translate-x-full');
+                icon.innerText = 'menu';
+                body.classList.remove('menu-open');
+            }
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('translate-x-full');
+                icon.innerText = 'menu';
+                body.classList.remove('menu-open');
+            });
+        });
+    </script>
 
 </body>
 </html>

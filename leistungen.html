@@ -29,39 +29,62 @@
           }
     </script>
     <style>
-        .glass-nav { background-color: rgba(252, 249, 243, 0.85); backdrop-filter: blur(20px); }
+        .glass-nav { 
+            background-color: rgba(252, 249, 243, 0.9); 
+            backdrop-filter: blur(20px); 
+        }
         .product-card { transition: all 0.3s ease; }
         .product-card:hover { transform: translateY(-5px); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .menu-open { overflow: hidden; }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body">
 
-<header class="fixed top-0 w-full z-50 border-b border-outline-variant/20 glass-nav">
-    <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-        <a class="flex items-center gap-3" href="index.html">
+<header class="fixed top-0 w-full z-[100] border-b border-outline-variant/20 glass-nav">
+    <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+        
+        <a class="flex items-center gap-3 z-[110]" href="index.html">
             <div class="h-10 w-10 bg-primary rounded-full flex items-center justify-center text-white">
                 <span class="material-symbols-outlined">photo_camera</span>
             </div>
-            <span class="font-headline font-bold text-lg tracking-tight text-primary uppercase hidden sm:block">Fotoboxverleih Roßkopf</span>
+            <span class="font-headline font-bold text-lg tracking-tight text-primary uppercase hidden xs:block">Paparossi</span>
         </a>
+
         <nav class="hidden md:flex items-center gap-10 font-headline font-medium text-sm">
             <a class="text-secondary/70 hover:text-primary transition-colors" href="index.html">Startseite</a>
             <a class="text-primary border-b-2 border-primary pb-1" href="leistungen.html">Leistungen & Preise</a>
             <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
+            <a href="kontakt.html" class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:opacity-90 transition-all">
+                Jetzt anfragen
+            </a>
         </nav>
-        <a href="kontakt.html" class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:opacity-90 transition-all">
-            Jetzt anfragen
-        </a>
+
+        <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-primary focus:outline-none">
+            <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[105] flex flex-col items-center justify-center gap-8 translate-x-full md:hidden">
+            <a class="text-primary/60 text-3xl font-headline font-bold" href="index.html">Startseite</a>
+            <a class="text-primary text-3xl font-headline font-bold border-b-4 border-primary" href="leistungen.html">Leistungen & Preise</a>
+            <a class="text-primary/60 text-3xl font-headline font-bold" href="kontakt.html">Kontakt</a>
+            <div class="h-px w-20 bg-primary/20 my-4"></div>
+            <a href="kontakt.html" class="bg-primary text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm shadow-xl">
+                Jetzt anfragen
+            </a>
+        </div>
     </div>
 </header>
 
 <main class="pt-20">
     <section class="relative h-[60vh] min-h-[450px] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img alt="Paparossi Fotobox Nahaufnahme" 
-                 class="w-full h-full object-cover object-top" 
-                 src="hero-leistungen.jpeg"/>
+            <img alt="Paparossi Fotobox Nahaufnahme" class="w-full h-full object-cover object-top" src="hero-leistungen.jpeg"/>
             <div class="absolute inset-0 bg-black/50"></div> 
         </div>
 
@@ -74,7 +97,7 @@
                     Leistungen & Technik
                 </h1>
                 <p class="text-white/90 text-lg md:text-xl leading-relaxed max-w-xl font-medium drop-shadow-md">
-                    Profi-Equipment und Rundum-Service für dein Event. Wir verwandeln Ihren besonderen Tag in ein unvergessliches Erlebnis.
+                    Profi-Equipment und Rundum-Service für dein Event. Wir verwandeln Ihren besonderen Tag in ein unvergessliche Erlebnis.
                 </p>
             </div>
         </div>
@@ -111,7 +134,7 @@
         </div>
     </section>
 
-   <section class="py-20 px-8 max-w-screen-2xl mx-auto">
+    <section class="py-20 px-8 max-w-screen-2xl mx-auto">
         <div class="mb-12">
             <span class="text-secondary text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Ausstattungsdetails</span>
             <h2 class="font-headline text-4xl font-extrabold text-primary">Paketoptionen & Add-ons</h2>
@@ -119,7 +142,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
             <div class="product-card group">
                 <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                     <img alt="Fotoboxen" class="w-full h-full object-cover" src="unsere-fotoboxen.jpeg"/>
@@ -173,42 +195,14 @@
                 <h3 class="font-headline text-xl font-bold text-primary">Individuelle Layouts</h3>
                 <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Maßgeschneiderte Designs für deine Foto-Ausdrucke.</p>
             </div>
-
-            <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                    <img alt="Drucker" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/>
-                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 50€</div>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-primary">Fotodrucker</h3>
-                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochgeschwindigkeits-Drucker für Laborqualität vor Ort.</p>
-            </div>
-
-            <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                    <img alt="Aufgaben" class="w-full h-full object-cover" src="aufgaben.jpg"/>
-                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-primary">Fotoboxaufgaben</h3>
-                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Kreative Aufgabenkarten, die das Eis brechen.</p>
-            </div>
-
-            <div class="product-card group">
-                <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                    <img alt="Zubehör" class="w-full h-full object-cover" src="zubehoer.jpg"/>
-                    <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Auf Anfrage</div>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-primary">Weiteres Zubehör</h3>
-                <p class="text-sm text-secondary/80 mt-2 leading-relaxed">LED-Beleuchtung, Event-Teppiche und vieles mehr.</p>
-            </div>
-
-        </div> </section>
-</main>
+            
+            </div> 
+    </section>
 </main>
 
 <footer class="bg-surface-container-highest border-t border-outline-variant/20 py-16 mt-20">
     <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            
             <div class="flex flex-col items-center md:items-start text-center md:text-left">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white">
@@ -223,17 +217,14 @@
 
             <div class="flex flex-col items-center md:items-start gap-4">
                 <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Kontakt</h4>
-                
                 <a href="mailto:paparossi-fotobox@gmx.de" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
                     <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
                     <span class="text-sm font-medium">paparossi-fotobox@gmx.de</span>
                 </a>
-
                 <a href="https://instagram.com/paparossi_fotobox" target="_blank" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
                     <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">camera_enhance</span>
                     <span class="text-sm font-medium">@paparossi_fotobox</span>
                 </a>
-
                 <a href="tel:+4915228494252" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
                     <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">smartphone</span>
                     <span class="text-sm font-medium">+49 1522 8494252</span>
@@ -245,7 +236,7 @@
                 <nav class="flex flex-col items-center md:items-start gap-2">
                     <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Startseite</a>
                     <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                    <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline decoration-primary/30 underline-offset-4">Impressum & Datenschutz</a>
+                    <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Impressum & Datenschutz</a>
                 </nav>
             </div>
         </div>
@@ -257,6 +248,36 @@
         </div>
     </div>
 </footer>
+
+<script>
+    const btn = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    const body = document.body;
+
+    btn.addEventListener('click', () => {
+        const isHidden = menu.classList.contains('translate-x-full');
+        
+        if (isHidden) {
+            menu.classList.remove('translate-x-full');
+            icon.innerText = 'close';
+            body.classList.add('menu-open');
+        } else {
+            menu.classList.add('translate-x-full');
+            icon.innerText = 'menu';
+            body.classList.remove('menu-open');
+        }
+    });
+
+    // Menü schließen wenn ein Link geklickt wird
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('translate-x-full');
+            icon.innerText = 'menu';
+            body.classList.remove('menu-open');
+        });
+    });
+</script>
 
 </body>
 </html>

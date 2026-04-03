@@ -68,16 +68,6 @@
                 </svg>
             </button>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-background border-b border-outline-variant/30 shadow-lg z-10">
-            <nav class="flex flex-col px-6 py-8 gap-6 font-headline font-bold text-xl uppercase tracking-widest text-center">
-                <a href="index.html" class="text-secondary/70 hover:text-primary block">Startseite</a>
-                <a href="leistungen.html" class="text-primary block">Leistungen</a>
-                <a href="kontakt.html" class="text-secondary/70 hover:text-primary block">Kontakt</a>
-                <div class="h-px w-16 bg-primary/20 mx-auto mt-4 mb-2"></div>
-                <a href="rechtliches.html" class="text-secondary/40 text-xs font-semibold">Impressum & Datenschutz</a>
-            </nav>
-        </div>
     </header>
 
     <main class="pt-20"> 
@@ -86,12 +76,12 @@
                 <img alt="Paparossi Fotobox Nahaufnahme" class="w-full h-full object-cover object-top" src="hero-leistungen.jpeg"/>
                 <div class="absolute inset-0 bg-black/50"></div> 
             </div>
-            <div class="max-w-screen-2xl mx-auto px-8 w-full z-10">
+            <div class="max-w-screen-2xl mx-auto px-8 w-full z-10 text-white text-center md:text-left">
                 <div class="max-w-3xl">
-                    <span class="inline-block px-4 py-1 mb-6 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-white text-xs font-bold uppercase tracking-widest">
+                    <span class="inline-block px-4 py-1 mb-6 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-xs font-bold uppercase tracking-widest">
                         Verleih von Fotoboxen und Zubehör
                     </span>
-                    <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 drop-shadow-xl">
+                    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 drop-shadow-xl">
                         Leistungen & Technik
                     </h1>
                     <p class="text-white/90 text-lg md:text-xl leading-relaxed max-w-xl font-medium drop-shadow-md">
@@ -111,22 +101,22 @@
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">cloud_done</span>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Digital-Flatrate</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
+                        <p class="text-sm text-secondary/70">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">photo_library</span>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Online-Galerie</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Passwortgeschützter Zugang für dich und deine Gäste zum Download.</p>
+                        <p class="text-sm text-secondary/70">Passwortgeschützter Zugang für dich und deine Gäste zum Download.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">theater_comedy</span>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Profi-Requisiten</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Hochwertige Accessoires, die über das übliche Sortiment hinausgehen.</p>
+                        <p class="text-sm text-secondary/70">Hochwertige Accessoires, die über das übliche Sortiment hinausgehen.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">local_shipping</span>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Aufbau-Service</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Wir kümmern uns um die Technik, damit du entspannt feiern kannst.</p>
+                        <p class="text-sm text-secondary/70">Wir kümmern uns um die Technik, damit du entspannt feiern kannst.</p>
                     </div>
                 </div>
             </div>
@@ -164,48 +154,43 @@
                         <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Inklusive</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotorequisiten</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Accessoires für den perfekten Party-Look.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Accessoires und lustige Gadgets für perfekte Partyfotos.</p>
                 </div>
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img alt="Hintergrund 1" class="w-full h-full object-cover" src="fotohintergrund1.jpg"/></div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
+                        <img alt="Fotohintergrund" class="w-full h-full object-cover" src="fotohintergrund1.jpg"/>
                         <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotohintergründe</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Stabile Hintergrundsysteme in verschiedenen Premium-Looks.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Stabile Hintergrundsysteme in verschiedenen Premium-Looks verfügbar.</p>
                 </div>
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="audioguetbook.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 40€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary">Audio Gästebuch</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img alt="Drucker" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/></div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
+                        <img alt="Fotodrucker" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/>
                         <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 50€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotodrucker</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochgeschwindigkeits-Drucker für Laborqualität vor Ort.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Drucke in Laborqualität direkt vor Ort für deine Gäste zum Mitnehmen.</p>
+                </div>
+
+                <div class="product-card group">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                        <img alt="Fotoboxaufgaben" class="w-full h-full object-cover" src="fotoboxaufgaben.jpeg"/>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 10€</div>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary">Fotoboxaufgaben</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Kreative Aufgabenkarten, die das Eis brechen und für Abwechslung sorgen.</p>
+                </div>
+
+                <div class="product-card group">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                        <img alt="Individuelle Layouts" class="w-full h-full object-cover" src="layout-design.jpeg"/>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Inklusive</div>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary">Individuelle Layouts</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Personalisierte Designs mit Namen und Datum passend zu deiner Feier.</p>
                 </div>
 
                 <div class="product-card group">
@@ -214,34 +199,33 @@
                         <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Sofortbildkamera</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Klassischer Retroschick für haptische Fotomomente.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Analoge Schnappschüsse als perfekte Ergänzung zur digitalen Box.</p>
                 </div>
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="USB Stick" class="w-full h-full object-cover" src="USB-Stick.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">10€</div>
+                        <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="audioguetbook.jpeg"/>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 40€</div>
                     </div>
-                    <h3 class="font-headline text-xl font-bold text-primary">USB-Stick</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Alle Bilder direkt am Ende der Party auf einem hochwertigen USB-Stick.</p>
+                    <h3 class="font-headline text-xl font-bold text-primary">Audio-Gästebücher</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Lass deine Gäste emotionale Sprachnachrichten statt Texte hinterlassen.</p>
                 </div>
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Layout Design" class="w-full h-full object-cover" src="layout-design.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Inklusive</div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img alt="USB Stick" class="w-full h-full object-cover" src="USB-Stick.jpeg"/></div>
+                                <div class="swiper-slide"><img alt="Gästealbum" class="w-full h-full object-cover" src="gaestealbum.jpeg"/></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Preis n.A.</div>
                     </div>
-                    <h3 class="font-headline text-xl font-bold text-primary">Individuelles Layout</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Personalisierte Fotovorgaben mit Namen, Datum oder Logos passend zu deinem Event.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Gästealbum" class="w-full h-full object-cover" src="gaestealbum.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 30€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary">Gästealbum</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Alben zum Einkleben der gedruckten Fotos vor Ort.</p>
+                    <h3 class="font-headline text-xl font-bold text-primary">Weiteres Zubehör</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">USB-Sticks, hochwertige Alben und alles, was deine Party abrundet.</p>
                 </div>
 
             </div>
@@ -293,7 +277,6 @@
                     <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-8 border-b border-primary/10 pb-2">
                         Folge uns auf Instagram
                     </h4>
-                    
                     <a href="https://www.instagram.com/paparossi_photobooth?igsh=eWZxeTg2dGcwdTV6&utm_source=qr" 
                        target="_blank" 
                        class="group flex items-center gap-5 transition-all duration-300">
@@ -316,23 +299,15 @@
                 <div class="flex flex-col items-center md:items-start gap-4">
                     <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-2 border-b border-primary/10 pb-2">Navigation</h4>
                     <nav class="flex flex-col items-center md:items-start gap-3">
-                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Startseite
-                        </a>
-                        <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Leistungen & Preise
-                        </a>
-                        <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                            <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Kontakt
-                        </a>
-                        <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline decoration-primary/20 underline-offset-8 flex items-center gap-2 group">
-                            <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Impressum & Datenschutz
-                        </a>
+                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">Startseite</a>
+                        <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">Leistungen & Preise</a>
+                        <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">Kontakt</a>
+                        <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline decoration-primary/20 underline-offset-8 flex items-center gap-2 group">Impressum & Datenschutz</a>
                     </nav>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
                 <p class="text-secondary/40 text-[10px] uppercase tracking-[0.3em] font-medium">
                     © 2026 Fotoboxverleih Roßkopf - Alle Rechte vorbehalten
                 </p>
@@ -343,18 +318,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-            const iconOpen = document.getElementById('icon-open');
-            const iconClose = document.getElementById('icon-close');
-
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                iconOpen.classList.toggle('hidden');
-                iconClose.classList.toggle('hidden');
-            });
-
-            // Initialisiere Swiper
             const swiper = new Swiper('.mySwiper', {
                 loop: true,
                 pagination: { el: '.swiper-pagination', clickable: true },

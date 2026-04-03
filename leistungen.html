@@ -57,7 +57,7 @@
                 <span class="font-headline font-bold text-sm md:text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
             </a>
 
-            <nav class="hidden md:flex items-center gap-10 font-headline font-semibold text-xs uppercase tracking-[0.15em]">
+            <nav class="hidden md:flex items-center gap-12 font-headline font-semibold text-xs uppercase tracking-[0.2em]">
                 <a class="text-secondary/70 hover:text-primary transition-colors" href="index.html">Startseite</a>
                 <a class="text-primary border-b-2 border-primary pb-1" href="leistungen.html">Leistungen</a>
                 <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
@@ -70,9 +70,9 @@
 
         <div id="mobile-menu" class="fixed inset-0 bg-background flex flex-col items-center justify-center gap-12 z-[105] md:hidden px-8 text-center">
             <nav class="flex flex-col items-center gap-10 font-headline font-bold text-3xl uppercase tracking-widest">
-                <a href="index.html" class="text-secondary/60 hover:text-primary">Startseite</a>
+                <a href="index.html" class="text-secondary/60 hover:text-primary transition-colors">Startseite</a>
                 <a href="leistungen.html" class="text-primary">Leistungen</a>
-                <a href="kontakt.html" class="text-secondary/60 hover:text-primary">Kontakt</a>
+                <a href="kontakt.html" class="text-secondary/60 hover:text-primary transition-colors">Kontakt</a>
             </nav>
             <div class="h-px w-20 bg-primary/20"></div>
             <a href="rechtliches.html" class="text-secondary/40 text-sm uppercase tracking-widest font-bold">Impressum & Datenschutz</a>
@@ -290,7 +290,6 @@
             }
         });
 
-        // Schließen des Menüs bei Klick auf einen Link
         const menuLinks = mobileMenu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {

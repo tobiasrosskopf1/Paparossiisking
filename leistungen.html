@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -32,6 +35,13 @@
         .product-card { transition: all 0.3s ease; }
         .product-card:hover { transform: translateY(-5px); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        
+        /* Anpassungen für den Swiper Slider im Theme-Look */
+        .swiper { width: 100%; height: 100%; --swiper-theme-color: #ffffff; --swiper-navigation-size: 20px; }
+        .swiper-button-next, .swiper-button-prev { background: rgba(0,0,0,0.3); border-radius: 50%; width: 30px; height: 30px; }
+        .swiper-button-next::after, .swiper-button-prev::after { font-weight: bold; }
+        .swiper-pagination-bullet { background: #ffffff; opacity: 0.7; }
+        .swiper-pagination-bullet-active { background: #5c4304; opacity: 1; }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body antialiased">
@@ -71,7 +81,8 @@
         </div>
     </header>
 
-    <main class="pt-20"> <section class="relative h-[60vh] min-h-[450px] flex items-center overflow-hidden">
+    <main class="pt-20"> 
+        <section class="relative h-[60vh] min-h-[450px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <img alt="Paparossi Fotobox Nahaufnahme" class="w-full h-full object-cover object-top" src="hero-leistungen.jpeg"/>
                 <div class="absolute inset-0 bg-black/50"></div> 
@@ -130,10 +141,11 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Fotoboxen" class="w-full h-full object-cover" src="unsere-fotoboxen.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 175€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 175€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Unsere Fotoboxen</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">High-End Hardware mit Canon Spiegelreflexkameras und Studioblitz.</p>
@@ -141,8 +153,16 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Requisiten" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">Inklusive</div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img alt="Requisiten 1" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/></div>
+                                <div class="swiper-slide"><img alt="Requisiten 2" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Inklusive</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotorequisiten</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Accessoires für den perfekten Party-Look.</p>
@@ -150,8 +170,16 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Hintergründe" class="w-full h-full object-cover" src="fotohintergrund1.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 25€</div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img alt="Hintergrund 1" class="w-full h-full object-cover" src="fotohintergrund1.jpg"/></div>
+                                <div class="swiper-slide"><img alt="Hintergrund 2" class="w-full h-full object-cover" src="fotohintergrund1.jpg"/></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotohintergründe</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Stabile Hintergrundsysteme in verschiedenen Premium-Looks.</p>
@@ -160,7 +188,7 @@
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="audioguetbook.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 40€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 40€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Audio Gästebuch</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein.</p>
@@ -168,8 +196,16 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Drucker" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 50€</div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img alt="Drucker 1" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/></div>
+                                <div class="swiper-slide"><img alt="Drucker 2" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 50€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotodrucker</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochgeschwindigkeits-Drucker für Laborqualität vor Ort.</p>
@@ -178,7 +214,7 @@
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Instax" class="w-full h-full object-cover" src="sofortbildkamera.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 25€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Sofortbildkamera</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Klassischer Retroschick für haptische Fotomomente.</p>
@@ -186,8 +222,16 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Layouts" class="w-full h-full object-cover" src="layouts.png"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 10€</div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img alt="Layouts 1" class="w-full h-full object-cover" src="layouts.png"/></div>
+                                <div class="swiper-slide"><img alt="Layouts 2" class="w-full h-full object-cover" src="layouts.png"/></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 10€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Individuelle Layouts</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Maßgeschneiderte Designs für deine Foto-Ausdrucke.</p>
@@ -196,7 +240,7 @@
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Aufgaben" class="w-full h-full object-cover" src="24 2.PNG"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 10€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 10€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotoboxaufgaben</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Kreative Aufgabenkarten, die das Eis brechen.</p>
@@ -204,8 +248,16 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Zubehör" class="w-full h-full object-cover" src="zubehoer.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">Auf Anfrage</div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img alt="Zubehör 1" class="w-full h-full object-cover" src="zubehoer.jpeg"/></div>
+                                <div class="swiper-slide"><img alt="Zubehör 2" class="w-full h-full object-cover" src="zubehoer.jpeg"/></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Auf Anfrage</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Weiteres Zubehör</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">LED-Beleuchtung, Event-Teppiche und vieles mehr.</p>
@@ -255,12 +307,19 @@
                     </nav>
                 </div>
             </div>
-            <div class="pt-8 border-t border-outline-variant/10 text-center">
+            
+            <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
                 <p class="text-secondary/40 text-[10px] uppercase tracking-widest">© 2026 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-4">
+                     <a href="https://www.instagram.com/paparossi_photobooth" target="_blank" class="text-secondary/40 hover:text-primary transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                     </a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const btn = document.getElementById('mobile-menu-btn');
@@ -283,6 +342,19 @@
                     iconOpen.classList.remove('hidden');
                     iconClose.classList.add('hidden');
                 });
+            });
+
+            // Swiper Slider initialisieren
+            var swipers = new Swiper(".mySwiper", {
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
             });
         });
     </script>

@@ -36,7 +36,6 @@
         .product-card:hover { transform: translateY(-5px); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
         
-        /* Anpassungen für den Swiper Slider im Theme-Look */
         .swiper { width: 100%; height: 100%; --swiper-theme-color: #ffffff; --swiper-navigation-size: 20px; }
         .swiper-button-next, .swiper-button-prev { background: rgba(0,0,0,0.3); border-radius: 50%; width: 30px; height: 30px; }
         .swiper-button-next::after, .swiper-button-prev::after { font-weight: bold; }
@@ -74,7 +73,6 @@
                 <a href="index.html" class="text-secondary/70 hover:text-primary block">Startseite</a>
                 <a href="leistungen.html" class="text-primary block">Leistungen</a>
                 <a href="kontakt.html" class="text-secondary/70 hover:text-primary block">Kontakt</a>
-                
                 <div class="h-px w-16 bg-primary/20 mx-auto mt-4 mb-2"></div>
                 <a href="rechtliches.html" class="text-secondary/40 text-xs font-semibold">Impressum & Datenschutz</a>
             </nav>
@@ -141,7 +139,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Fotoboxen" class="w-full h-full object-cover" src="unsere-fotoboxen.jpeg"/>
@@ -155,8 +152,8 @@
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img alt="Requisiten 1" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/></div>
-                                <div class="swiper-slide"><img alt="Requisiten 2" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/></div>
+                                <div class="swiper-slide"><img alt="Requisiten Auswahl 1" class="w-full h-full object-cover" src="IMG_7293.jpg"/></div>
+                                <div class="swiper-slide"><img alt="Requisiten Auswahl 2" class="w-full h-full object-cover" src="IMG_7294.jpg"/></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
@@ -199,7 +196,6 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img alt="Drucker 1" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/></div>
-                                <div class="swiper-slide"><img alt="Drucker 2" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
@@ -225,7 +221,6 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img alt="Layouts 1" class="w-full h-full object-cover" src="layouts.png"/></div>
-                                <div class="swiper-slide"><img alt="Layouts 2" class="w-full h-full object-cover" src="layouts.png"/></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
@@ -251,7 +246,6 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img alt="Zubehör 1" class="w-full h-full object-cover" src="zubehoer.jpeg"/></div>
-                                <div class="swiper-slide"><img alt="Zubehör 2" class="w-full h-full object-cover" src="zubehoer.jpeg"/></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
@@ -283,6 +277,7 @@
                     Jetzt anfragen
                 </a>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
                 <div>
                     <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
@@ -295,15 +290,22 @@
                         Professioneller Fotoboxverleih für unvergessliche Momente in Titting und Umgebung.
                     </p>
                 </div>
+                
                 <div class="flex flex-col gap-4">
-                    <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest border-b border-primary/20 pb-1 w-fit mx-auto md:mx-0">Kontakt</h4>
-                    <a href="mailto:paparossi-fotobox@gmx.de" class="text-sm text-secondary/70 hover:text-primary transition-colors">paparossi-fotobox@gmx.de</a>
-                    <a href="tel:+4915228494252" class="text-sm text-secondary/70 hover:text-primary transition-colors">+49 1522 8494252</a>
+                    <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest border-b border-primary/20 pb-1 w-fit mx-auto md:mx-0">Navigation</h4>
+                    <nav class="flex flex-col gap-2">
+                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Startseite</a>
+                        <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Leistungen</a>
+                        <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Kontakt</a>
+                    </nav>
                 </div>
+
                 <div class="flex flex-col gap-4">
                     <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest border-b border-primary/20 pb-1 w-fit mx-auto md:mx-0">Rechtliches</h4>
-                    <nav class="flex flex-col gap-2">
+                    <nav class="flex flex-col gap-2 text-center md:text-left">
                         <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors underline">Impressum & Datenschutz</a>
+                        <a href="mailto:paparossi-fotobox@gmx.de" class="text-sm text-secondary/70 hover:text-primary transition-colors italic">paparossi-fotobox@gmx.de</a>
+                        <a href="tel:+4915228494252" class="text-sm text-secondary/70 hover:text-primary transition-colors">+49 1522 8494252</a>
                     </nav>
                 </div>
             </div>
@@ -311,9 +313,9 @@
             <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
                 <p class="text-secondary/40 text-[10px] uppercase tracking-widest">© 2026 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-4">
-                     <a href="https://www.instagram.com/paparossi_photobooth" target="_blank" class="text-secondary/40 hover:text-primary transition-colors">
+                    <a href="https://www.instagram.com/paparossi_photobooth" target="_blank" class="text-secondary/40 hover:text-primary transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                     </a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -327,14 +329,12 @@
             const iconOpen = document.getElementById('icon-open');
             const iconClose = document.getElementById('icon-close');
 
-            // Toggle Menü bei Klick auf Hamburger/X
             btn.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
                 iconOpen.classList.toggle('hidden');
                 iconClose.classList.toggle('hidden');
             });
 
-            // Schließe Menü, wenn ein Link angeklickt wird
             const navLinks = menu.querySelectorAll('a');
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
@@ -344,20 +344,12 @@
                 });
             });
 
-            // Swiper Slider initialisieren
             var swipers = new Swiper(".mySwiper", {
                 loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
+                pagination: { el: ".swiper-pagination", clickable: true },
+                navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
             });
         });
     </script>
-
 </body>
 </html>

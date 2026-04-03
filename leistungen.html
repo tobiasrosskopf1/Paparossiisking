@@ -43,24 +43,19 @@
         .swiper-pagination-bullet { background: #ffffff; opacity: 0.7; }
         .swiper-pagination-bullet-active { background: #5c4304; opacity: 1; }
 
-        /* NEU: CSS für das mobile Menü Overlay */
         #mobile-menu {
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(-10px);
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
         }
         #mobile-menu.active {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
+            transform: translateX(0);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body antialiased">
+<body class="bg-background text-on-surface font-body antialiased overflow-x-hidden">
 
     <header class="fixed top-0 w-full z-[100] bg-background/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
-        <div class="flex justify-between items-center px-6 h-20 max-w-screen-2xl mx-auto relative z-20 bg-transparent">
+        <div class="flex justify-between items-center px-6 h-20 max-w-screen-2xl mx-auto relative z-20">
             <a class="flex items-center gap-3" href="index.html">
                 <img src="Logo.png" alt="Logo" class="h-10 w-auto object-contain">
                 <span class="font-headline font-bold text-sm md:text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
@@ -72,7 +67,7 @@
                 <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
             </nav>
 
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary focus:outline-none relative z-[110]">
                 <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -82,10 +77,10 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="absolute top-20 left-0 w-full bg-background border-b border-outline-variant/30 py-8 px-6 md:hidden shadow-xl">
-            <nav class="flex flex-col gap-6 font-headline font-bold text-xl uppercase tracking-widest text-primary">
+        <div id="mobile-menu" class="fixed inset-0 bg-background z-[105] flex flex-col items-center justify-center gap-8 md:hidden">
+            <nav class="flex flex-col items-center gap-8 font-headline font-bold text-2xl uppercase tracking-widest text-primary">
                 <a href="index.html">Startseite</a>
-                <a href="leistungen.html" class="text-secondary">Leistungen</a>
+                <a href="leistungen.html" class="border-b-4 border-primary">Leistungen</a>
                 <a href="kontakt.html">Kontakt</a>
             </nav>
         </div>
@@ -162,7 +157,7 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <div class="swiper mySwiper">
+                        <div class="swiper mySwiper h-full">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img alt="Requisiten 1" class="w-full h-full object-cover" src="IMG_7293.jpg"/></div>
                                 <div class="swiper-slide"><img alt="Requisiten 2" class="w-full h-full object-cover" src="IMG_7294.jpg"/></div>
@@ -171,7 +166,7 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Inklusive</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-[15]">Inklusive</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary italic">Fotorequisiten</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Accessoires und lustige Gadgets für perfekte Partyfotos.</p>
@@ -215,7 +210,7 @@
 
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                       <img alt="Sofortbildkamera" class="w-full h-full object-cover object-bottom" src="sofortbildkamera.jpeg"/>
+                        <img alt="Sofortbildkamera" class="w-full h-full object-cover object-bottom" src="sofortbildkamera.jpeg"/>
                         <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary italic">Sofortbildkamera</h3>
@@ -260,12 +255,10 @@
                     Jetzt anfragen
                 </a>
             </div>
-
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-12">
                 <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Fotoboxverleih Roßkopf</span>
-                    </div>
+                    <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight mb-6">Fotoboxverleih Roßkopf</span>
                     <p class="text-secondary/60 text-sm leading-relaxed max-w-xs mb-6 italic">"Wir halten deine Momente fest – professionell, regional & herzlich."</p>
                     <div class="space-y-2">
                         <a href="mailto:paparossi-fotobox@gmx.de" class="text-xs font-medium text-secondary/70 hover:text-primary flex items-center gap-2 transition-colors">
@@ -283,6 +276,44 @@
                         <span class="text-lg font-headline font-bold text-primary group-hover:text-primary/100 transition-colors tracking-tight">@paparossi_photobooth</span>
                     </a>
                 </div>
+            </div>
+        </div>
+    </footer>
 
-                <div class="flex flex-col items-center md:items-start gap-4">
-                    <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-2 border-b border-primary/10
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Swiper Initialisierung (WICHTIG: Muss nach dem HTML kommen)
+            const swiper = new Swiper('.mySwiper', {
+                loop: true,
+                pagination: { el: '.swiper-pagination', clickable: true },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            });
+
+            // LOGIK FÜR DAS MOBILE MENÜ
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+            const body = document.body;
+
+            menuBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('active');
+                iconOpen.classList.toggle('hidden', isOpen);
+                iconClose.classList.toggle('hidden', !isOpen);
+                body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                    body.style.overflow = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

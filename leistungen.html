@@ -43,19 +43,16 @@
         .swiper-pagination-bullet { background: #ffffff; opacity: 0.7; }
         .swiper-pagination-bullet-active { background: #5c4304; opacity: 1; }
 
+        /* Fix für mobiles Menü */
         #mobile-menu {
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(100%);
-        }
-        #mobile-menu.active {
-            transform: translateX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body antialiased overflow-x-hidden">
 
     <header class="fixed top-0 w-full z-[100] bg-background/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
-        <div class="flex justify-between items-center px-6 h-20 max-w-screen-2xl mx-auto relative z-20">
+        <div class="flex justify-between items-center px-6 h-20 max-w-screen-2xl mx-auto relative z-[120]">
             <a class="flex items-center gap-3" href="index.html">
                 <img src="Logo.png" alt="Logo" class="h-10 w-auto object-contain">
                 <span class="font-headline font-bold text-sm md:text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
@@ -67,7 +64,7 @@
                 <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
             </nav>
 
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary focus:outline-none relative z-[110]">
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary focus:outline-none relative z-[130]">
                 <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -77,8 +74,8 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-0 bg-background z-[105] flex flex-col items-center justify-center gap-8 md:hidden">
-            <nav class="flex flex-col items-center gap-8 font-headline font-bold text-2xl uppercase tracking-widest text-primary">
+        <div id="mobile-menu" class="fixed inset-0 bg-background z-[110] flex flex-col items-center justify-center translate-x-full md:hidden">
+            <nav class="flex flex-col items-center gap-10 font-headline font-bold text-2xl uppercase tracking-widest text-primary">
                 <a href="index.html">Startseite</a>
                 <a href="leistungen.html" class="border-b-4 border-primary">Leistungen</a>
                 <a href="kontakt.html">Kontakt</a>
@@ -273,7 +270,7 @@
                 <div class="flex flex-col items-center md:items-start">
                     <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-8 border-b border-primary/10 pb-2">Folge uns auf Instagram</h4>
                     <a href="https://www.instagram.com/paparossi_photobooth" target="_blank" class="group flex items-center gap-5">
-                        <span class="text-lg font-headline font-bold text-primary group-hover:text-primary/100 transition-colors tracking-tight">@paparossi_photobooth</span>
+                        <span class="text-lg font-headline font-bold text-primary group-hover:text-primary transition-colors tracking-tight">@paparossi_photobooth</span>
                     </a>
                 </div>
             </div>
@@ -283,34 +280,43 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Swiper Initialisierung (WICHTIG: Muss nach dem HTML kommen)
+            // Swiper
             const swiper = new Swiper('.mySwiper', {
                 loop: true,
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             });
 
-            // LOGIK FÜR DAS MOBILE MENÜ
+            // Mobile Menu Logic
             const menuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const iconOpen = document.getElementById('icon-open');
             const iconClose = document.getElementById('icon-close');
-            const body = document.body;
 
             menuBtn.addEventListener('click', () => {
-                const isOpen = mobileMenu.classList.toggle('active');
-                iconOpen.classList.toggle('hidden', isOpen);
-                iconClose.classList.toggle('hidden', !isOpen);
-                body.style.overflow = isOpen ? 'hidden' : '';
+                const isOpen = mobileMenu.classList.contains('translate-x-full');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
             });
 
+            // Close menu on link click
             const menuLinks = mobileMenu.querySelectorAll('a');
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
+                    mobileMenu.classList.add('translate-x-full');
                     iconOpen.classList.remove('hidden');
                     iconClose.classList.add('hidden');
-                    body.style.overflow = '';
+                    document.body.style.overflow = '';
                 });
             });
         });

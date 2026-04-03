@@ -35,38 +35,34 @@
         h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
         
         .glass-nav { 
-            background-color: rgba(252, 249, 243, 0.9); 
-            backdrop-filter: blur(20px); 
+            background-color: rgba(252, 249, 243, 0.8); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
             line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            word-wrap: normal;
-            white-space: nowrap;
-            direction: ltr;
         }
 
         #mobile-menu {
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .menu-open { overflow: hidden; }
     </style>
 </head>
 
-<body class="pt-20 selection:bg-secondary/20">
+<body class="pt-24 selection:bg-secondary/20">
 
-    <header class="fixed top-0 w-full z-[100] border-b border-outline-variant/20 glass-nav">
+    <header class="fixed top-0 w-full z-[100] border-b border-outline-variant/10 glass-nav">
         <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
             
-            <a href="index.html" class="flex items-center gap-4 z-[110]">
-                <img src="Logo.png" alt="Logo" class="h-12 w-auto object-contain">
+            <a href="index.html" class="flex items-center gap-4 z-[110] group">
+                <img src="Logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105">
                 
                 <div class="flex flex-col justify-center border-l border-primary/20 pl-4">
-                    <span class="text-primary font-headline font-bold text-sm md:text-base uppercase tracking-wider leading-tight">
+                    <span class="text-primary font-headline font-bold text-xs md:text-sm uppercase tracking-[0.2em] leading-tight">
                         Fotoboxverleih
                     </span>
                     <span class="text-secondary font-headline font-extrabold text-sm md:text-base uppercase tracking-wider leading-tight">
@@ -75,22 +71,22 @@
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a href="index.html" class="text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                <a href="leistungen.html" class="text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                <a href="kontakt.html" class="text-primary border-b-2 border-primary pb-1">Kontakt</a>
+            <nav class="hidden md:flex items-center gap-10 font-semibold text-[13px] uppercase tracking-widest">
+                <a href="index.html" class="text-secondary/60 hover:text-primary transition-colors">Startseite</a>
+                <a href="leistungen.html" class="text-secondary/60 hover:text-primary transition-colors">Leistungen</a>
+                <a href="kontakt.html" class="text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary">Kontakt</a>
             </nav>
 
-            <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-primary focus:outline-none">
+            <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-primary">
                 <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
             </button>
 
-            <div id="mobile-menu" class="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[105] flex flex-col items-center justify-center gap-8 translate-x-full md:hidden">
-                <a class="text-primary/60 text-3xl font-headline font-bold" href="index.html">Startseite</a>
-                <a class="text-primary/60 text-3xl font-headline font-bold" href="leistungen.html">Leistungen & Preise</a>
-                <a class="text-primary text-3xl font-headline font-bold border-b-4 border-primary" href="kontakt.html">Kontakt</a>
-                <div class="h-px w-20 bg-primary/20 my-4"></div>
-                <p class="text-secondary/60 text-xs uppercase tracking-widest font-bold">Lass uns feiern!</p>
+            <div id="mobile-menu" class="fixed inset-0 bg-background/95 backdrop-blur-xl z-[105] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none md:hidden">
+                <a class="text-secondary/40 text-3xl font-headline font-bold hover:text-primary transition-colors" href="index.html">Startseite</a>
+                <a class="text-secondary/40 text-3xl font-headline font-bold hover:text-primary transition-colors" href="leistungen.html">Leistungen</a>
+                <a class="text-primary text-3xl font-headline font-bold" href="kontakt.html">Kontakt</a>
+                <div class="h-px w-12 bg-primary/20 my-2"></div>
+                <p class="text-secondary/60 text-xs uppercase tracking-[0.3em] font-bold">Paparossi Fotobox</p>
             </div>
         </div>
     </header>
@@ -298,13 +294,13 @@
         const body = document.body;
 
         btn.addEventListener('click', () => {
-            const isHidden = menu.classList.contains('translate-x-full');
+            const isHidden = menu.classList.contains('opacity-0');
             if (isHidden) {
-                menu.classList.remove('translate-x-full');
+                menu.classList.remove('opacity-0', 'pointer-events-none');
                 icon.innerText = 'close';
                 body.classList.add('menu-open');
             } else {
-                menu.classList.add('translate-x-full');
+                menu.classList.add('opacity-0', 'pointer-events-none');
                 icon.innerText = 'menu';
                 body.classList.remove('menu-open');
             }
@@ -312,7 +308,7 @@
 
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('translate-x-full');
+                menu.classList.add('opacity-0', 'pointer-events-none');
                 icon.innerText = 'menu';
                 body.classList.remove('menu-open');
             });

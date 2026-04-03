@@ -44,16 +44,31 @@
             line-height: 1;
         }
 
-        /* Verhindert Scrollen bei offenem Menü */
+        /* Fix für das gelbe Autofill-Feld im Browser */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            -webkit-text-fill-color: #5c4304;
+            -webkit-box-shadow: 0 0 0px 1000px #fcf9f3 inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        /* Styling für das Datum-Icon */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(24%) sepia(85%) saturate(443%) hue-rotate(1deg) brightness(94%) contrast(94%);
+            cursor: pointer;
+        }
+
         .no-scroll { overflow: hidden; }
 
-        /* Das mobile Menü ist standardmäßig komplett unsichtbar und außerhalb des Layouts */
-        #mobile-menu {
-            display: none;
-        }
-        #mobile-menu.active {
-            display: flex;
-        }
+        #mobile-menu { display: none; }
+        #mobile-menu.active { display: flex; }
     </style>
 </head>
 
@@ -144,9 +159,9 @@
                             <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Gewünschtes Paket</label>
                             <select name="paket" class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
                                 <option value="Einsteiger">Einsteiger (ab 175€)</option>
-                                <option value="Klassik" selected>Klassik (ab 289€)</option>
+                                <option value="Klassik">Klassik (ab 289€)</option>
                                 <option value="Komplettpaket">Komplettpaket (ab 349€)</option>
-                                <option value="Individuell">Individuelle Anfrage</option>
+                                <option value="Individuell" selected>Individuelle Anfrage</option>
                             </select>
                         </div>
 
@@ -224,7 +239,7 @@
                         <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
                     </summary>
                     <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        In jedem Paket (außer Einsteiger) ist ein bunt gemischtes Set an hochwertigen Requisiten enthalten: Brillen, Hüte, Schilder und mehr. Auf Wunsch können wir die Requisiten auch an dein Event-Motto anpassen.
+                        In jedem Paket ist ein bunt gemischtes Set an hochwertigen Requisiten enthalten: Brillen, Hüte, Schilder und mehr. Auf Wunsch können wir Requisiten auch speziell für Euch mit unserem Laser auf Holz gestalten.
                     </div>
                 </details>
 
@@ -244,7 +259,7 @@
                         <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
                     </summary>
                     <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        Ja, in unseren Paketen ist ein Hintergrundsystem enthalten. Du kannst aus verschiedenen Designs (z.B. Holzoptik, Glitzer, Schlicht) wählen. Alternativ nutzen wir eine schöne Wand in deiner Location.
+                        Der Fotohintergrund ist nur im Komplett-Paket mit dabei. Für andere Pakete kannst du das Fotohintergrundsystem dazubuchen. Du kannst aus verschiedenen Designs (z.B. Holzoptik, Glitzer, Schlicht) wählen. Alternativ nutzen wir eine schöne Wand in deiner Location.
                     </div>
                 </details>
 
@@ -254,7 +269,7 @@
                         <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
                     </summary>
                     <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        Unsere Technik ist sehr zuverlässig. Sollte es dennoch zu einem unerwarteten Problem kommen, das wir telefonisch nicht lösen können, versuchen wir schnellstmöglich einen Vor-Ort-Service oder Ersatz zu stellen.
+                        Unsere Technik ist sehr zuverlässig. Sollte es dennoch zu einem unerwarteten Problem kommen, das wir telefonisch nicht lösen können, wird der Preis abhängig von der Art des Problems / Verschuldens Euch preislich entgegenkommen.
                     </div>
                 </details>
             </div>
@@ -262,25 +277,48 @@
     </main>
 
     <footer class="bg-white border-t border-outline-variant/20 py-16">
-        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 text-center md:text-left">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <h4 class="font-headline font-bold text-primary uppercase text-sm mb-4">Fotoboxverleih Roßkopf</h4>
-                    <p class="text-secondary/60 text-sm">Dein regionaler Partner für Partyspaß in Titting.</p>
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary">photo_camera</span>
+                        <h4 class="font-headline font-bold text-primary uppercase text-sm">Fotoboxverleih Roßkopf</h4>
+                    </div>
+                    <p class="text-secondary/60 text-sm">Dein regionaler Partner für professionellen Partyspaß in Titting und Umgebung.</p>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <h4 class="font-headline font-bold text-primary uppercase text-sm mb-2">Kontakt</h4>
-                    <p class="text-sm text-secondary/70">paparossi-fotobox@gmx.de</p>
-                    <p class="text-sm text-secondary/70">+49 1522 8494252</p>
+
+                <div class="flex flex-col items-center md:items-start gap-3">
+                    <h4 class="font-headline font-bold text-primary uppercase text-sm mb-2 border-b border-primary/10 pb-1 w-full md:w-auto text-center md:text-left">Kontakt</h4>
+                    <a href="mailto:paparossi-fotobox@gmx.de" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">mail</span> paparossi-fotobox@gmx.de
+                    </a>
+                    <a href="tel:+4915228494252" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">smartphone</span> +49 1522 8494252
+                    </a>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <h4 class="font-headline font-bold text-primary uppercase text-sm mb-2">Navigation</h4>
-                    <a href="index.html" class="text-sm text-secondary/70">Startseite</a>
-                    <a href="leistungen.html" class="text-sm text-secondary/70">Leistungen & Preise</a>
-                    <a href="rechtliches.html" class="text-sm text-secondary/70 underline">Impressum</a>
+
+                <div class="flex flex-col items-center md:items-start gap-3">
+                    <h4 class="font-headline font-bold text-primary uppercase text-sm mb-2 border-b border-primary/10 pb-1 w-full md:w-auto text-center md:text-left">Navigation</h4>
+                    <a href="index.html" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">home</span> Startseite
+                    </a>
+                    <a href="leistungen.html" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">shopping_bag</span> Leistungen & Preise
+                    </a>
+                    <a href="rechtliches.html" class="flex items-center gap-2 text-sm text-secondary/70 underline decoration-primary/20 underline-offset-4">
+                        <span class="material-symbols-outlined text-base">gavel</span> Impressum & Datenschutz
+                    </a>
                 </div>
             </div>
-            <p class="text-[10px] uppercase text-secondary/40 border-t pt-8">© 2026 Fotoboxverleih Roßkopf</p>
+            
+            <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] uppercase tracking-[0.3em] text-secondary/40 font-medium text-center">© 2026 Fotoboxverleih Roßkopf</p>
+                <div class="flex gap-4">
+                     <a href="https://www.instagram.com/paparossi_photobooth" target="_blank" class="text-secondary/40 hover:text-primary transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                     </a>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -302,7 +340,6 @@
 
         closeBtn.addEventListener('click', closeMenu);
 
-        // Schließen wenn Link im Menü geklickt wird
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });

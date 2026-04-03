@@ -29,28 +29,16 @@
         }
     </script>
     <style>
-        .glass-nav { background-color: rgba(252, 249, 243, 0.98); backdrop-filter: blur(20px); }
         .product-card { transition: all 0.3s ease; }
         .product-card:hover { transform: translateY(-5px); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        
-        /* Mobile Menu State */
-        #mobile-menu {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        #mobile-menu.active {
-            display: flex;
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body antialiased">
 
-    <header class="fixed top-0 w-full z-[100] border-b border-outline-variant/20 glass-nav">
-        <div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
-            <a class="flex items-center gap-3 z-[110]" href="index.html">
+    <header class="fixed top-0 w-full z-[100] bg-background/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+        <div class="flex justify-between items-center px-6 h-20 max-w-screen-2xl mx-auto relative z-20 bg-transparent">
+            <a class="flex items-center gap-3" href="index.html">
                 <img src="Logo.png" alt="Logo" class="h-10 w-auto object-contain">
                 <span class="font-headline font-bold text-sm md:text-lg tracking-tight text-primary uppercase">Fotoboxverleih Roßkopf</span>
             </a>
@@ -61,26 +49,31 @@
                 <a class="text-secondary/70 hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
             </nav>
 
-            <button id="menu-btn" class="md:hidden z-[110] p-2 text-primary">
-                <span id="menu-icon" class="material-symbols-outlined text-4xl">menu</span>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary focus:outline-none">
+                <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-0 bg-background flex-col items-center justify-center gap-12 z-[105] md:hidden">
-            <nav class="flex flex-col items-center gap-10 font-headline font-bold text-3xl uppercase tracking-widest text-center">
-                <a href="index.html" class="text-secondary/60 hover:text-primary">Startseite</a>
-                <a href="leistungen.html" class="text-primary">Leistungen</a>
-                <a href="kontakt.html" class="text-secondary/60 hover:text-primary">Kontakt</a>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-background border-b border-outline-variant/30 shadow-lg z-10">
+            <nav class="flex flex-col px-6 py-8 gap-6 font-headline font-bold text-xl uppercase tracking-widest text-center">
+                <a href="index.html" class="text-secondary/70 hover:text-primary block">Startseite</a>
+                <a href="leistungen.html" class="text-primary block">Leistungen</a>
+                <a href="kontakt.html" class="text-secondary/70 hover:text-primary block">Kontakt</a>
+                
+                <div class="h-px w-16 bg-primary/20 mx-auto mt-4 mb-2"></div>
+                <a href="rechtliches.html" class="text-secondary/40 text-xs font-semibold">Impressum & Datenschutz</a>
             </nav>
-            <div class="h-px w-24 bg-primary/20"></div>
-            <a href="rechtliches.html" class="text-secondary/40 text-sm uppercase tracking-widest font-bold">Impressum & Datenschutz</a>
         </div>
     </header>
 
-    <main class="pt-16">
-        <section class="relative h-[60vh] min-h-[450px] flex items-center overflow-hidden">
+    <main class="pt-20"> <section class="relative h-[60vh] min-h-[450px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img alt="Paparossi Fotobox" class="w-full h-full object-cover object-top" src="hero-leistungen.jpeg"/>
+                <img alt="Paparossi Fotobox Nahaufnahme" class="w-full h-full object-cover object-top" src="hero-leistungen.jpeg"/>
                 <div class="absolute inset-0 bg-black/50"></div> 
             </div>
             <div class="max-w-screen-2xl mx-auto px-8 w-full z-10">
@@ -107,22 +100,22 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">cloud_done</span>
-                        <h3 class="font-headline text-lg font-bold mb-2 text-primary text-balance">Digital-Flatrate</h3>
+                        <h3 class="font-headline text-lg font-bold mb-2 text-primary">Digital-Flatrate</h3>
                         <p class="text-sm text-secondary/70 leading-relaxed">Alle Fotos des Abends in voller Auflösung direkt digital gespeichert.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">photo_library</span>
-                        <h3 class="font-headline text-lg font-bold mb-2 text-primary text-balance">Online-Galerie</h3>
+                        <h3 class="font-headline text-lg font-bold mb-2 text-primary">Online-Galerie</h3>
                         <p class="text-sm text-secondary/70 leading-relaxed">Passwortgeschützter Zugang für dich und deine Gäste zum Download.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">theater_comedy</span>
-                        <h3 class="font-headline text-lg font-bold mb-2 text-primary text-balance">Profi-Requisiten</h3>
+                        <h3 class="font-headline text-lg font-bold mb-2 text-primary">Profi-Requisiten</h3>
                         <p class="text-sm text-secondary/70 leading-relaxed">Hochwertige Accessoires, die über das übliche Sortiment hinausgehen.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm">
                         <span class="material-symbols-outlined text-primary mb-4 text-4xl">local_shipping</span>
-                        <h3 class="font-headline text-lg font-bold mb-2 text-primary text-balance">Aufbau-Service</h3>
+                        <h3 class="font-headline text-lg font-bold mb-2 text-primary">Aufbau-Service</h3>
                         <p class="text-sm text-secondary/70 leading-relaxed">Wir kümmern uns um die Technik, damit du entspannt feiern kannst.</p>
                     </div>
                 </div>
@@ -130,84 +123,92 @@
         </section>
 
         <section class="py-20 px-8 max-w-screen-2xl mx-auto">
-            <div class="mb-12 text-center md:text-left">
+            <div class="mb-12">
                 <span class="text-secondary text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Ausstattungsdetails</span>
                 <h2 class="font-headline text-4xl font-extrabold text-primary">Paketoptionen & Add-ons</h2>
-                <div class="h-1 w-20 bg-primary mt-4 mx-auto md:mx-0"></div>
+                <div class="h-1 w-20 bg-primary mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="product-card">
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Fotoboxen" class="w-full h-full object-cover" src="unsere-fotoboxen.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 175€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 175€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Unsere Fotoboxen</h3>
-                    <p class="text-sm text-secondary/80 mt-2">High-End Hardware mit Canon Spiegelreflexkameras und Studioblitz.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">High-End Hardware mit Canon Spiegelreflexkameras und Studioblitz.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Requisiten" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Inklusive</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">Inklusive</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotorequisiten</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Hochwertige Accessoires für den perfekten Party-Look.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Accessoires für den perfekten Party-Look.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Hintergründe" class="w-full h-full object-cover" src="hintergrund.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 25€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotohintergründe</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Stabile Hintergrundsysteme in verschiedenen Premium-Looks.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Stabile Hintergrundsysteme in verschiedenen Premium-Looks.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="gaestebuch.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 40€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 40€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Audio Gästebuch</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Vintage-Telefon fängt emotionale Sprachnachrichten deiner Gäste ein.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Drucker" class="w-full h-full object-cover" src="drucker.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 50€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 50€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotodrucker</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Hochgeschwindigkeits-Drucker für Laborqualität vor Ort.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochgeschwindigkeits-Drucker für Laborqualität vor Ort.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Instax" class="w-full h-full object-cover" src="instax.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 25€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 25€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Sofortbildkamera</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Klassischer Retroschick für haptische Fotomomente.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Klassischer Retroschick für haptische Fotomomente.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Layouts" class="w-full h-full object-cover" src="layouts.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 10€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Individuelle Layouts</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Maßgeschneiderte Designs für deine Foto-Ausdrucke.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Maßgeschneiderte Designs für deine Foto-Ausdrucke.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Aufgaben" class="w-full h-full object-cover" src="aufgaben.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">ab 10€</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">ab 10€</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Fotoboxaufgaben</h3>
-                    <p class="text-sm text-secondary/80 mt-2">Kreative Aufgabenkarten, die das Eis brechen.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Kreative Aufgabenkarten, die das Eis brechen.</p>
                 </div>
-                <div class="product-card">
+
+                <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Zubehör" class="w-full h-full object-cover" src="zubehoer.jpg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold">Auf Anfrage</div>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md">Auf Anfrage</div>
                     </div>
                     <h3 class="font-headline text-xl font-bold text-primary">Weiteres Zubehör</h3>
-                    <p class="text-sm text-secondary/80 mt-2">LED-Beleuchtung, Event-Teppiche und vieles mehr.</p>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">LED-Beleuchtung, Event-Teppiche und vieles mehr.</p>
                 </div>
             </div>
 
@@ -261,31 +262,27 @@
     </footer>
 
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
 
-        menuBtn.addEventListener('click', () => {
-            const isActive = mobileMenu.classList.contains('active');
-            
-            if (isActive) {
-                mobileMenu.classList.remove('active');
-                menuIcon.innerText = 'menu';
-                document.body.style.overflow = 'auto';
-            } else {
-                mobileMenu.classList.add('active');
-                menuIcon.innerText = 'close';
-                document.body.style.overflow = 'hidden';
-            }
-        });
+            // Toggle Menü bei Klick auf Hamburger/X
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            });
 
-        // Schließen beim Klick auf Links
-        const navLinks = mobileMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuIcon.innerText = 'menu';
-                document.body.style.overflow = 'auto';
+            // Schließe Menü, wenn ein Link angeklickt wird
+            const navLinks = menu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
             });
         });
     </script>

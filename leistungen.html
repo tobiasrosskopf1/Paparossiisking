@@ -39,7 +39,7 @@
         
         .swiper { width: 100%; height: 100%; --swiper-theme-color: #ffffff; --swiper-navigation-size: 20px; }
         .swiper-button-next, .swiper-button-prev { background: rgba(0,0,0,0.3); border-radius: 50%; width: 30px; height: 30px; }
-        .swiper-button-next::after, .swiper-button-prev::after { font-weight: bold; }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 12px; font-weight: bold; }
         .swiper-pagination-bullet { background: #ffffff; opacity: 0.7; }
         .swiper-pagination-bullet-active { background: #5c4304; opacity: 1; }
     </style>
@@ -60,10 +60,10 @@
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden p-2 text-primary focus:outline-none">
-                <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-                <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -140,6 +140,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
                 <div class="product-card group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <img alt="Fotoboxen" class="w-full h-full object-cover" src="unsere-fotoboxen.jpeg"/>
@@ -153,8 +154,8 @@
                     <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img alt="Requisiten 1" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/></div>
-                                <div class="swiper-slide"><img alt="Requisiten 2" class="w-full h-full object-cover" src="fotorequisiten.jpeg/></div>
+                                <div class="swiper-slide"><img alt="Requisiten 1" class="w-full h-full object-cover" src="IMG_7293.jpg"/></div>
+                                <div class="swiper-slide"><img alt="Requisiten 2" class="w-full h-full object-cover" src="IMG_7294.jpg"/></div>
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="swiper-button-next"></div>
@@ -215,6 +216,34 @@
                     <h3 class="font-headline text-xl font-bold text-primary">Sofortbildkamera</h3>
                     <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Klassischer Retroschick für haptische Fotomomente.</p>
                 </div>
+
+                <div class="product-card group">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                        <img alt="USB Stick" class="w-full h-full object-cover" src="USB-Stick.jpeg"/>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">10€</div>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary">USB-Stick</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Alle Bilder direkt am Ende der Party auf einem hochwertigen USB-Stick.</p>
+                </div>
+
+                <div class="product-card group">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                        <img alt="Layout Design" class="w-full h-full object-cover" src="layout-design.jpeg"/>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Inklusive</div>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary">Individuelles Layout</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Personalisierte Fotovorgaben mit Namen, Datum oder Logos passend zu deinem Event.</p>
+                </div>
+
+                <div class="product-card group">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
+                        <img alt="Gästealbum" class="w-full h-full object-cover" src="gaestealbum.jpeg"/>
+                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 30€</div>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary">Gästealbum</h3>
+                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Alben zum Einkleben der gedruckten Fotos vor Ort.</p>
+                </div>
+
             </div>
 
             <div class="mt-16 p-6 bg-surface-container/50 rounded-2xl border border-outline-variant/20 flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto text-center md:text-left">
@@ -268,7 +297,6 @@
                     <a href="https://www.instagram.com/paparossi_photobooth?igsh=eWZxeTg2dGcwdTV6&utm_source=qr" 
                        target="_blank" 
                        class="group flex items-center gap-5 transition-all duration-300">
-                        
                         <div class="relative">
                             <div class="h-14 w-14 rounded-full border border-outline-variant/50 flex items-center justify-center z-10 relative group-hover:border-transparent transition-colors duration-500">
                                 <svg class="w-6 h-6 text-primary/70 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -276,14 +304,10 @@
                             </div>
                             <div class="absolute inset-0 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out shadow-lg"></div>
                         </div>
-
                         <div class="flex flex-col">
-                            <span class="text-lg font-headline font-bold text-primary group-hover:text-primary/100 transition-colors tracking-tight">
-                                @paparossi_photobooth
-                            </span>
+                            <span class="text-lg font-headline font-bold text-primary group-hover:text-primary/100 transition-colors tracking-tight">@paparossi_photobooth</span>
                             <span class="text-[11px] uppercase tracking-widest text-secondary/50 flex items-center gap-1 group-hover:text-secondary transition-colors">
-                                Inspiration & Momente 
-                                <span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">east</span>
+                                Inspiration & Momente <span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">east</span>
                             </span>
                         </div>
                     </a>
@@ -330,20 +354,11 @@
                 iconClose.classList.toggle('hidden');
             });
 
-            const navLinks = menu.querySelectorAll('a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                    iconOpen.classList.remove('hidden');
-                    iconClose.classList.add('hidden');
-                });
-            });
-
-            // Initialisiere alle Swiper-Instanzen
-            var swipers = new Swiper(".mySwiper", {
+            // Initialisiere Swiper
+            const swiper = new Swiper('.mySwiper', {
                 loop: true,
-                pagination: { el: ".swiper-pagination", clickable: true },
-                navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             });
         });
     </script>

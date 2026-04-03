@@ -55,36 +55,36 @@
 
 <body class="selection:bg-secondary/20">
 
-    <header class="fixed top-0 w-full z-[100] border-b border-outline-variant/10 glass-nav">
-        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
-            
-            <a href="index.html" class="flex items-center gap-4 z-[110]">
-                <img src="Logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
-                <div class="flex flex-col justify-center border-l border-primary/20 pl-4">
-                    <span class="text-primary font-headline font-bold text-xs md:text-sm uppercase tracking-widest leading-tight">Fotoboxverleih</span>
-                    <span class="text-secondary font-headline font-extrabold text-sm md:text-base uppercase tracking-wider leading-tight">Roßkopf</span>
-                </div>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a href="index.html" class="text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                <a href="leistungen.html" class="text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                <a href="kontakt.html" class="text-primary border-b-2 border-primary pb-1">Kontakt</a>
-            </nav>
-
-            <button id="mobile-menu-toggle" class="md:hidden z-[110] p-2 text-primary">
-                <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
-            </button>
-
-            <div id="mobile-menu" class="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[105] flex flex-col items-center justify-center gap-8 translate-x-full md:hidden">
-                <a class="text-primary/60 text-3xl font-headline font-bold" href="index.html">Startseite</a>
-                <a class="text-primary/60 text-3xl font-headline font-bold" href="leistungen.html">Leistungen & Preise</a>
-                <a class="text-primary text-3xl font-headline font-bold border-b-4 border-primary" href="kontakt.html">Kontakt</a>
-                <div class="h-px w-20 bg-primary/20 my-4"></div>
-                <p class="text-secondary/60 text-xs uppercase tracking-widest font-bold">Lass uns feiern!</p>
+<header class="fixed top-0 left-0 w-full z-[999] border-b border-outline-variant/10 glass-nav">
+    <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
+        
+        <a href="index.html" class="flex items-center gap-4 z-[1000] hover:opacity-80 transition-opacity">
+            <img src="Logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
+            <div class="flex flex-col justify-center border-l border-primary/20 pl-4">
+                <span class="text-primary font-headline font-bold text-xs md:text-sm uppercase tracking-widest leading-tight">Fotoboxverleih</span>
+                <span class="text-secondary font-headline font-extrabold text-sm md:text-base uppercase tracking-wider leading-tight">Roßkopf</span>
             </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm relative z-[1000]">
+            <a href="index.html" class="text-secondary/70 hover:text-primary transition-colors py-2">Startseite</a>
+            <a href="leistungen.html" class="text-secondary/70 hover:text-primary transition-colors py-2">Leistungen & Preise</a>
+            <a href="kontakt.html" class="text-primary border-b-2 border-primary pb-1">Kontakt</a>
+        </nav>
+
+        <button id="mobile-menu-toggle" class="md:hidden z-[1000] p-2 text-primary focus:outline-none">
+            <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-background/98 backdrop-blur-2xl z-[998] flex flex-col items-center justify-center gap-8 translate-x-full md:hidden">
+            <a href="index.html" class="text-primary/60 text-3xl font-headline font-bold">Startseite</a>
+            <a href="leistungen.html" class="text-primary/60 text-3xl font-headline font-bold">Leistungen & Preise</a>
+            <a href="kontakt.html" class="text-primary text-3xl font-headline font-bold border-b-4 border-primary">Kontakt</a>
+            <div class="h-px w-20 bg-primary/20 my-4"></div>
+            <p class="text-secondary/60 text-xs uppercase tracking-widest font-bold">Lass uns feiern!</p>
         </div>
-    </header>
+    </div>
+</header>
 
     <section class="relative h-[40vh] min-h-[350px] w-full flex items-center justify-center overflow-hidden">
    <img src="hero-kontakt.jpeg" alt="Kontakt Hero" class="absolute inset-0 w-full h-full object-cover object-bottom">

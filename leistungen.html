@@ -10,75 +10,51 @@
         @font-face {
             font-family: 'Inter';
             src: url('inter-v20-latin-300.woff2') format('woff2');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 300; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Inter';
             src: url('inter-v20-latin-regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 400; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Inter';
             src: url('inter-v20-latin-500.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 500; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Inter';
             src: url('inter-v20-latin-600.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 600; font-style: normal; font-display: swap;
         }
 
         /* --- PLUS JAKARTA SANS LOKAL --- */
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 400; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-500.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 500; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-600.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 600; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 700; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
-            font-weight: 800;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 800; font-style: normal; font-display: swap;
         }
 
-        /* Vorhandene Styles beibehalten */
-        .material-symbols-outlined {
-            display: inline-block;
-            line-height: 1;
-            vertical-align: middle;
-        }
         .glass-nav {
             background: rgba(28, 28, 24, 0.85);
             backdrop-filter: blur(20px);
@@ -140,7 +116,9 @@
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden p-2 text-primary relative z-[130]">
-                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
             </button>
         </div>
 
@@ -182,22 +160,22 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
-                        <span class="material-symbols-outlined text-primary mb-4 text-4xl">cloud_done</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-10 h-10 fill-primary mb-4 mx-auto md:mx-0"><path d="M240-160q-50 0-85-35t-35-85q0-50 35-85t85-35q11 0 21 2t20 7q25-60 80.5-94.5T480-440q59 0 106.5 31.5T655-325q14-8 29.5-11.5T720-340q50 0 85 35t35 85q0 50-35 85t-85 35H240Zm0-80h480q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-31 10t-25 26l-14 24-27-5q-12-3-24-4t-24-1q-40 0-72.5 21.5T460-192l-8 27-28-5q-7-1-14-1.5t-14-.5q-38 0-66 24t-31 62q0 2 1 4t1 4ZM480-480Z"/></svg>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Digital-Flatrate</h3>
                         <p class="text-sm text-secondary/70">Alle Fotos in voller Auflösung direkt digital gespeichert.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
-                        <span class="material-symbols-outlined text-primary mb-4 text-4xl">photo_library</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-10 h-10 fill-primary mb-4 mx-auto md:mx-0"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm80-80h120l-30-40-30 40Zm160 0h240l-60-80-60 80-60-80-60 80ZM160-240v-480 480Z"/></svg>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Online-Galerie</h3>
                         <p class="text-sm text-secondary/70">Persönlicher Link zur Cloud für dich und deine Gäste zum Download.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
-                        <span class="material-symbols-outlined text-primary mb-4 text-4xl">theater_comedy</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-10 h-10 fill-primary mb-4 mx-auto md:mx-0"><path d="M120-120v-80h80v-520q0-33 23.5-56.5T280-800h400q33 0 56.5 23.5T760-720v520h80v80H120Zm160-80h400v-520H280v520Zm160-360h80v-80h-80v80Zm0 120h80v-80h-80v80Zm0 120h80v-80h-80v80Z"/></svg>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Profi-Requisiten</h3>
                         <p class="text-sm text-secondary/70">Hochwertige Fotorequisiten, die über das übliche Sortiment hinausgehen.</p>
                     </div>
                     <div class="p-8 bg-white rounded-2xl border border-outline-variant/10 shadow-sm text-center md:text-left">
-                        <span class="material-symbols-outlined text-primary mb-4 text-4xl">local_shipping</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-10 h-10 fill-primary mb-4 mx-auto md:mx-0"><path d="M240-160q-33 0-56.5-23.5T160-240v-400q0-33 23.5-56.5T240-720h400l160 160v320q0 33-23.5 56.5T720-160H240Zm0-80h480v-287L607-640H240v400Zm240-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg>
                         <h3 class="font-headline text-lg font-bold mb-2 text-primary">Auf- & Abbau-Service</h3>
                         <p class="text-sm text-secondary/70">Wir kümmern uns um die Technik, damit du entspannt feiern kannst.</p>
                     </div>
@@ -205,166 +183,48 @@
             </div>
         </section>
 
-                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch mb-16">
+        <section class="py-16 px-8 max-w-screen-2xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch mb-16">
                 <div class="md:col-span-4 bg-surface-container p-10 rounded-xl flex flex-col border border-outline-variant/10">
                     <h4 class="font-headline text-2xl font-bold text-on-surface mb-2">Einsteiger</h4>
-                    <p class="text-on-surface-variant text-sm mb-8">Dein digitales Party-Upgrade – unbegrenzt Fotos, maximaler Spaß</p>
+                    <p class="text-on-surface-variant text-sm mb-8">Dein digitales Party-Upgrade</p>
                     <div class="text-3xl font-headline font-extrabold text-primary mb-10">ab 175€</div>
                     <ul class="space-y-5 mb-12 flex-grow">
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-primary">check</span>Digitale Fotoflatrate</li>
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-primary">check</span>Online Galerie</li>
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-primary">check</span>Auf- und Abbau inklusive</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-primary"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Digitale Fotoflatrate</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-primary"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Online Galerie</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-primary"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Auf- und Abbau inklusive</li>
                     </ul>
-                    <a href="leistungen.html" class="mt-auto w-full py-4 rounded-full border border-primary text-primary font-label font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-center block">weitere Informationen</a>
+                    <a href="kontakt.html" class="mt-auto w-full py-4 rounded-full border border-primary text-primary font-label font-bold text-xs uppercase text-center">Jetzt anfragen</a>
                 </div>
 
                 <div class="md:col-span-4 bg-gradient-to-br from-primary to-primary-container p-10 rounded-xl flex flex-col text-on-primary shadow-2xl scale-105 z-10 relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-on-primary text-primary px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-md">Beliebteste Wahl</div>
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-on-primary text-primary px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Beliebteste Wahl</div>
                     <h4 class="font-headline text-2xl font-bold mb-2">Klassik</h4>
-                    <p class="text-on-primary-container text-sm mb-8">Das volle Erlebnis – schießen, drucken und sofort mitnehmen</p>
+                    <p class="text-on-primary-container text-sm mb-8">Das volle Erlebnis – sofort drucken</p>
                     <div class="text-3xl font-headline font-extrabold mb-10 text-secondary-fixed">ab 289€</div>
                     <ul class="space-y-5 mb-12 flex-grow">
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-on-primary">check</span>Alle Einsteiger Leistungen</li>
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-on-primary">check</span>Fotodrucker inkl. 350 gedruckte Bilder (10x15)</li>
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-on-primary">check</span>Individuelles Drucklayout</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-white"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Alle Einsteiger Leistungen</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-white"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Drucker inkl. 350 Bilder</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-white"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Individuelles Layout</li>
                     </ul>
-                    <a href="leistungen.html" class="mt-auto w-full py-4 rounded-full bg-on-primary text-primary font-label font-bold text-xs uppercase tracking-widest shadow-xl hover:scale-105 transition-all text-center block">weitere Informationen</a>
+                    <a href="kontakt.html" class="mt-auto w-full py-4 rounded-full bg-on-primary text-primary font-label font-bold text-xs uppercase text-center shadow-xl">Jetzt anfragen</a>
                 </div>
 
                 <div class="md:col-span-4 bg-surface-container p-10 rounded-xl flex flex-col border border-outline-variant/10">
                     <h4 class="font-headline text-2xl font-bold text-on-surface mb-2">Komplettpaket</h4>
-                    <p class="text-on-surface-variant text-sm mb-8">Sorglos-Premium – das volle Programm inklusive Zubehör & Audio-Gästebuch</p>
+                    <p class="text-on-surface-variant text-sm mb-8">Sorglos-Premium mit Audio-Gästebuch</p>
                     <div class="text-3xl font-headline font-extrabold text-primary mb-10">ab 339€</div>
                     <ul class="space-y-5 mb-12 flex-grow">
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-primary">check</span>Alle Klassik Leistungen</li>
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-primary">check</span>Audio Gästebuch (Retro-Telefon)</li>
-                        <li class="flex items-start gap-3 text-sm leading-snug"><span class="material-symbols-outlined text-primary">check</span>Hintergrundsystem</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-primary"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Alle Klassik Leistungen</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-primary"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Audio Gästebuch</li>
+                        <li class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-primary"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg> Hintergrundsystem</li>
                     </ul>
-                    <a href="leistungen.html" class="mt-auto w-full py-4 rounded-full border border-primary text-primary font-label font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-center block">weitere Informationen</a>
-                </div>
-            </div>
-
-        <section class="py-20 px-8 max-w-screen-2xl mx-auto">
-            <div class="mb-12">
-                <span class="text-secondary text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Ausstattungsdetails</span>
-                <h2 class="font-headline text-4xl font-extrabold text-primary">Pakete individuell zusammenstellen</h2>
-                <div class="h-1 w-20 bg-primary mt-4"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Fotoboxen" class="w-full h-full object-cover" src="unsere-fotoboxen.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 175€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Unsere Fotoboxen</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Canon Spiegelreflexkameras, Studioblitz und Live-View, damit Ihr Euch optimal positionieren könnt.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <div class="swiper mySwiper h-full">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img alt="Requisiten 1" class="w-full h-full object-cover" src="fotorequisiten.jpeg"/></div>
-                                <div class="swiper-slide"><img alt="Requisiten 2" class="w-full h-full object-cover" src="requisiten 2.jpeg"/></div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-[15]">Inklusive</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Fotorequisiten</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Accessoires und lustige Gadgets für perfekte Partyfotos.</p>
-                </div>
-
-               <div class="product-card group">
-    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-        
-        <div class="swiper mySwiper h-full w-full">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img alt="Fotohintergrund 1" class="w-full h-full object-cover" src="hexagon.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="Fotohintergrund 2" class="w-full h-full object-cover" src="fotohintergrund1.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                    <img alt="Fotohintergrund 3" class="w-full h-full object-cover" src="pailietten-hintergrund.JPG"/>
-                </div>
-            </div>
-
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next !scale-75 !-right-1"></div>
-            <div class="swiper-button-prev !scale-75 !-left-1"></div>
-        </div>
-
-        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-20">
-            ab 25€
-        </div>
-    </div>
-
-    <h3 class="font-headline text-xl font-bold text-primary italic">Fotohintergründe</h3>
-    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Stabile Hintergrundsysteme in verschiedenen Looks verfügbar.</p>
-</div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Fotodrucker" class="w-full h-full object-cover" src="fotodrucker-citizen.JPG"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 50€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Fotodrucker</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Sofortausdrucke im Format 10x15 mit einer Druckzeit von ca. 10 Sekunden und ohne Medienwechsel.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Fotoboxaufgaben" class="w-full h-full object-cover" src="24 2.PNG"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">5€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Fotoboxaufgaben</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Kreative Aufgabenkarten, die das Eis brechen und für Abwechslung sorgen.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Individuelle Layouts" class="w-full h-full object-cover" src="layouts.png"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">10€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Individuelle Layouts</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Personalisierte Designs mit Namen und Datum passend zu deiner Feier.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                       <img alt="Sofortbildkamera" class="w-full h-full object-cover object-[center_100%]" src="sofortbildkamera.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">ab 25€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Sofortbildkamera</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Analoge Schnappschüsse als perfekte Ergänzung zur digitalen Box.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Audio Gästebuch" class="w-full h-full object-cover" src="audioguetbook.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">40€</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Audio-Gästebücher</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Lass deine Gäste emotionale Sprachnachrichten statt Texte hinterlassen.</p>
-                </div>
-
-                <div class="product-card group">
-                    <div class="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden mb-4 relative border border-outline-variant/20 shadow-sm">
-                        <img alt="Zubehör" class="w-full h-full object-cover" src="zubehoer.jpeg"/>
-                        <div class="absolute bottom-3 right-3 bg-primary text-white px-3 py-1 rounded text-sm font-bold shadow-md z-10">Preis n.A.</div>
-                    </div>
-                    <h3 class="font-headline text-xl font-bold text-primary italic">Weiteres Zubehör</h3>
-                    <p class="text-sm text-secondary/80 mt-2 leading-relaxed">Hochwertige Ergänzungen und alles, was deine Party abrundet.</p>
+                    <a href="kontakt.html" class="mt-auto w-full py-4 rounded-full border border-primary text-primary font-label font-bold text-xs uppercase text-center">Jetzt anfragen</a>
                 </div>
             </div>
 
             <div class="mt-16 p-6 bg-surface-container/50 rounded-2xl border border-outline-variant/20 flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto text-center md:text-left">
-                <span class="material-symbols-outlined text-primary text-4xl">local_shipping</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-10 h-10 fill-primary shrink-0"><path d="M240-160q-33 0-56.5-23.5T160-240v-400q0-33 23.5-56.5T240-720h400l160 160v320q0 33-23.5 56.5T720-160H240Zm0-80h480v-287L607-640H240v400Zm240-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg>
                 <p class="text-secondary/80 text-sm leading-relaxed">
                     <strong class="text-primary uppercase text-xs tracking-widest block mb-1">Anfahrt & Lieferung</strong>
                     Pro gefahrenen Kilometer ab <strong>85135 Titting (Ortsteil Altdorf)</strong> berechnen wir eine Fahrtkostenpauschale von <strong>0,40 Euro</strong>.
@@ -372,144 +232,63 @@
             </div>
         </section>
     </main>
-<footer class="bg-surface-container-highest border-t border-outline-variant/20 py-16">
-    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-        
-<div class="flex flex-col items-center mb-16 pb-16 border-b border-outline-variant/10 text-center">
-    <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-primary mb-6 italic tracking-tight">Lust auf unvergessliche Momente?</h3>
-    <a href="kontakt.html" class="bg-primary hover:bg-primary-container text-on-primary font-bold uppercase px-12 py-5 rounded-full transition-all shadow-xl hover:scale-105 active:scale-95 flex items-center gap-3 group">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-6 h-6 fill-current group-hover:animate-bounce">
-            <path d="M420-160v-520H200v-80h560v80H540v520h-120Zm52-328 74-74 74 74-74 74-74-74Zm-252 0 74-74 74 74-74 74-74-74Zm312-192 40-40 40 40-40 40-40-40Zm-120 0 40-40 40 40-40 40-40-40Z"/>
-            <path d="M180-120q-24 0-42-18t-18-42q0-24 18-42t42-18q24 0 42 18t18 42q0 24-18 42t-42 18Zm400-480L420-760l120-120 140 140-100 100Zm140 140L580-600l100-100 140 140-100 100ZM280-280l440-440 80 80-440 440-80-80Z"/>
-        </svg>
 
-        Jetzt anfragen
-    </a>
-</div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-12">
+    <footer class="bg-surface-container-highest border-t border-outline-variant/20 py-16">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
             
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="flex items-center gap-3 mb-6">
-                   <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-white">
-        <path d="M480-280q75 0 127.5-52.5T660-460q0-75-52.5-127.5T480-640q-75 0-127.5 52.5T300-460q0 75 52.5 127.5T480-280Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM160-160q-33 0-56.5-23.5T80-240v-440q0-33 23.5-56.5T160-760h126l74-80h240l74 80h126q33 0 56.5 23.5T880-680v440q0 33-23.5 56.5T800-160H160Z"/>
-    </svg>
-</div>
-                    <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Fotoboxverleih Roßkopf</span>
-                </div>
-                <div class="space-y-2">
-                    <a href="mailto:paparossi-fotobox@gmx.de" class="text-xs font-medium text-secondary/70 hover:text-primary flex items-center gap-2 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-4 h-4 fill-current">
-        <path d="M160-160q-33 0-56.5-23.5T80-240v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200Z"/>
-    </svg>
-    paparossi-fotobox@gmx.de
-</a>
-                    <a href="tel:+4915228494252" class="text-xs font-medium text-secondary/70 hover:text-primary flex items-center gap-2 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-4 h-4 fill-current">
-        <path d="M280-40v-880h400v880H280Zm80-160h240v-560H360v560Z"/>
-    </svg> 
-    +49 1522 8494252
-</a>
-                </div>
-            </div>
-
-            <div class="flex flex-col items-center md:items-start">
-                <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-8 border-b border-primary/10 pb-2">
-                    Folge uns auf Instagram
-                </h4>
-                
-                <a href="https://www.instagram.com/paparossi_photobooth?igsh=eWZxeTg2dGcwdTV6&utm_source=qr" 
-                   target="_blank" 
-                   class="group flex items-center gap-5 transition-all duration-300">
-                    
-                    <div class="relative">
-                        <div class="h-14 w-14 rounded-full border border-outline-variant/50 flex items-center justify-center z-10 relative group-hover:border-transparent transition-colors duration-500">
-                            <svg class="w-6 h-6 text-primary/70 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out shadow-lg"></div>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <span class="text-lg font-headline font-bold text-primary group-hover:text-primary/100 transition-colors tracking-tight">
-                            @paparossi_photobooth
-                        </span>
-                        <span class="text-[11px] uppercase tracking-widest text-secondary/50 flex items-center gap-1 group-hover:text-secondary transition-colors">
-                            Inspiration & Momente 
-                            <span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">east</span>
-                        </span>
-                    </div>
+            <div class="flex flex-col items-center mb-16 pb-16 border-b border-outline-variant/10 text-center">
+                <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-primary mb-6 italic tracking-tight">Lust auf unvergessliche Momente?</h3>
+                <a href="kontakt.html" class="bg-primary hover:bg-primary-container text-on-primary font-bold uppercase px-12 py-5 rounded-full transition-all shadow-xl hover:scale-105 active:scale-95 flex items-center gap-3 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-6 h-6 fill-current group-hover:animate-bounce">
+                        <path d="M180-120q-24 0-42-18t-18-42q0-24 18-42t42-18q24 0 42 18t18 42q0 24-18 42t-42 18Zm400-480L420-760l120-120 140 140-100 100Zm140 140L580-600l100-100 140 140-100 100ZM280-280l440-440 80 80-440 440-80-80Z"/>
+                    </svg>
+                    Jetzt anfragen
                 </a>
             </div>
 
-            <div class="flex flex-col items-center md:items-start gap-4">
-                <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-2 border-b border-primary/10 pb-2">Navigation</h4>
-                <nav class="flex flex-col items-center md:items-start gap-3">
-                    <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Startseite
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-12">
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-white"><path d="M480-280q75 0 127.5-52.5T660-460q0-75-52.5-127.5T480-640q-75 0-127.5 52.5T300-460q0 75 52.5 127.5T480-280Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM160-160q-33 0-56.5-23.5T80-240v-440q0-33 23.5-56.5T160-760h126l74-80h240l74 80h126q33 0 56.5 23.5T880-680v440q0 33-23.5 56.5T800-160H160Z"/></svg>
+                        </div>
+                        <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Fotoboxverleih Roßkopf</span>
+                    </div>
+                    <div class="space-y-2 text-sm text-secondary/70">
+                        <p>paparossi-fotobox@gmx.de</p>
+                        <p>+49 1522 8494252</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-4">Instagram</h4>
+                    <a href="https://www.instagram.com/paparossi_photobooth" target="_blank" class="flex items-center gap-2 group">
+                        <div class="p-2 border border-primary/20 rounded-full group-hover:bg-primary group-hover:text-white transition-all">
+                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
+                        <span class="text-sm font-bold text-primary">@paparossi_photobooth</span>
                     </a>
-                    <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Leistungen & Preise
-                    </a>
-                    <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Kontakt
-                    </a>
-                    <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline decoration-primary/20 underline-offset-8 flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Impressum & Datenschutz
-                    </a>
-                </nav>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-4">Navigation</h4>
+                    <nav class="flex flex-col gap-2 text-sm text-secondary/70">
+                        <a href="index.html" class="hover:text-primary transition-colors">Startseite</a>
+                        <a href="leistungen.html" class="hover:text-primary transition-colors">Leistungen</a>
+                        <a href="kontakt.html" class="hover:text-primary transition-colors">Kontakt</a>
+                        <a href="rechtliches.html" class="hover:text-primary transition-colors font-bold">Impressum & Datenschutz</a>
+                    </nav>
+                </div>
             </div>
         </div>
+    </footer>
 
-        <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-secondary/40 text-[10px] uppercase tracking-[0.3em] font-medium">
-                © 2026 Fotoboxverleih Roßkopf - Alle Rechte vorbehalten
-            </p>
-        </div>
-    </div>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const swiper = new Swiper('.mySwiper', {
-                loop: true,
-                pagination: { el: '.swiper-pagination', clickable: true },
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            });
-
-            // FINAL FIX MOBILE MENU
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-
-            menuBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const isHidden = mobileMenu.classList.contains('hidden');
-                
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    mobileMenu.classList.add('flex');
-                    menuIcon.innerText = 'close';
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                    menuIcon.innerText = 'menu';
-                    document.body.style.overflow = '';
-                }
-            });
-
-            // Schließen bei Klick auf Link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                    menuIcon.innerText = 'menu';
-                    document.body.style.overflow = '';
-                });
-            });
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
         });
     </script>
 </body>

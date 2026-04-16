@@ -3,46 +3,126 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Leistungen & Technik - Fotoboxverleih Roßkopf</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Paparossi Fotobox - Fotoboxverleih Roßkopf</title>
 
-    <script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#5c4304",
-                        "secondary": "#765a1c",
-                        "background": "#fcf9f3",
-                        "surface-container": "#f0eee8",
-                        "surface-container-highest": "#e6e1d6",
-                        "on-surface": "#1c1c18",
-                        "on-primary": "#ffffff",
-                        "outline-variant": "#d1c5b4"
-                    },
-                    fontFamily: {
-                        "headline": ["Plus Jakarta Sans"],
-                        "body": ["Inter"]
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        .product-card { transition: all 0.3s ease; }
-        .product-card:hover { transform: translateY(-5px); }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        
-        .swiper { width: 100%; height: 100%; --swiper-theme-color: #ffffff; --swiper-navigation-size: 20px; }
-        .swiper-button-next, .swiper-button-prev { background: rgba(0,0,0,0.3); border-radius: 50%; width: 30px; height: 30px; }
-        .swiper-button-next::after, .swiper-button-prev::after { font-size: 12px; font-weight: bold; }
-        .swiper-pagination-bullet { background: #ffffff; opacity: 0.7; }
-        .swiper-pagination-bullet-active { background: #5c4304; opacity: 1; }
+        /* --- INTER LOKAL --- */
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter-v20-latin-300.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter-v20-latin-regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter-v20-latin-500.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter-v20-latin-600.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- PLUS JAKARTA SANS LOKAL --- */
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            src: url('plus-jakarta-sans-v12-latin-500.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            src: url('plus-jakarta-sans-v12-latin-600.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            src: url('plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Vorhandene Styles beibehalten */
+        .material-symbols-outlined {
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(28, 28, 24, 0.85);
+            backdrop-filter: blur(20px);
+        }
+        .text-shadow-premium {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
     </style>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "primary": "#5c4304",
+                  "primary-container": "#765a1c",
+                  "on-primary": "#ffffff",
+                  "secondary": "#765a1c",
+                  "secondary-fixed": "#ffdea3",
+                  "secondary-fixed-dim": "#e7c179",
+                  "background": "#fcf9f3",
+                  "on-background": "#1c1c18",
+                  "surface": "#fcf9f3",
+                  "on-surface": "#1c1c18",
+                  "on-surface-variant": "#4d4639",
+                  "surface-container": "#f0eee8",
+                  "surface-container-low": "#f6f3ed",
+                  "surface-container-highest": "#e5e2dc",
+                  "surface-container-lowest": "#ffffff",
+                  "outline-variant": "#d1c5b4",
+                  "primary-fixed-dim": "#e7c179"
+                },
+                fontFamily: {
+                  "headline": ["Plus Jakarta Sans", "sans-serif"],
+                  "body": ["Inter", "sans-serif"],
+                  "label": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+    </script>
 </head>
 <body class="bg-background text-on-surface font-body antialiased overflow-x-hidden">
 

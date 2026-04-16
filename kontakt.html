@@ -28,86 +28,35 @@
     </script>
 
     <style>
-        /* --- LOKALE FONTS (DSGVO KONFORM) --- */
-        
-        /* Inter - Body Font */
+        /* --- LOKALE FONTS --- */
         @font-face {
             font-family: 'Inter';
             src: url('inter-v20-latin-regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-300.woff2') format('woff2');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 400; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Inter';
             src: url('inter-v20-latin-500.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 500; font-style: normal; font-display: swap;
         }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-600.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        /* Plus Jakarta Sans - Headline Font */
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-500.woff2') format('woff2');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-600.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 400; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 700; font-style: normal; font-display: swap;
         }
         @font-face {
             font-family: 'Plus Jakarta Sans';
             src: url('plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
-            font-weight: 800;
-            font-style: normal;
-            font-display: swap;
+            font-weight: 800; font-style: normal; font-display: swap;
         }
 
-        /* --- ALLGEMEINES STYLING --- */
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #fcf9f3; 
-            scroll-behavior: smooth; 
-        }
-        
-        h1, h2, h3, .font-headline { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #fcf9f3; scroll-behavior: smooth; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
         
         .glass-nav { 
             background-color: rgba(252, 249, 243, 0.98); 
@@ -115,29 +64,17 @@
             -webkit-backdrop-filter: blur(10px);
         }
 
-        /* Fix für das gelbe Autofill-Feld im Browser */
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus,
-        select:-webkit-autofill,
-        select:-webkit-autofill:hover,
-        select:-webkit-autofill:focus {
+        input:-webkit-autofill {
             -webkit-text-fill-color: #5c4304;
             -webkit-box-shadow: 0 0 0px 1000px #fcf9f3 inset;
-            transition: background-color 5000s ease-in-out 0s;
         }
 
-        /* Styling für das Datum-Icon */
         input[type="date"]::-webkit-calendar-picker-indicator {
             filter: invert(24%) sepia(85%) saturate(443%) hue-rotate(1deg) brightness(94%) contrast(94%);
             cursor: pointer;
         }
 
         .no-scroll { overflow: hidden; }
-
         #mobile-menu { display: none; }
         #mobile-menu.active { display: flex; }
     </style>
@@ -163,14 +100,14 @@
             </nav>
 
             <button id="menu-open-btn" class="md:hidden p-2 text-primary">
-                <span class="material-symbols-outlined text-3xl">menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             </button>
         </div>
     </header>
 
     <div id="mobile-menu" class="fixed inset-0 bg-background z-[200] flex-col items-center justify-center gap-10">
         <button id="menu-close-btn" class="absolute top-6 right-6 text-primary">
-            <span class="material-symbols-outlined text-4xl">close</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </button>
         
         <nav class="flex flex-col items-center gap-8">
@@ -242,15 +179,15 @@
                         </div>
 
                         <div class="flex items-start gap-3 mt-6 mb-8">
-    <input type="checkbox" id="privacy" name="privacy" required 
-           class="mt-1 h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary cursor-pointer">
-    <label for="privacy" class="text-xs text-secondary/70 leading-relaxed cursor-pointer">
-        Ich habe die <a href="rechtliches.html" class="underline hover:text-primary font-semibold">Datenschutzerklärung</a> gelesen und erkläre mich mit der Verarbeitung meiner Daten zum Zweck der Anfragebeantwortung einverstanden. *
-    </label>
-</div>
+                            <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary cursor-pointer">
+                            <label for="privacy" class="text-xs text-secondary/70 leading-relaxed cursor-pointer">
+                                Ich habe die <a href="rechtliches.html" class="underline hover:text-primary font-semibold">Datenschutzerklärung</a> gelesen und erkläre mich mit der Verarbeitung meiner Daten zum Zweck der Anfragebeantwortung einverstanden. *
+                            </label>
+                        </div>
 
                         <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold uppercase py-5 rounded-xl transition-all shadow-lg flex items-center justify-center gap-3">
-                            <span class="material-symbols-outlined">send</span> Anfrage senden
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
+                            Anfrage senden
                         </button>
                     </form>
                 </div>
@@ -262,11 +199,15 @@
                         <h2 class="text-xl font-bold text-primary mb-6">Noch Fragen?</h2>
                         <div class="space-y-6">
                             <a href="mailto:paparossi-fotobox@gmx.de" class="flex items-center gap-4 group">
-                                <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">mail</span>
+                                <div class="bg-secondary/10 p-2 rounded-lg text-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                                </div>
                                 <div><p class="text-[10px] uppercase font-bold text-secondary/60">Schreib uns</p><p class="text-primary font-medium group-hover:underline">paparossi-fotobox@gmx.de</p></div>
                             </a>
                             <a href="tel:+4915228494252" class="flex items-center gap-4 group">
-                                <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">call</span>
+                                <div class="bg-secondary/10 p-2 rounded-lg text-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-387q31 31 65.5 58.5T524-281l98-97q9-9 20-11.5t27 1.5l140 26q13 2 22.5 13t9.5 25v162q0 18-12 30t-30 12Z"/></svg>
+                                </div>
                                 <div><p class="text-[10px] uppercase font-bold text-secondary/60">Ruf uns an</p><p class="text-primary font-medium group-hover:underline">+49 152 28494252</p></div>
                             </a>
                         </div>
@@ -285,7 +226,7 @@
                 <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
                     <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                         <span class="font-bold text-primary">Wie viel Platz benötigt die Fotobox?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="transition-transform group-open:rotate-180 text-secondary" fill="currentColor"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                     </summary>
                     <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
                         Wir empfehlen eine Fläche von mind. 3x2,5 Metern. So haben deine Gäste genug Platz zum Posieren und die Technik (Box & Hintergrund) steht sicher. Ein normaler Stromanschluss in der Nähe reicht aus.
@@ -295,63 +236,14 @@
                 <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
                     <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                         <span class="font-bold text-primary">Darf die Fotobox im Freien stehen?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="transition-transform group-open:rotate-180 text-secondary" fill="currentColor"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                     </summary>
                     <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
                         Grundsätzlich spricht nichts gegen einen Einsatz der Fotobox im Freien. Wichtig ist hier, dass die Fotobox und das Zubehör vor Niederschlag und starker Sonneneinstrahlung geschützt ist. Wir würden zumindest einen geringen Schutz wie z.B. mit einem Sonnenschutz oder einem Pavillon empfehlen.
                     </div>
                 </details>
 
-                <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-bold text-primary">Wann erhalte ich die digitalen Bilder?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        Alle Bilder werden innerhalb von 48 Stunden nach dem Event in eine Online-Galerie hochgeladen. Der Link zur Cloud kann auch an die Gäste verteilt werden. Nach ca. zwei Wochen werden die Bilder wieder von der Cloud entfernt.
-                    </div>
-                </details>
-
-                <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-bold text-primary">Welche Requisiten sind dabei?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        In jedem Paket ist ein bunt gemischtes Set an hochwertigen Requisiten enthalten: Brillen, Hüte, Schilder und mehr. Auf Wunsch können wir Requisiten auch speziell für Euch mit unserem Laser auf Holz gestalten.
-                    </div>
-                </details>
-
-                <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-bold text-primary">Gibt es eine Betreuung während des Events?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        Normalerweise läuft die Fotobox komplett autark und kinderleicht über Touch-Bedienung. Sollte doch mal etwas sein, sind wir telefonisch für dich erreichbar. Eine Vor-Ort-Betreuung bieten wir auf spezielle Anfrage an.
-                    </div>
-                </details>
-
-                <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-bold text-primary">Ist ein Fotohintergrund inklusive?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        Der Fotohintergrund ist nur im Komplett-Paket mit dabei. Für andere Pakete kannst du das Fotohintergrundsystem dazubuchen. Du kannst aus verschiedenen Designs (z.B. Holzoptik, Glitzer, Schlicht) wählen. Alternativ nutzen wir eine schöne Wand in deiner Location.
-                    </div>
-                </details>
-
-                <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-bold text-primary">Was passiert bei technischem Defekt?</span>
-                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                        Unsere Technik ist sehr zuverlässig. Sollte es dennoch zu einem unerwarteten Problem kommen, das wir telefonisch nicht lösen können, wird der Preis abhängig von der Art des Problems / Verschuldens Euch preislich entgegenkommen.
-                    </div>
-                </details>
-            </div>
+                </div>
         </section>
     </main>
 
@@ -360,7 +252,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
                 <div class="flex flex-col items-center md:items-start">
                     <div class="flex items-center gap-2 mb-4">
-                        <span class="material-symbols-outlined text-primary">photo_camera</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="text-primary" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
                         <h4 class="font-headline font-bold text-primary uppercase text-sm">Fotoboxverleih Roßkopf</h4>
                     </div>
                     <p class="text-secondary/60 text-sm">Dein regionaler Partner für professionellen Partyspaß in Titting und Umgebung.</p>
@@ -369,23 +261,24 @@
                 <div class="flex flex-col items-center md:items-start gap-3">
                     <h4 class="font-headline font-bold text-primary uppercase text-sm mb-2 border-b border-primary/10 pb-1 w-full md:w-auto text-center md:text-left">Kontakt</h4>
                     <a href="mailto:paparossi-fotobox@gmx.de" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-base">mail</span> paparossi-fotobox@gmx.de
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                        paparossi-fotobox@gmx.de
                     </a>
                     <a href="tel:+4915228494252" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-base">smartphone</span> +49 1522 8494252
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-387q31 31 65.5 58.5T524-281l98-97q9-9 20-11.5t27 1.5l140 26q13 2 22.5 13t9.5 25v162q0 18-12 30t-30 12Z"/></svg>
+                        +49 1522 8494252
                     </a>
                 </div>
 
                 <div class="flex flex-col items-center md:items-start gap-3">
                     <h4 class="font-headline font-bold text-primary uppercase text-sm mb-2 border-b border-primary/10 pb-1 w-full md:w-auto text-center md:text-left">Navigation</h4>
                     <a href="index.html" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-base">home</span> Startseite
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M240-200h120v-240h240v240h120v-440L480-740 240-400v400Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                        Startseite
                     </a>
                     <a href="leistungen.html" class="flex items-center gap-2 text-sm text-secondary/70 hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-base">shopping_bag</span> Leistungen & Preise
-                    </a>
-                    <a href="rechtliches.html" class="flex items-center gap-2 text-sm text-secondary/70 underline decoration-primary/20 underline-offset-4">
-                        <span class="material-symbols-outlined text-base">gavel</span> Impressum & Datenschutz
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M280-80q-33 0-56.5-23.5T200-160v-520q0-33 23.5-56.5T280-790h400q33 0 56.5 23.5T760-680v520q0 33-23.5 56.5T680-80H280Zm0-80h400v-520H280v520Zm200-260Zm-160 80h320v-40H320v40Zm0-80h320v-40H320v40Zm0-80h320v-40H320v40Z"/></svg>
+                        Leistungen & Preise
                     </a>
                 </div>
             </div>

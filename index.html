@@ -75,10 +75,9 @@ p{margin:0 0 18px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 22px}
 .hero .btn-outline{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.08)}
 .hero .btn-outline:hover{background:rgba(255,255,255,.18)}
-.hero-points{display:flex;flex-wrap:wrap;gap:18px;color:rgba(255,255,255,.78);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
 
 .usps{background:var(--surface2);border-top:1px solid rgba(209,197,180,.25);border-bottom:1px solid rgba(209,197,180,.25);padding:55px 0}
-.usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.usp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
 .usp{text-align:center}
 .icon{width:44px;height:44px;margin:0 auto 14px;color:var(--gold)}
 .icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -113,14 +112,15 @@ p{margin:0 0 18px}
 .feature-list h3{font-size:1.08rem;margin-bottom:6px}
 .feature-list p{font-size:.9rem;color:var(--muted);margin:0}
 
-.accessories{background:var(--bg)}
-.accessory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.accessories{background:var(--bg);padding:70px 0}
+.accessories .center-head{margin-bottom:38px}
+.accessory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .accessory{background:#fff;border:1px solid rgba(209,197,180,.35);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 25px rgba(28,28,24,.05);transition:.22s ease}
 .accessory:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(28,28,24,.1)}
-.accessory img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.accessory-body{padding:24px;display:flex;flex-direction:column;flex:1}
-.accessory-body h3{font-size:1.25rem;margin-bottom:8px}
-.accessory-body p{font-size:.86rem;color:var(--muted);margin-bottom:18px}
+.accessory img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.accessory-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.accessory-body h3{font-size:1.08rem;margin-bottom:7px}
+.accessory-body p{font-size:.82rem;color:var(--muted);margin-bottom:14px}
 .accessory-link{margin-top:auto;color:var(--gold);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
 .accessory-link:hover{text-decoration:underline}
 .accessory-note{margin-top:30px;padding:22px 25px;border-radius:16px;background:var(--surface2);border:1px solid rgba(209,197,180,.35);text-align:center}
@@ -136,7 +136,7 @@ p{margin:0 0 18px}
 .occasion-link{display:inline-flex;align-items:center;gap:7px;color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
 .occasion-link:hover{text-decoration:underline}
 
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
 .step{text-align:center}
 .step-number{font-family:"Plus Jakarta Sans";font-size:2.6rem;font-weight:800;color:var(--gold)}
 .step h3{font-size:1.1rem;margin:8px 0}
@@ -283,11 +283,6 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <a class="btn btn-primary" href="kontakt.html">Verfügbarkeit anfragen</a>
       <a class="btn btn-outline" href="#pakete">Pakete ansehen</a>
     </div>
-    <div class="hero-points">
-      <span>✓ Sofortdruck</span>
-      <span>✓ Online-Galerie</span>
-      <span>✓ Persönlicher Service</span>
-    </div>
   </div>
 </section>
 
@@ -296,6 +291,10 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     <div class="usp">
       <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 8h14v11H5z"/><circle cx="12" cy="13.5" r="3"/><path d="M8 8l1.2-2h5.6L16 8"/></svg></div>
       <h3>Hochwertige Fotos</h3><p>Professionelle Technik für natürliche und schöne Erinnerungen.</p>
+    </div>
+    <div class="usp">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 3h12v5H6zM4 8h16v9h-3v4H7v-4H4zM9 14h6v5H9z"/><path d="M17 11h.01"/></svg></div>
+      <h3>Sofortdruck</h3><p>Hochwertige Ausdrucke direkt auf der Feier und sofort zum Mitnehmen.</p>
     </div>
     <div class="usp">
       <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.7 5.2H19l-4.3 3.1 1.7 5.2-4.4-3.2-4.4 3.2 1.7-5.2L5 8.2h5.3z"/></svg></div>
@@ -338,7 +337,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <h3>Premium-Komplettpaket</h3>
         <p class="muted">Sorglos-Premium – das volle Programm inklusive Zubehör & Audio-Gästebuch.</p>
         <div class="price">ab 449 €</div>
-        <ul><li>Alle Klassik-Leistungen</li><li>Druckflatrate ohne Limit</li><li>Audio-Gästebuch (Retro-Telefon)</li><li>Hintergrundsystem</li><li>Premium Service</li></ul>
+        <ul><li>Alle Klassik-Leistungen</li><li>Druckflatrate ohne Limit</li><li>Audio-Gästebuch (Retro-Telefon)</li><li>Hintergrundsystem</li><li>Fotoaufgaben</li><li>Premium Service</li></ul>
         <a class="btn btn-outline" href="leistungen.html#premium">Weitere Informationen</a>
       </article>
     </div>
@@ -380,7 +379,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <img src="audio-gaestebuch.webp" alt="Audio Gästebuch mit Retro-Telefon für Hochzeiten und Feiern" loading="lazy">
         <div class="accessory-body">
           <h3>Audio-Gästebuch</h3>
-          <p>Persönliche Sprachnachrichten statt klassischer Gästebucheinträge – eure Gäste hinterlassen Wünsche, Grüße und lustige Erinnerungen.</p>
+          <p>Persönliche Wünsche, Grüße und lustige Sprachnachrichten eurer Gäste als bleibende Erinnerung.</p>
           <a class="accessory-link" href="audio-gaestebuch-mieten.html">Audio-Gästebuch entdecken →</a>
         </div>
       </article>
@@ -388,18 +387,36 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <article class="accessory">
         <img src="hexagon.webp" alt="Hexagon Dekoration als besonderes Event-Zubehör" loading="lazy">
         <div class="accessory-body">
-          <h3>Hexagon</h3>
-          <p>Ein besonderer Hingucker für eure Location und eine stilvolle Ergänzung rund um die Fotobox und eure Dekoration.</p>
-          <a class="accessory-link" href="fotobox-extras.html#hintergruende">Hexagon entdecken →</a>
+          <h3>Hintergründe & Hexagon</h3>
+          <p>Eine passende Kulisse schafft einen einheitlichen Look und macht die Fotofläche zum Blickfang.</p>
+          <a class="accessory-link" href="fotobox-extras.html#hintergruende">Kulissen entdecken →</a>
         </div>
       </article>
 
       <article class="accessory">
-        <img src="hintergrundsystem.webp" alt="Fotohintergrundsystem für eine Fotobox auf einer Feier" loading="lazy">
+        <img src="fotorequisiten.webp" alt="Individuell gelaserte Holz-Fotorequisiten für die Fotobox" loading="lazy">
         <div class="accessory-body">
-          <h3>Hintergrundsysteme</h3>
-          <p>Mit einem passenden Hintergrund bekommt eure Fotobox eine eigene Bühne und eure Bilder einen einheitlichen Look.</p>
-          <a class="accessory-link" href="fotobox-extras.html#hintergruende">Hintergründe ansehen →</a>
+          <h3>Gelaserte Holz-Fotorequisiten</h3>
+          <p>Meine individuell gelaserten Holz-Fotorequisiten sorgen für kreative Posen und passen hochwertig zur Fotobox.</p>
+          <a class="accessory-link" href="leistungen.html#ausstattung">Ausstattung ansehen →</a>
+        </div>
+      </article>
+
+      <article class="accessory">
+        <img src="fotoaufgaben.webp" alt="Kreative Fotoaufgaben für Hochzeiten und Veranstaltungen" loading="lazy">
+        <div class="accessory-body">
+          <h3>Fotoaufgaben</h3>
+          <p>Kreative Aufgaben bringen Gäste zusammen und sorgen für abwechslungsreiche Bilder. Einzeln 10 €, im Premium-Paket inklusive.</p>
+          <a class="accessory-link" href="fotobox-extras.html#fotoaufgaben">Fotoaufgaben entdecken →</a>
+        </div>
+      </article>
+
+      <article class="accessory">
+        <img src="zubehoer-neonschild.webp" alt="Neonschild und dekorative Schilder für die Fotobox" loading="lazy">
+        <div class="accessory-body">
+          <h3>Schilder & Neonschilder</h3>
+          <p>Leuchtende und dekorative Schilder setzen Akzente und ergänzen eure Fotobox-Kulisse.</p>
+          <a class="accessory-link" href="fotobox-extras.html#neonschilder">Schilder entdecken →</a>
         </div>
       </article>
 
@@ -407,7 +424,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <img src="sofortbildkamera.webp" alt="Sofortbildkamera für Hochzeiten und Events" loading="lazy">
         <div class="accessory-body">
           <h3>Sofortbildkameras</h3>
-          <p>Analoge Erinnerungen zum Anfassen: Gäste fotografieren selbst und nehmen ihre Sofortbilder direkt mit.</p>
+          <p>Analoge Erinnerungen zum Anfassen, die eure Gäste direkt mitnehmen oder ins Gästebuch kleben können.</p>
           <a class="accessory-link" href="leistungen.html#ausstattung">Sofortbildkameras entdecken →</a>
         </div>
       </article>
@@ -445,15 +462,15 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     </div>
     <div class="occasion-grid">
       <article class="occasion">
-        <img src="anlass-hochzeit.webp" alt="Fotobox bei einer stilvollen Hochzeit" loading="lazy">
+        <img src="Fotobox-Hochzeit.webp" alt="Weiße Fotobox bei einer stilvollen Hochzeit mit festlicher Ballon- und Holzdekoration" loading="lazy">
         <div class="occasion-body"><h3>Hochzeit</h3><p>Für euren großen Tag und eure Gäste: spontane Fotos, viel Freude und Erinnerungen, die bleiben.</p><a class="occasion-link" href="kontakt.html">Hochzeit anfragen →</a></div>
       </article>
       <article class="occasion">
-        <img src="anlass-geburtstag.webp" alt="Fotobox bei einer fröhlichen Geburtstagsparty" loading="lazy">
+        <img src="Fotobox-Geburtstag1.webp" alt="Fotobox bei einer festlich beleuchteten Geburtstagsparty" loading="lazy">
         <div class="occasion-body"><h3>Geburtstag</h3><p>Ob runder Geburtstag oder große Party – die Fotobox sorgt für Spaß, lockere Stimmung und unvergessliche Schnappschüsse.</p><a class="occasion-link" href="kontakt.html">Geburtstag anfragen →</a></div>
       </article>
       <article class="occasion">
-        <img src="anlass-firmenfeier.webp" alt="Fotobox bei einer Firmenfeier und einem Teamevent" loading="lazy">
+        <img src="anlass-firmenfeier.webp" alt="Weiße Fotobox bei einer Firmenfeier und einem Teamevent" loading="lazy">
         <div class="occasion-body"><h3>Firmenfeier & Event</h3><p>Für Sommerfeste, Weihnachtsfeiern, Jubiläen und Teamevents – mit Raum für kreative Erinnerungen.</p><a class="occasion-link" href="kontakt.html">Event anfragen →</a></div>
       </article>
     </div>
@@ -464,14 +481,15 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   <div class="container">
     <div class="center-head">
       <span class="eyebrow">So einfach geht's</span>
-      <h2>Von der Anfrage bis zum ersten Foto</h2>
-      <p>Wir halten den Ablauf unkompliziert, damit du dich auf deine Feier konzentrieren kannst.</p>
+      <h2>Von der Anfrage bis zur Online-Galerie</h2>
+      <p>Fünf klare Schritte – persönlich begleitet und zuverlässig umgesetzt.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="step-number">01</div><h3>Termin anfragen</h3><p>Schick uns dein Veranstaltungsdatum und ein paar Infos zu deiner Feier.</p></div>
-      <div class="step"><div class="step-number">02</div><h3>Paket auswählen</h3><p>Gemeinsam finden wir das passende Paket und auf Wunsch das passende Zubehör.</p></div>
-      <div class="step"><div class="step-number">03</div><h3>Wir bereiten alles vor</h3><p>Fotobox und gebuchtes Zubehör werden für euren Termin vorbereitet.</p></div>
-      <div class="step"><div class="step-number">04</div><h3>Feiern & Erinnerungen sammeln</h3><p>Fotos machen, direkt ausdrucken und später die Online-Galerie genießen.</p></div>
+      <div class="step"><div class="step-number">01</div><h3>Paket auswählen & anfragen</h3><p>Wählt euer Wunschpaket und fragt euren Veranstaltungstermin unverbindlich an.</p></div>
+      <div class="step"><div class="step-number">02</div><h3>Termin buchen & beraten lassen</h3><p>Mit der Buchung erhaltet ihr eine persönliche Beratung zu Fotobox, Ablauf und Zubehör.</p></div>
+      <div class="step"><div class="step-number">03</div><h3>Letzte Details abstimmen</h3><p>Vor dem Event klären wir die letzten Details, beispielsweise euer individuelles Drucklayout.</p></div>
+      <div class="step"><div class="step-number">04</div><h3>Aufbau & Einrichtung</h3><p>Ich übernehme den Aufbau und richte die Fotobox passend für eure Veranstaltung ein.</p></div>
+      <div class="step"><div class="step-number">05</div><h3>Abholung & Bilder</h3><p>Nach dem Event hole ich die Fotobox ab und lade eure Bilder in die Cloud beziehungsweise Online-Galerie.</p></div>
     </div>
   </div>
 </section>

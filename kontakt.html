@@ -1,448 +1,427 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Kontakt - Fotoboxverleih Roßkopf</title>
-    
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#5c4304",
-                        "secondary": "#765a1c",
-                        "background": "#fcf9f3",
-                        "surface": "#ffffff",
-                        "outline-variant": "#d1c5b4",
-                    },
-                    fontFamily: {
-                        "headline": ["Plus Jakarta Sans", "sans-serif"],
-                        "body": ["Inter", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fotobox anfragen in Eichstätt & Ingolstadt | Roßkopf</title>
+<meta name="description" content="Fotobox für Hochzeit, Geburtstag oder Firmenfeier in Eichstätt, Ingolstadt und Umgebung unverbindlich anfragen. Persönliche Beratung durch Tobias Roßkopf.">
+<link rel="canonical" href="https://www.fotoboxverleih-rosskopf.de/kontakt.html">
 
-    <style>
-        /* --- LOKALE FONTS --- */
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-regular.woff2') format('woff2');
-            font-weight: 400; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-500.woff2') format('woff2');
-            font-weight: 500; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
-            font-weight: 400; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
-            font-weight: 700; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
-            font-weight: 800; font-style: normal; font-display: swap;
-        }
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fotobox unverbindlich anfragen | Fotoboxverleih Roßkopf">
+<meta property="og:description" content="Termin, Paket und gewünschte Extras auswählen – Tobias meldet sich persönlich mit einem passenden Angebot.">
+<meta property="og:url" content="https://www.fotoboxverleih-rosskopf.de/kontakt.html">
+<meta property="og:image" content="https://www.fotoboxverleih-rosskopf.de/hero-kontakt.webp">
 
-        body { font-family: 'Inter', sans-serif; background-color: #fcf9f3; scroll-behavior: smooth; }
-        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
-        
-        .glass-nav { 
-            background-color: rgba(252, 249, 243, 0.98); 
-            backdrop-filter: blur(10px); 
-            -webkit-backdrop-filter: blur(10px);
-        }
+<style>
+@font-face{font-family:Inter;src:url("inter-v20-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-700.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-800.woff2") format("woff2");font-weight:800;font-display:swap}
 
-        input:-webkit-autofill {
-            -webkit-text-fill-color: #5c4304;
-            -webkit-box-shadow: 0 0 0px 1000px #fcf9f3 inset;
-        }
+:root{
+  --bg:#fcf9f3;--surface:#f0eee8;--surface2:#f6f3ed;--ink:#1c1c18;
+  --muted:#4d4639;--gold:#5c4304;--gold2:#765a1c;--gold-light:#e7c179;
+  --line:#d1c5b4;--white:#fff;--success:#27643a;--error:#a83232
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
+body.menu-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.narrow{width:min(900px,calc(100% - 40px));margin:auto}
+h1,h2,h3{font-family:"Plus Jakarta Sans",Arial,sans-serif;line-height:1.15;margin:0 0 18px}
+h2{font-size:clamp(2rem,4vw,3rem)}
+p{margin:0 0 18px}
+.eyebrow{display:inline-block;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border:0;border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:.22s ease}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;box-shadow:0 12px 30px rgba(92,67,4,.18)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(92,67,4,.25)}
+.btn-primary:disabled{cursor:wait;opacity:.72;transform:none}
 
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(24%) sepia(85%) saturate(443%) hue-rotate(1deg) brightness(94%) contrast(94%);
-            cursor: pointer;
-        }
+.nav{position:fixed;z-index:100;top:0;left:0;right:0;background:rgba(28,28,24,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:50px;width:auto}
+.brand-name{border-left:1px solid rgba(255,255,255,.22);padding-left:14px;display:flex;flex-direction:column;font-family:"Plus Jakarta Sans";font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.brand-name span:last-child{color:var(--gold-light);font-weight:800}
+.nav-links{display:flex;gap:27px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.72);font-size:.75rem;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.07em}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a.active{border-bottom:2px solid var(--gold-light);padding-bottom:5px}
+.menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
+.mobile-menu{display:none;padding:18px 20px 28px;border-top:1px solid rgba(255,255,255,.1)}
+.mobile-menu.open{display:flex;flex-direction:column;gap:18px}
+.mobile-menu a{color:#fff;text-decoration:none;text-align:center;font-family:"Plus Jakarta Sans";font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.mobile-menu a.legal{color:rgba(255,255,255,.55);font-size:.72rem}
 
-        .no-scroll { overflow: hidden; }
-        #mobile-menu { display: none; }
-        #mobile-menu.active { display: flex; }
-    </style>
+.hero{min-height:490px;display:flex;align-items:center;position:relative;overflow:hidden;color:#fff;text-align:center}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 68%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.5),rgba(0,0,0,.76))}
+.hero-content{position:relative;z-index:2;padding-top:95px;max-width:820px}
+.hero .eyebrow{color:var(--gold-light)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.8rem);margin:14px 0 18px;letter-spacing:-.03em}
+.hero p{max-width:680px;margin:0 auto;color:rgba(255,255,255,.9);font-size:clamp(1rem,2vw,1.16rem)}
+
+.request-section{padding:0 0 90px}
+.request-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.75fr);gap:28px;align-items:start}
+.form-card{position:relative;margin-top:-54px;z-index:3;padding:38px;background:#fff;border:1px solid rgba(209,197,180,.38);border-radius:22px;box-shadow:0 24px 58px rgba(28,28,24,.12)}
+.form-intro{margin-bottom:30px}
+.form-intro h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:8px 0 10px}
+.form-intro p{margin:0;color:var(--muted)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label,.group-label{font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.required{color:var(--gold)}
+.field input,.field select,.field textarea{width:100%;border:1px solid rgba(209,197,180,.75);border-radius:12px;background:var(--bg);color:var(--ink);padding:14px 15px;outline:none;transition:.2s ease}
+.field textarea{min-height:125px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(92,67,4,.1)}
+.field small{color:rgba(77,70,57,.72);font-size:.75rem}
+.extras{grid-column:1/-1;border:0;padding:8px 0 0;margin:0}
+.extra-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:11px}
+.extra-option{position:relative;display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border:1px solid rgba(209,197,180,.65);border-radius:12px;background:var(--bg);cursor:pointer;transition:.2s ease}
+.extra-option:hover{border-color:var(--gold);background:#fff}
+.extra-option input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--gold);flex:none}
+.extra-option span{font-size:.86rem;font-weight:600}
+.extra-option small{display:block;font-weight:400;color:var(--muted);font-size:.72rem}
+.privacy{grid-column:1/-1;display:flex;align-items:flex-start;gap:11px;margin-top:5px}
+.privacy input{width:17px;height:17px;margin:4px 0 0;accent-color:var(--gold);flex:none}
+.privacy label{font-size:.78rem;color:var(--muted)}
+.privacy a{color:var(--gold);font-weight:600}
+.submit-row{grid-column:1/-1;display:flex;align-items:center;gap:18px;margin-top:4px}
+.submit-row .btn{min-width:230px}
+.submit-note{margin:0;color:var(--muted);font-size:.74rem}
+.form-status{display:none;grid-column:1/-1;padding:14px 16px;border-radius:12px;font-size:.88rem;font-weight:600}
+.form-status.success{display:block;color:var(--success);background:#eef8f1;border:1px solid #b8dcc2}
+.form-status.error{display:block;color:var(--error);background:#fff1f1;border:1px solid #e9bcbc}
+
+.contact-side{padding-top:30px;display:grid;gap:18px}
+.side-card{background:var(--surface2);border:1px solid rgba(209,197,180,.45);border-radius:18px;padding:27px}
+.side-card.personal{background:linear-gradient(145deg,var(--gold),var(--gold2));color:#fff}
+.side-card .eyebrow{margin-bottom:8px}
+.side-card.personal .eyebrow{color:var(--gold-light)}
+.side-card h2{font-size:1.45rem;margin-bottom:10px}
+.side-card p{font-size:.86rem;color:var(--muted);margin-bottom:0}
+.side-card.personal p{color:rgba(255,255,255,.82)}
+.trust-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:11px}
+.trust-list li{display:flex;gap:9px;font-size:.82rem;color:rgba(255,255,255,.9)}
+.trust-list li::before{content:"✓";color:var(--gold-light);font-weight:800}
+.contact-links{display:grid;gap:15px;margin-top:18px}
+.contact-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--gold);font-weight:600;font-size:.87rem;overflow-wrap:anywhere}
+.contact-link svg{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.contact-link:hover{text-decoration:underline}
+
+.footer{background:#e5e2dc;border-top:1px solid rgba(209,197,180,.45);padding:70px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.15fr .9fr .9fr;gap:50px;margin-bottom:45px}
+.footer h3{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.footer-brand{font-family:"Plus Jakarta Sans";font-weight:800;color:var(--gold);font-size:1.05rem;margin-bottom:8px}
+.footer a{display:block;text-decoration:none;color:rgba(77,70,57,.75);font-size:.85rem;margin:8px 0}
+.footer a:hover{color:var(--gold)}
+.instagram-link{display:inline-flex!important;align-items:center;gap:10px;padding:10px 13px;border-radius:12px;transition:.22s ease}
+.instagram-link svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8}
+.instagram-link:hover{background:var(--gold);color:#fff!important;transform:translateY(-2px);box-shadow:0 10px 22px rgba(92,67,4,.18)}
+.footer-bottom{border-top:1px solid rgba(209,197,180,.45);padding-top:24px;text-align:center;color:rgba(77,70,57,.5);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase}
+
+@media(max-width:980px){
+  .nav-links{display:none}.menu-btn{display:block}
+  .request-layout{grid-template-columns:1fr}
+  .contact-side{grid-template-columns:1fr 1fr;padding-top:0}
+}
+@media(max-width:720px){
+  .container,.narrow{width:min(100% - 28px,1180px)}
+  .nav-inner{height:74px}.brand img{height:43px}.brand-name{font-size:.72rem}
+  .hero{min-height:440px}.hero-content{padding-top:80px}
+  .request-section{padding-bottom:70px}
+  .form-card{padding:27px 20px;margin-top:-34px}
+  .form-grid,.extra-grid,.contact-side,.footer-grid{grid-template-columns:1fr}
+  .submit-row{align-items:stretch;flex-direction:column}
+  .submit-row .btn{width:100%}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ContactPage",
+  "name":"Fotobox unverbindlich anfragen",
+  "url":"https://www.fotoboxverleih-rosskopf.de/kontakt.html",
+  "about":{"@id":"https://www.fotoboxverleih-rosskopf.de/#localbusiness"},
+  "mainEntity":{
+    "@type":"LocalBusiness",
+    "@id":"https://www.fotoboxverleih-rosskopf.de/#localbusiness",
+    "name":"Fotoboxverleih Roßkopf",
+    "alternateName":"Paparossi Fotobox",
+    "telephone":"+4915228494252",
+    "email":"info@fotoboxverleih-rosskopf.de",
+    "address":{"@type":"PostalAddress","addressLocality":"Titting","postalCode":"85135","addressRegion":"Bayern","addressCountry":"DE"},
+    "areaServed":["Titting","Eichstätt","Ingolstadt","Greding","Beilngries"]
+  }
+}
+</script>
+
 </head>
 
-<body class="selection:bg-secondary/20">
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Paparossi Fotoboxverleih Startseite">
+      <img src="fotoboxverleih-logo.webp" alt="Paparossi Fotoboxverleih Roßkopf Logo">
+      <span class="brand-name"><span>Fotoboxverleih</span><span>Roßkopf</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-paparossi.html">Über Paparossi</a>
+      <a class="active" href="kontakt.html">Kontakt</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+      <svg id="menuIcon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="closeIcon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+    <a href="index.html">Startseite</a>
+    <a href="leistungen.html">Leistungen & Preise</a>
+    <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
+    <a href="fotobox-extras.html">Extras</a>
+    <a href="ueber-paparossi.html">Über Paparossi</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a class="legal" href="rechtliches.html">Impressum, Datenschutz & AGB</a>
+  </nav>
+</header>
 
-    <header class="fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/10 glass-nav">
-        <div class="flex justify-between items-center px-4 md:px-12 py-3 max-w-screen-2xl mx-auto">
-            
-            <a href="index.html" class="flex items-center gap-3 shrink-0">
-                <img src="fotoboxverleih-logo.webp" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
-                <div class="flex flex-col justify-center border-l border-primary/20 pl-3">
-                    <span class="text-primary font-headline font-bold text-[10px] md:text-sm uppercase tracking-widest leading-tight">Fotoboxverleih</span>
-                    <span class="text-secondary font-headline font-extrabold text-xs md:text-base uppercase tracking-wider leading-tight">Roßkopf</span>
-                </div>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a href="index.html" class="text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                <a href="leistungen.html" class="text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                <a href="kontakt.html" class="text-primary border-b-2 border-primary pb-1 font-bold">Kontakt</a>
-            </nav>
-
-            <button id="menu-open-btn" class="md:hidden p-2 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-            </button>
-        </div>
-    </header>
-
-    <div id="mobile-menu" class="fixed inset-0 bg-background z-[200] flex-col items-center justify-center gap-10">
-        <button id="menu-close-btn" class="absolute top-6 right-6 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-        </button>
-        
-        <nav class="flex flex-col items-center gap-8">
-            <a href="index.html" class="text-primary text-2xl font-headline font-bold">Startseite</a>
-            <a href="leistungen.html" class="text-primary text-2xl font-headline font-bold">Leistungen & Preise</a>
-            <a href="kontakt.html" class="text-primary text-2xl font-headline font-bold border-b-4 border-primary px-2">Kontakt</a>
-        </nav>
-        
-        <div class="h-px w-16 bg-primary/20"></div>
-        <p class="text-secondary/60 text-xs uppercase tracking-widest font-bold font-headline text-center">
-            Lass uns feiern!<br>Paparossi Fotobox
-        </p>
-    </div>
-
-    <section class="relative h-[40vh] min-h-[350px] w-full flex items-center justify-center overflow-hidden">
-        <img src="hero-kontakt.webp" alt="Kontakt Hero" class="absolute inset-0 w-full h-full object-cover object-bottom">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative z-10 text-center px-6 mt-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-3 drop-shadow-md uppercase tracking-tight">Lass uns feiern!</h1>
-            <p class="text-white/90 text-sm md:text-base max-w-xl mx-auto drop-shadow-sm font-medium">
-                Fülle das Formular möglichst detailliert aus. Wir senden dir so schnell wie möglich ein unverbindliches Angebot.
-            </p>
-        </div>
-    </section>
-
-    <main class="max-w-screen-2xl mx-auto px-6 md:px-12 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <div class="lg:col-span-8">
-                <div class="rounded-2xl p-6 md:p-8 border border-outline-variant/30 shadow-xl bg-white -mt-20 relative z-20">
-                    <form action="https://formspree.io/f/mbdpaobd" method="POST" class="space-y-6">
-                        <input type="text" name="_gotcha" style="display:none" />
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Dein Name</label>
-                                <input type="text" name="name" required placeholder="Vor- und Nachname" class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">E-Mail Adresse</label>
-                                <input type="email" name="email" required placeholder="beispiel@mail.de" class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Datum der Feier</label>
-                                <input type="date" name="datum" required class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Ort der Feier</label>
-                                <input type="text" name="ort" placeholder="z.B. Titting, Eichstätt..." class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Gewünschtes Paket</label>
-                            <select name="paket" class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all">
-                                <option value="Einsteiger">Einsteiger (ab 179€)</option>
-                                <option value="Klassik">Klassik (ab 299€)</option>
-                                <option value="Komplettpaket">Komplettpaket (ab 349€)</option>
-                                <option value="Individuell" selected>Individuelle Anfrage</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Deine Nachricht</label>
-                            <textarea name="nachricht" rows="5" placeholder="Erzähl uns kurz von deiner Feier (Anlass, Gästeanzahl, etc.)..." class="w-full bg-background border-none rounded-xl p-4 focus:ring-2 focus:ring-primary text-primary transition-all"></textarea>
-                        </div>
-
-                        <div class="flex items-start gap-3 mt-6 mb-8">
-                            <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary cursor-pointer">
-                            <label for="privacy" class="text-xs text-secondary/70 leading-relaxed cursor-pointer">
-                                Ich habe die <a href="rechtliches.html" class="underline hover:text-primary font-semibold">Datenschutzerklärung</a> gelesen und erkläre mich mit der Verarbeitung meiner Daten zum Zweck der Anfragebeantwortung einverstanden. *
-                            </label>
-                        </div>
-
-                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold uppercase py-5 rounded-xl transition-all shadow-lg flex items-center justify-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
-                            Anfrage senden
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <aside class="lg:col-span-4 lg:pt-8">
-                <div class="sticky top-32 space-y-6">
-                    <div class="bg-white p-8 rounded-2xl border border-outline-variant/20 shadow-sm">
-                        <h2 class="text-xl font-bold text-primary mb-6">Noch Fragen?</h2>
-                        <div class="space-y-6">
-                            <a href="mailto:info@fotoboxverleih-rosskopf.de" class="flex items-center gap-4 group">
-                                <div class="bg-secondary/10 p-2 rounded-lg text-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-                                </div>
-                                <div><p class="text-[10px] uppercase font-bold text-secondary/60">Schreib uns</p><p class="text-primary font-medium group-hover:underline">info@fotoboxverleih-rosskopf.de</p></div>
-                            </a>
-                            <a href="tel:+4915228494252" class="flex items-center gap-4 group">
-                                <div class="bg-secondary/10 p-2 rounded-lg text-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-387q31 31 65.5 58.5T524-281l98-97q9-9 20-11.5t27 1.5l140 26q13 2 22.5 13t9.5 25v162q0 18-12 30t-30 12Z"/></svg>
-                                </div>
-                                <div><p class="text-[10px] uppercase font-bold text-secondary/60">Ruf uns an</p><p class="text-primary font-medium group-hover:underline">+49 152 28494252</p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-        </div>
-
-<section class="max-w-4xl mx-auto pt-24 pb-24 mt-12 border-t border-outline-variant/20">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl font-extrabold text-primary mb-4 uppercase tracking-tight">Häufig gestellte Fragen</h2>
-        <p class="text-secondary/70">Alles, was du vor deiner Buchung wissen musst.</p>
-    </div>
-
-    <div class="space-y-4">
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Wie funktioniert die Bedienung der Fotobox?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Durch Betätigen des Touch-Screens wird nach einem festgelegten Countdown (in der Regel 5 Sekunden) die Kamera ausgelöst. Alle Fotos werden digital gespeichert und im Anschluss auf einer Cloud hochgeladen. Bei Buchung des Druckerpakets können die Fotos in sekundenschnelle gedruckt werden.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Gibt es ein Limit an Bildern und wie werden die Bilder bereitgestellt?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Nein, digital könnt Ihr soviel Bilder machen, soviel Ihr wollt. Im Anschluss der Veranstaltung werden die Bilder auf einer Cloud gespeichert.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Wieviele Personen passen auf die Bilder der Fotobox?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Das hängt vor allem auch vom Abstand der Fotobox zum jeweiligen Hintergrund ab. Gemäß Erfahrungswerte passen auf jeden Fall mindestens vier Personen auf das Bild, häufig auch bis zu 10 Personen oder sogar mehr. Je weiter die Fotobox vom Hintergrund entfernt, desto mehr Personen passen auf das Foto.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Wieviel Platz benötigt die Fotobox und welche Utensilien sollten zur Verfügung stehen?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Für die Fotobox benötigt Ihr in der Breite mindestens zwei Meter und in der Länge mindestens zweieinhalb Meter Platz. Je mehr Platz zur Verfügung steht, desto besser. Außerdem wäre es wichtig, wenn noch ein stabiler Beistelltisch bereitgestellt wird, auf dem der Drucker sowie die Requisiten platziert werden können.
-                Zudem wird ein Stromanschluss benötigt.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Darf die Fotobox im Freien stehen?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Grundsätzlich spricht nichts gegen einen Einsatz der Fotobox im Freien. Wichtig ist hier, dass die Fotobox und das Zubehör vor Niederschlag und starker Sonneneinstrahlung geschützt sind. Wir würden zumindest einen geringen Schutz wie z.B. mit einem Sonnenschutz oder einem Pavillon empfehlen.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Braucht man einen Fotohintergrund?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Das ist abhängig von der Location. Eventuell gibt es dort eine schöne Wand, die sich dafür anbietet. Eine weiße Wand ist in der Regel ausreichend. Ein schönes Möbelstück wie z.B. ein antiker Schrank oder eine hölzerne Wand eignen sich auch sehr gut. Muss die Fotobox frei im Raum oder vor Fenstern platziert werden, können Sie einen Hintergrund zusätzlich buchen.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Was passiert bei technischen Problemen mit der Fotobox?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Beim Aufbau der Fotobox geben wir Euch eine kurze Einweisung. Dadurch seid Ihr dann in der Lage, die Fotobox inklusive zugehöriger Technik einzuschalten und auch Medien zu wechseln. Zudem gibt es auch eine ausführliche Anleitung. Sollte dies nicht ausreichen, stehen wir Euch auch telefonisch zur Verfügung. Sollte die Technik (ohne Euer Verschulden) gar nicht funktionieren und wir den Fehler vor Ort nicht beheben können, werden wir Euch auch keine oder nur stark reduzierte Kosten berechnen.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Was versteht man unter einem Drucklayout und welche Gestaltungsmöglichkeiten gibt es?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Unter einem Drucklayout verstehen wir einen selbst designtes Drucklayout. Als Standard wird ein Foto als Vollbild (d.h. ohne Ränder oder Beschriftungen) abgebildet. Bei den individuellen Drucklayouts könnt Ihr wählen, ob ein oder mehrere Bilder (mehr als vier sollten es aufgrund der Größe nicht sein) auf dem gedruckten Bild abgebildet werden sollen. Zusätzlich können wir noch weitere Gestaltungsmöglichkeiten wie beispielsweise bereits für die Einladung verwendete Symbole / Designs auch in das Drucklayout zu integrieren.
-            </div>
-        </details>
-
-        <details class="group bg-white rounded-xl border border-outline-variant/20 overflow-hidden">
-            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                <span class="font-bold text-primary">Wer trägt die Kosten, falls an der Fotobox etwas kaputt geht?</span>
-                <svg class="transition-transform group-open:rotate-180 text-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-                    <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/>
-                </svg>
-            </summary>
-            <div class="px-6 pb-6 text-sm text-secondary/80 leading-relaxed">
-                Die Fotobox ist in der Regel über Eure Haftpflichtversicherung abgesichert. Bitte schaut vorher nochmal das Vertragswerk der Haftpflichtversicherung an - es sollte auch gegen Diebstahl abgesichert sein. Im Falle von Defekten oder Verlusten haftet der Mieter.
-            </div>
-        </details>
-    </div>
+<main>
+<section class="hero">
+  <div class="hero-bg"><img src="hero-kontakt.webp" alt="Paparossi Fotobox auf einer Feier im Raum Eichstätt und Ingolstadt" fetchpriority="high"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <span class="eyebrow">Unverbindlich anfragen</span>
+    <h1>Fotobox für dein Event anfragen</h1>
+    <p>Verrate mir kurz, wann und wo du feierst. Ich prüfe deinen Termin und melde mich persönlich mit einem passenden Angebot.</p>
+  </div>
 </section>
-    </main>
 
-<footer class="bg-surface-container-highest border-t border-outline-variant/20 py-16">
-    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<section class="request-section" aria-labelledby="form-title">
+  <div class="container request-layout">
+    <div class="form-card">
+      <div class="form-intro">
+        <span class="eyebrow">Deine Feier</span>
+        <h2 id="form-title">In wenigen Schritten zur Fotobox</h2>
+        <p>Die mit <span class="required">*</span> markierten Angaben brauche ich zur Prüfung deiner Anfrage.</p>
+      </div>
 
+      <form id="contactForm" action="https://formspree.io/f/mbdpaobd" method="POST" accept-charset="UTF-8">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Neue Fotobox-Anfrage über die Webseite">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Dein Name <span class="required">*</span></label>
+            <input id="name" type="text" name="name" required autocomplete="name" placeholder="Vor- und Nachname">
+          </div>
+          <div class="field">
+            <label for="email">E-Mail-Adresse <span class="required">*</span></label>
+            <input id="email" type="email" name="email" required autocomplete="email" placeholder="beispiel@mail.de">
+          </div>
+          <div class="field">
+            <label for="telefon">Telefonnummer</label>
+            <input id="telefon" type="tel" name="telefon" autocomplete="tel" inputmode="tel" placeholder="Optional für Rückfragen">
+          </div>
+          <div class="field">
+            <label for="anlass">Anlass <span class="required">*</span></label>
+            <select id="anlass" name="anlass" required>
+              <option value="" selected disabled>Bitte auswählen</option>
+              <option value="Hochzeit">Hochzeit</option>
+              <option value="Geburtstag">Geburtstag</option>
+              <option value="Firmenfeier">Firmenfeier</option>
+              <option value="Vereinsfeier">Vereinsfeier</option>
+              <option value="Sonstiges Event">Sonstiges Event</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="datum">Datum der Feier <span class="required">*</span></label>
+            <input id="datum" type="date" name="datum" required>
+          </div>
+          <div class="field">
+            <label for="ort">Ort der Feier <span class="required">*</span></label>
+            <input id="ort" type="text" name="ort" required autocomplete="address-level2" placeholder="z. B. Titting oder Eichstätt">
+          </div>
+          <div class="field">
+            <label for="gaeste">Ungefähre Gästezahl</label>
+            <input id="gaeste" type="number" name="gaestezahl" min="1" step="1" inputmode="numeric" placeholder="Optional">
+          </div>
+          <div class="field">
+            <label for="paket">Gewünschtes Paket</label>
+            <select id="paket" name="paket">
+              <option value="Beratung gewünscht" selected>Noch unsicher – Beratung gewünscht</option>
+              <option value="Einsteiger Digital">Einsteiger Digital – ab 179 €</option>
+              <option value="Klassik mit Sofortdruck">Klassik mit Sofortdruck – ab 299 €</option>
+              <option value="Premium Komplettpaket">Premium-Komplettpaket – ab 349 €</option>
+              <option value="Nur Zubehör">Nur Zubehör anfragen</option>
+            </select>
+          </div>
 
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="flex items-center gap-3 mb-6">
-                   <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-5 h-5 fill-white">
-        <path d="M480-280q75 0 127.5-52.5T660-460q0-75-52.5-127.5T480-640q-75 0-127.5 52.5T300-460q0 75 52.5 127.5T480-280Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM160-160q-33 0-56.5-23.5T80-240v-440q0-33 23.5-56.5T160-760h126l74-80h240l74 80h126q33 0 56.5 23.5T880-680v440q0 33-23.5 56.5T800-160H160Z"/>
-    </svg>
-</div>
-                    <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Fotoboxverleih Roßkopf</span>
-                </div>
-                <div class="space-y-2">
-                    <a href="mailto:info@fotoboxverleih-rosskopf.de" class="text-xs font-medium text-secondary/70 hover:text-primary flex items-center gap-2 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-4 h-4 fill-current">
-        <path d="M160-160q-33 0-56.5-23.5T80-240v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200Z"/>
-    </svg>
-    info@fotoboxverleih-rosskopf.de
-</a>
-                    <a href="tel:+4915228494252" class="text-xs font-medium text-secondary/70 hover:text-primary flex items-center gap-2 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-4 h-4 fill-current">
-        <path d="M280-40v-880h400v880H280Zm80-160h240v-560H360v560Z"/>
-    </svg> 
-    +49 1522 8494252
-</a>
-                </div>
+          <fieldset class="extras">
+            <legend class="group-label">Welche Extras interessieren dich?</legend>
+            <div class="extra-grid">
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Audio-Gästebuch"><span>Audio-Gästebuch<small>Persönliche Sprachnachrichten</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Fotohintergrund"><span>Fotohintergrund<small>Eine passende Bühne für eure Bilder</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Hexagon"><span>Hexagon<small>Stilvoller Blickfang für die Location</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Fotoaufgaben"><span>Fotoaufgaben<small>Kreative Aufgaben für eure Gäste</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Neon-Schild"><span>Neon-Schild<small>Leuchtendes Highlight für eure Feier</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Sofortbildkameras"><span>Sofortbildkameras<small>Analoge Erinnerungen zum Mitnehmen</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Individuelles Drucklayout"><span>Individuelles Drucklayout<small>Passend zum Design eures Events</small></span></label>
             </div>
+          </fieldset>
 
-            <div class="flex flex-col items-center md:items-start">
-                <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-8 border-b border-primary/10 pb-2">
-                    Folge uns auf Instagram
-                </h4>
+          <div class="field full">
+            <label for="nachricht">Deine Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Gibt es noch etwas, das ich über deine Feier wissen sollte?"></textarea>
+          </div>
 
-                <a href="https://www.instagram.com/paparossi_photobooth?igsh=eWZxeTg2dGcwdTV6&utm_source=qr" 
-                   target="_blank" 
-                   class="group flex items-center gap-5 transition-all duration-300">
+          <div class="privacy">
+            <input id="privacy" type="checkbox" name="datenschutz" value="zugestimmt" required>
+            <label for="privacy">Ich habe die <a href="rechtliches.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Beantwortung der Anfrage einverstanden. <span class="required">*</span></label>
+          </div>
 
-                    <div class="relative">
-                        <div class="h-14 w-14 rounded-full border border-outline-variant/50 flex items-center justify-center z-10 relative group-hover:border-transparent transition-colors duration-500">
-                            <svg class="w-6 h-6 text-primary/70 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out shadow-lg"></div>
-                    </div>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
 
-                    <div class="flex flex-col">
-                        <span class="text-lg font-headline font-bold text-primary group-hover:text-primary/100 transition-colors tracking-tight">
-                            @paparossi_photobooth
-                        </span>
-                        <span class="text-[11px] uppercase tracking-widest text-secondary/50 flex items-center gap-1 group-hover:text-secondary transition-colors">
-                            Inspiration & Momente 
-
-                        </span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center md:items-start gap-4">
-                <h4 class="font-headline font-bold text-primary uppercase text-[10px] tracking-[0.25em] mb-2 border-b border-primary/10 pb-2">Navigation</h4>
-                <nav class="flex flex-col items-center md:items-start gap-3">
-                    <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Startseite
-                    </a>
-                    <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Leistungen & Preise
-                    </a>
-                    <a href="kontakt.html" class="text-sm text-secondary/70 hover:text-primary transition-colors flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Kontakt
-                    </a>
-                    <a href="rechtliches.html" class="text-sm text-secondary/70 hover:text-primary transition-colors font-semibold underline decoration-primary/20 underline-offset-8 flex items-center gap-2 group">
-                        <span class="h-1 w-1 bg-primary/30 rounded-full group-hover:scale-150 transition-transform"></span> Impressum, Datenschutz & AGB
-                    </a>
-                </nav>
-            </div>
+          <div class="submit-row">
+            <button id="submitBtn" class="btn btn-primary" type="submit">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
+              Anfrage senden
+            </button>
+            <p class="submit-note">Kostenlos und unverbindlich – deine Anfrage wird persönlich von Tobias beantwortet.</p>
+          </div>
         </div>
-
-        <div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-secondary/40 text-[10px] uppercase tracking-[0.3em] font-medium">
-                © 2026 Fotoboxverleih Roßkopf - Alle Rechte vorbehalten
-            </p>
-        </div>
+      </form>
     </div>
+
+    <aside class="contact-side" aria-label="Kontakt und Vorteile">
+      <div class="side-card personal">
+        <span class="eyebrow">Persönlich für dich da</span>
+        <h2>Hi, ich bin Tobias.</h2>
+        <p>Bei mir stehst du als Kunde im Mittelpunkt. Ich unterstütze dich persönlich bei der Auswahl der passenden Fotobox und Extras.</p>
+        <ul class="trust-list">
+          <li>Persönliche Beratung</li>
+          <li>Top-Qualität zum fairen Preis</li>
+          <li>Zuverlässiger Rundum-Service</li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <span class="eyebrow">Direkter Kontakt</span>
+        <h2>Noch eine kurze Frage?</h2>
+        <p>Du erreichst mich auch direkt per E-Mail oder Telefon.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:info@fotoboxverleih-rosskopf.de">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            info@fotoboxverleih-rosskopf.de
+          </a>
+          <a class="contact-link" href="tel:+4915228494252">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-4-2-2 2c-3.5-1.5-6.5-4.5-8-8l2-2z"/></svg>
+            +49 1522 8494252
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Fotoboxverleih Roßkopf</div>
+        <a href="mailto:info@fotoboxverleih-rosskopf.de">info@fotoboxverleih-rosskopf.de</a>
+        <a href="tel:+4915228494252">+49 1522 8494252</a>
+      </div>
+      <div>
+        <h3>Folge Paparossi</h3>
+        <a class="instagram-link" href="https://www.instagram.com/paparossi_photobooth/" target="_blank" rel="noopener noreferrer" aria-label="Paparossi auf Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>@paparossi_photobooth</span>
+        </a>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen & Preise</a>
+        <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
+        <a href="fotobox-extras.html">Fotobox-Extras</a>
+        <a href="ueber-paparossi.html">Über Paparossi</a>
+        <a href="rechtliches.html">Impressum, Datenschutz & AGB</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Fotoboxverleih Roßkopf – Alle Rechte vorbehalten</div>
+  </div>
 </footer>
 
-    <script>
-        const menu = document.getElementById('mobile-menu');
-        const openBtn = document.getElementById('menu-open-btn');
-        const closeBtn = document.getElementById('menu-close-btn');
-        const body = document.body;
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+const menuIcon=document.getElementById("menuIcon");
+const closeIcon=document.getElementById("closeIcon");
 
-        openBtn.addEventListener('click', () => {
-            menu.classList.add('active');
-            body.classList.add('no-scroll');
-        });
+function setMenu(open){
+  mobileMenu.classList.toggle("open",open);
+  document.body.classList.toggle("menu-open",open);
+  menuIcon.style.display=open?"none":"block";
+  closeIcon.style.display=open?"block":"none";
+  menuBtn.setAttribute("aria-expanded",String(open));
+  menuBtn.setAttribute("aria-label",open?"Menü schließen":"Menü öffnen");
+}
+menuBtn.addEventListener("click",()=>setMenu(!mobileMenu.classList.contains("open")));
+mobileMenu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setMenu(false)));
 
-        const closeMenu = () => {
-            menu.classList.remove('active');
-            body.classList.remove('no-scroll');
-        };
+const dateField=document.getElementById("datum");
+const today=new Date();
+const localToday=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split("T")[0];
+dateField.min=localToday;
 
-        closeBtn.addEventListener('click', closeMenu);
+const form=document.getElementById("contactForm");
+const submitBtn=document.getElementById("submitBtn");
+const formStatus=document.getElementById("formStatus");
 
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-    </script>
+form.addEventListener("submit",async event=>{
+  event.preventDefault();
+  if(!form.reportValidity())return;
+
+  submitBtn.disabled=true;
+  submitBtn.textContent="Wird gesendet …";
+  formStatus.className="form-status";
+  formStatus.textContent="";
+
+  try{
+    const response=await fetch(form.action,{
+      method:"POST",
+      body:new FormData(form),
+      headers:{"Accept":"application/json"}
+    });
+    if(!response.ok)throw new Error("Senden fehlgeschlagen");
+    form.reset();
+    dateField.min=localToday;
+    formStatus.className="form-status success";
+    formStatus.textContent="Vielen Dank! Deine Anfrage wurde gesendet. Ich melde mich persönlich bei dir.";
+    formStatus.scrollIntoView({behavior:"smooth",block:"center"});
+  }catch(error){
+    formStatus.className="form-status error";
+    formStatus.innerHTML='Die Anfrage konnte gerade nicht gesendet werden. Bitte versuche es erneut oder schreibe mir direkt an <a href="mailto:info@fotoboxverleih-rosskopf.de">info@fotoboxverleih-rosskopf.de</a>.';
+  }finally{
+    submitBtn.disabled=false;
+    submitBtn.innerHTML='<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>Anfrage senden';
+  }
+});
+</script>
 </body>
 </html>

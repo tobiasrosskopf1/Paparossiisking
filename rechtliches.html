@@ -1,301 +1,432 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Rechtliches - Fotoboxverleih Roßkopf</title>
-    
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#5c4304",
-                        "secondary": "#765a1c",
-                        "background": "#fcf9f3",
-                        "surface": "#ffffff",
-                        "outline-variant": "#d1c5b4"
-                    },
-                    fontFamily: {
-                        "headline": ["Plus Jakarta Sans", "sans-serif"],
-                        "body": ["Inter", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum, Datenschutz & AGB | Fotoboxverleih Roßkopf</title>
+<meta name="description" content="Impressum, Datenschutzerklärung und Mietbedingungen des Fotoboxverleihs Roßkopf in Titting.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.fotoboxverleih-rosskopf.de/rechtliches.html">
 
-    <style>
-        /* --- LOKALE FONTS --- */
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-regular.woff2') format('woff2');
-            font-weight: 400; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-500.woff2') format('woff2');
-            font-weight: 500; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('inter-v20-latin-600.woff2') format('woff2');
-            font-weight: 600; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
-            font-weight: 400; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
-            font-weight: 700; font-style: normal; font-display: swap;
-        }
-        @font-face {
-            font-family: 'Plus Jakarta Sans';
-            src: url('plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
-            font-weight: 800; font-style: normal; font-display: swap;
-        }
+<style>
+@font-face{font-family:Inter;src:url("inter-v20-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-700.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-800.woff2") format("woff2");font-weight:800;font-display:swap}
 
-        body { font-family: 'Inter', sans-serif; background-color: #fcf9f3; scroll-behavior: smooth; }
-        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
-        
-        .glass-nav { 
-            background-color: rgba(252, 249, 243, 0.98); 
-            backdrop-filter: blur(15px); 
-            -webkit-backdrop-filter: blur(15px);
-        }
+:root{
+  --bg:#fcf9f3;--surface:#f0eee8;--surface2:#f6f3ed;--ink:#1c1c18;
+  --muted:#4d4639;--gold:#5c4304;--gold2:#765a1c;--gold-light:#e7c179;
+  --line:#d1c5b4;--white:#fff;--notice:#fff8e8
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:105px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.7}
+body.menu-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:var(--gold)}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.legal-width{width:min(940px,calc(100% - 40px));margin:auto}
+h1,h2,h3,h4{font-family:"Plus Jakarta Sans",Arial,sans-serif;line-height:1.2;margin:0 0 18px}
+p{margin:0 0 16px}
+ul{margin:0 0 18px;padding-left:22px}
+li+li{margin-top:6px}
+.eyebrow{display:inline-block;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.small{font-size:.78rem}
 
-        .no-scroll { overflow: hidden; }
+.nav{position:fixed;z-index:100;top:0;left:0;right:0;background:rgba(28,28,24,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:50px;width:auto}
+.brand-name{border-left:1px solid rgba(255,255,255,.22);padding-left:14px;display:flex;flex-direction:column;font-family:"Plus Jakarta Sans";font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.brand-name span:last-child{color:var(--gold-light);font-weight:800}
+.nav-links{display:flex;gap:27px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.72);font-size:.75rem;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.07em}
+.nav-links a:hover{color:#fff}
+.menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
+.mobile-menu{display:none;padding:18px 20px 28px;border-top:1px solid rgba(255,255,255,.1)}
+.mobile-menu.open{display:flex;flex-direction:column;gap:18px}
+.mobile-menu a{color:#fff;text-decoration:none;text-align:center;font-family:"Plus Jakarta Sans";font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.mobile-menu a.active{color:var(--gold-light)}
 
-        #mobile-menu { display: none; }
-        #mobile-menu.active { display: flex; }
-    </style>
+.hero{padding:155px 0 78px;color:#fff;text-align:center;background:radial-gradient(circle at 50% 0,rgba(118,90,28,.75),transparent 47%),linear-gradient(135deg,#171713,#29261e)}
+.hero .eyebrow{color:var(--gold-light)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.8rem);margin:14px 0 17px;letter-spacing:-.03em}
+.hero p{max-width:680px;margin:0 auto;color:rgba(255,255,255,.76)}
+
+.jump-wrap{position:sticky;top:82px;z-index:40;background:rgba(252,249,243,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(209,197,180,.55)}
+.jump-nav{display:flex;justify-content:center;gap:10px;padding:13px 0;overflow-x:auto}
+.jump-nav a{white-space:nowrap;text-decoration:none;color:var(--gold);border:1px solid rgba(92,67,4,.25);border-radius:999px;padding:8px 16px;font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;background:#fff}
+.jump-nav a:hover{background:var(--gold);color:#fff}
+
+.legal-main{padding:72px 0 95px}
+.legal-section{margin-bottom:82px}
+.legal-section:last-child{margin-bottom:0}
+.section-head{display:flex;gap:18px;align-items:flex-start;padding-bottom:20px;margin-bottom:30px;border-bottom:1px solid rgba(209,197,180,.7)}
+.section-number{width:45px;height:45px;display:grid;place-items:center;flex:none;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;font-family:"Plus Jakarta Sans";font-weight:800}
+.section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);margin:0 0 5px}
+.section-head p{margin:0;color:var(--muted);font-size:.88rem}
+.legal-card{padding:28px 30px;background:#fff;border:1px solid rgba(209,197,180,.45);border-radius:16px;box-shadow:0 8px 24px rgba(28,28,24,.04);margin-bottom:18px}
+.legal-card h3{font-size:1.12rem;color:var(--gold);margin-bottom:13px}
+.legal-card h4{font-size:.96rem;margin-top:24px;margin-bottom:10px}
+.legal-card p,.legal-card li{color:var(--muted);font-size:.9rem}
+.legal-card p:last-child,.legal-card ul:last-child{margin-bottom:0}
+.legal-card address{font-style:normal;color:var(--muted)}
+.legal-card strong{color:var(--ink)}
+.notice{padding:22px 24px;background:var(--notice);border:1px solid rgba(92,67,4,.22);border-left:4px solid var(--gold);border-radius:12px;margin:22px 0}
+.notice p{font-size:.84rem;color:var(--muted);margin:0}
+.contact-list{display:grid;gap:7px;margin-top:15px}
+.contact-list a{width:fit-content;text-decoration:none;font-weight:600}
+.contact-list a:hover{text-decoration:underline}
+.agb-card{counter-increment:agb}
+.agb-card h3{display:flex;gap:10px;align-items:baseline}
+.agb-card h3::before{content:"§ " counter(agb);font-size:.78rem;letter-spacing:.06em;color:var(--gold2);flex:none}
+.agb-list{counter-reset:agb}
+.status{margin-top:28px;text-align:center;color:rgba(77,70,57,.64);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+
+.footer{background:#e5e2dc;border-top:1px solid rgba(209,197,180,.45);padding:70px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.15fr .9fr .9fr;gap:50px;margin-bottom:45px}
+.footer h3{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.footer-brand{font-family:"Plus Jakarta Sans";font-weight:800;color:var(--gold);font-size:1.05rem;margin-bottom:8px}
+.footer a{display:block;text-decoration:none;color:rgba(77,70,57,.75);font-size:.85rem;margin:8px 0}
+.footer a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(209,197,180,.45);padding-top:24px;text-align:center;color:rgba(77,70,57,.5);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase}
+
+@media(max-width:980px){.nav-links{display:none}.menu-btn{display:block}}
+@media(max-width:720px){
+  .container,.legal-width{width:min(100% - 28px,1180px)}
+  .nav-inner{height:74px}.brand img{height:43px}.brand-name{font-size:.72rem}
+  .hero{padding:132px 0 62px}
+  .jump-wrap{top:74px}.jump-nav{justify-content:flex-start}
+  .legal-main{padding:58px 0 75px}.legal-section{margin-bottom:65px}
+  .legal-card{padding:23px 20px}.section-head{gap:13px}.section-number{width:40px;height:40px}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 
-<body class="selection:bg-secondary/20">
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Fotoboxverleih Roßkopf Startseite">
+      <img src="fotoboxverleih-logo.webp" alt="Fotoboxverleih Roßkopf Logo">
+      <span class="brand-name"><span>Fotoboxverleih</span><span>Roßkopf</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-paparossi.html">Über mich</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+      <svg id="menuIcon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="closeIcon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+    <a href="index.html">Startseite</a>
+    <a href="leistungen.html">Leistungen & Preise</a>
+    <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
+    <a href="fotobox-extras.html">Extras</a>
+    <a href="ueber-paparossi.html">Über mich</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a class="active" href="rechtliches.html">Impressum, Datenschutz & AGB</a>
+  </nav>
+</header>
 
-    <header class="fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/10 glass-nav">
-        <div class="flex justify-between items-center px-4 md:px-12 py-3 max-w-screen-2xl mx-auto">
-            
-            <a href="index.html" class="flex items-center gap-3 shrink-0">
-                <img src="fotoboxverleih-logo.webp" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
-                <div class="flex flex-col justify-center border-l border-primary/20 pl-3">
-                    <span class="text-primary font-headline font-bold text-[10px] md:text-sm uppercase tracking-widest leading-tight">Fotoboxverleih</span>
-                    <span class="text-secondary font-headline font-extrabold text-xs md:text-base uppercase tracking-wider leading-tight">Roßkopf</span>
-                </div>
-            </a>
+<main>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Transparent geregelt</span>
+    <h1>Impressum, Datenschutz & AGB</h1>
+    <p>Hier findest du die Anbieterinformationen, Hinweise zur Verarbeitung personenbezogener Daten und die Mietbedingungen des Fotoboxverleihs Roßkopf.</p>
+  </div>
+</section>
 
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a href="index.html" class="text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                <a href="leistungen.html" class="text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                <a href="kontakt.html" class="text-secondary/70 hover:text-primary transition-colors">Kontakt</a>
-            </nav>
+<div class="jump-wrap">
+  <nav class="container jump-nav" aria-label="Seitennavigation">
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="#agb">Mietbedingungen</a>
+  </nav>
+</div>
 
-            <button id="menu-open-btn" class="md:hidden p-2 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-            </button>
-        </div>
-    </header>
-
-    <div id="mobile-menu" class="fixed inset-0 bg-background z-[200] flex-col items-center justify-center gap-10">
-        <button id="menu-close-btn" class="absolute top-6 right-6 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-        </button>
-        
-        <nav class="flex flex-col items-center gap-8 text-center">
-            <a href="index.html" class="text-primary text-2xl font-headline font-bold">Startseite</a>
-            <a href="leistungen.html" class="text-primary text-2xl font-headline font-bold">Leistungen & Preise</a>
-            <a href="kontakt.html" class="text-primary text-2xl font-headline font-bold">Kontakt</a>
-            <div class="h-px w-16 bg-primary/20"></div>
-            <a href="rechtliches.html" class="text-primary text-xl font-headline font-bold border-b-2 border-primary px-2">Impressum & Datenschutz</a>
-        </nav>
+<div class="legal-main legal-width">
+  <section class="legal-section" id="impressum">
+    <div class="section-head">
+      <div class="section-number" aria-hidden="true">1</div>
+      <div><h2>Impressum</h2><p>Anbieterkennzeichnung gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p></div>
     </div>
 
-    <main class="max-w-4xl mx-auto px-6 py-32">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-12 text-center leading-tight">Rechtliche Hinweise</h1>
+    <div class="legal-card">
+      <h3>Angaben zum Anbieter</h3>
+      <address>
+        <strong>Tobias Roßkopf</strong><br>
+        Fotoboxverleih Roßkopf<br>
+        Dr.-Kurz-Platz 5<br>
+        85135 Titting<br>
+        Deutschland
+      </address>
+      <div class="contact-list">
+        <a href="tel:+4915228494252">Telefon: +49 1522 8494252</a>
+        <a href="mailto:info@fotoboxverleih-rosskopf.de">E-Mail: info@fotoboxverleih-rosskopf.de</a>
+      </div>
+    </div>
 
-        <div class="space-y-20">
-            <!-- IMPRESSUM -->
-            <section id="impressum">
-                <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2 flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151l-200 108-200-108v151l200 108Zm0-241Z"/></svg> Impressum
-                </h2>
-                <div class="text-secondary/80 space-y-6 leading-relaxed">
-                    <div>
-                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-2">Angaben gemäß § 5 DDG:</p>
-                        <p class="text-lg font-medium text-primary">Tobias Roßkopf</p>
-                        <p>Fotoboxverleih Roßkopf</p>
-                        <p>Dr.-Kurz-Platz 5</p>
-                        <p>85135 Titting</p>
-                    </div>
-                    
-                    <div class="space-y-2">
-                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-1">Kontakt:</p>
-                        <p class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-387q31 31 65.5 58.5T524-281l98-97q9-9 20-11.5t27 1.5l140 26q13 2 22.5 13t9.5 25v162q0 18-12 30t-30 12Z"/></svg>
-                            +49 1522 8494252
-                        </p>
-                        <p class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-                            info@fotoboxverleih-rosskopf.de
-                        </p>
-                    </div>
+    <div class="legal-card">
+      <h3>Umsatzsteuer</h3>
+      <p>Die Umsätze sind gemäß § 19 UStG von der Umsatzsteuer befreit. Umsatzsteuer wird daher nicht ausgewiesen.</p>
+    </div>
 
-                    <div class="bg-primary/5 p-6 rounded-2xl border border-primary/10">
-                        <p class="font-bold text-primary mb-1">Umsatzsteuer-Hinweis:</p>
-                        <p class="text-sm italic">Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet.</p>
-                    </div>
+    <div class="legal-card">
+      <h3>Verbraucherstreitbeilegung</h3>
+      <p>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    </div>
+  </section>
 
-                    <div>
-                        <p class="font-bold text-primary text-sm uppercase tracking-wider mb-2">Redaktionell verantwortlich:</p>
-                        <p>Tobias Roßkopf, Dr.-Kurz-Platz 5, 85135 Titting</p>
-                    </div>
-                </div>
-            </section>
+  <section class="legal-section" id="datenschutz">
+    <div class="section-head">
+      <div class="section-number" aria-hidden="true">2</div>
+      <div><h2>Datenschutzerklärung</h2><p>Informationen über die Verarbeitung personenbezogener Daten</p></div>
+    </div>
 
-            <!-- DATENSCHUTZERKLÄRUNG -->
-            <section id="datenschutz">
-                <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2 flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
-                    Datenschutzerklärung
-                </h2>
-                <div class="text-secondary/80 space-y-8 text-sm leading-relaxed">
-                    <div>
-                        <h3 class="font-bold text-primary text-base mb-3 italic">1. Datenschutz auf einen Blick</h3>
-                        <p>Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO). Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben.</p>
-                    </div>
+    <div class="legal-card">
+      <h3>1. Verantwortlicher</h3>
+      <p>Verantwortlicher für die Datenverarbeitung auf dieser Website ist:</p>
+      <address>
+        <strong>Tobias Roßkopf</strong><br>
+        Fotoboxverleih Roßkopf<br>
+        Dr.-Kurz-Platz 5, 85135 Titting<br>
+        Telefon: <a href="tel:+4915228494252">+49 1522 8494252</a><br>
+        E-Mail: <a href="mailto:info@fotoboxverleih-rosskopf.de">info@fotoboxverleih-rosskopf.de</a>
+      </address>
+    </div>
 
-                    <div>
-                        <h3 class="font-bold text-primary text-base mb-3 italic">2. Datenerfassung auf unserer Webseite</h3>
-                        <p><strong>Kontakt:</strong> Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-                    </div>
+    <div class="legal-card">
+      <h3>2. Hosting über GitHub Pages</h3>
+      <p>Diese Website wird über den Dienst <strong>GitHub Pages</strong> der GitHub, Inc., USA, bereitgestellt. Beim Aufruf der Website verarbeitet GitHub technisch erforderliche Verbindungsdaten. Dazu kann insbesondere die IP-Adresse gehören, die GitHub nach eigenen Angaben zu Sicherheitszwecken protokolliert.</p>
+      <p>Die Verarbeitung erfolgt zur sicheren und zuverlässigen Bereitstellung der Website auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt im sicheren und technisch funktionsfähigen Betrieb unseres Internetauftritts. Eine Verarbeitung in den USA kann nicht ausgeschlossen werden. GitHub gibt an, am EU-US Data Privacy Framework teilzunehmen und ergänzend geeignete Garantien einzusetzen.</p>
+      <p>Weitere Informationen: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzhinweise von GitHub</a>.</p>
+    </div>
 
-                    <div class="bg-secondary/5 p-6 rounded-2xl border border-outline-variant/20 space-y-4">
-                        <h3 class="font-bold text-primary text-base italic">Besonderer Hinweis zur Fotobox-Nutzung & Bildrechten</h3>
-                        <p><strong>Verantwortlichkeit:</strong> Der Fotoboxverleih stellt lediglich die technische Apparatur zur Verfügung. Verantwortlicher im Sinne der DSGVO für die Erhebung und Verarbeitung der Bilddaten vor Ort ist ausdrücklich der Mieter (Veranstalter) des Events. Der Mieter ist verpflichtet, seine Gäste in geeigneter Weise (z. B. durch Hinweisschilder) über die Anfertigung von Fotos aufzuklären.</p>
-                        <p><strong>Speicherung & Online-Galerien:</strong> Erstellte Bilder werden lokal auf dem Gerät gespeichert. Sofern vereinbart, werden die Fotos nach der Veranstaltung in eine passwortgeschützte Online-Galerie hochgeladen. Der Zugang ist nur dem Mieter und den von ihm autorisierten Personen gestattet. Alle Bilddaten auf den lokalen Speichermedien des Vermieters sowie in der Online-Galerie werden spätestens 30 Tage nach Bereitstellung unwiderruflich gelöscht.</p>
-                    </div>
-                </div>
-            </section>
+    <div class="legal-card">
+      <h3>3. Technisch notwendige Daten</h3>
+      <p>Beim Aufruf einer Website werden durch Browser und Hosting-Infrastruktur regelmäßig technische Daten verarbeitet, etwa IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Datei, übertragene Datenmenge, Browsertyp und Betriebssystem. Diese Verarbeitung ist erforderlich, um die Website auszuliefern, Störungen zu erkennen und die Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p>Auf dieser Website werden keine eigenen Analyse- oder Marketingdienste eingesetzt. Die verwendeten Schriftarten und Seitenelemente werden lokal eingebunden. Soweit keine weiteren technisch nicht notwendigen Dienste ergänzt werden, setzt diese Website keine eigenen Tracking-Cookies ein.</p>
+    </div>
 
-            <!-- MIETBEDINGUNGEN (AGB) -->
-            <section id="agb">
-                <h2 class="text-2xl font-bold text-primary mb-6 border-b border-outline-variant/30 pb-2 flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
-                    Mietbedingungen (AGB)
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
-                        <h3 class="font-bold text-primary mb-2">§ 1 Vertragsgegenstand & Mietzeit</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Gegenstand des Vertrages ist die mietweise Überlassung einer Fotobox nebst vereinbartem Zubehör. Die Mietzeit ist bindend. Bei verspäteter Rückgabe oder verweigertem Abbau durch Verschulden des Mieters wird eine Nutzungsentschädigung in Höhe des regulären Tagessatzes fällig.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
-                        <h3 class="font-bold text-primary mb-2">§ 2 Haftung & Schäden</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Der Mieter haftet ab Übergabe vollumfänglich für alle Schäden (z. B. durch Umkippen, Flüssigkeiten, unsachgemäße Bedienung), Diebstahl oder Verlust der Fotobox sowie des Zubehörs (Requisiten, Drucker). Eine Kaution kann einbehalten werden. Technische Ausfälle ohne grobes Verschulden des Vermieters mindern den Mietpreis maximal bis zur Höhe des Auftragswerts.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
-                        <h3 class="font-bold text-primary mb-2">§ 3 Stornierungsbedingungen</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Da Termine exklusiv reserviert werden, fallen bei einer Stornierung durch den Mieter folgende Gebühren an: Bis zu 30 Tage vor dem Event kostenfrei, ab dem 29. bis zum 14. Tag vor dem Event 50 %, danach oder bei Nichtabholung 80 % des vereinbarten Gesamtbetrags.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm">
-                        <h3 class="font-bold text-primary mb-2">§ 4 Betrieb & technische Voraussetzungen</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Der Mieter verpflichtet sich, für einen ebenen, trockenen und diebstahlsicheren Untergrund sowie einen stabilen Stromanschluss (230V) in unmittelbarer Nähe zu sorgen. Die Fotobox darf im Außenbereich nur in einem wetterfesten, vollkommen geschützten Zelt oder Pavillon betrieben werden.</p>
-                    </div>
+    <div class="legal-card">
+      <h3>4. Kontaktaufnahme</h3>
+      <p>Wenn du uns per E-Mail, Telefon oder Kontaktformular kontaktierst, verarbeiten wir die von dir übermittelten Angaben zur Bearbeitung deiner Anfrage, zur Angebotserstellung und zur Durchführung vorvertraglicher Maßnahmen. Hierzu gehören insbesondere Name, Kontaktdaten, Veranstaltungsdatum, Veranstaltungsort, Anlass, gewünschtes Paket, Zubehörwünsche und der Inhalt deiner Nachricht.</p>
+      <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf einen Vertragsschluss gerichtet ist. Bei sonstigen Anfragen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Soweit eine Einwilligung erteilt wird, ist zusätzlich Art. 6 Abs. 1 lit. a DSGVO Rechtsgrundlage.</p>
+      <p>Die Angaben werden gelöscht, wenn die Anfrage abschließend bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten oder berechtigten Gründe für eine weitere Speicherung bestehen.</p>
+    </div>
 
-                    <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm md:col-span-2">
-                        <h3 class="font-bold text-primary mb-2">§ 5 Veröffentlichung von Bildmaterial zu Werbezwecken</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Der Vermieter behält sich das Recht vor, Fotos vom technischen Aufbau, dem Design der Fotobox sowie anonymisierte Raumaufnahmen (ohne erkennbare Personen) zu Referenz- und Marketingzwecken zu nutzen. Die Veröffentlichung von Fotos, auf denen Eventgäste klar erkennbar sind, erfolgt ausschließlich dann, wenn die abgebildeten Personen vor Ort (z. B. digital über die Software oder per eindeutigem Verhalten mit Marketing-Requisiten) ihre Einwilligung erteilt haben.</p>
-                    </div>
+    <div class="legal-card">
+      <h3>5. Kontaktformular mit Formspree</h3>
+      <p>Zur technischen Übermittlung des Kontaktformulars nutzen wir <strong>Formspree</strong>, einen Dienst der Formspree, Inc., USA. Beim Absenden werden die in das Formular eingegebenen Daten sowie technisch erforderliche Verbindungsdaten an Formspree übertragen und an uns weitergeleitet. Formspree kann Formulardaten zur Bereitstellung und Absicherung des Dienstes speichern.</p>
+      <p>Der Einsatz erfolgt zur Bearbeitung von Anfragen gemäß Art. 6 Abs. 1 lit. b DSGVO und auf Grundlage unseres berechtigten Interesses an einer sicheren Formularübermittlung gemäß Art. 6 Abs. 1 lit. f DSGVO. Eine Übermittlung in die USA findet statt. Formspree gibt an, für entsprechende Übermittlungen Standardvertragsklauseln zu verwenden.</p>
+      <p>Bitte übermittle über das Formular keine besonders sensiblen Daten. Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Datenschutzhinweise von Formspree</a>.</p>
+    </div>
 
-                    <div class="bg-white p-6 rounded-xl border border-outline-variant/20 shadow-sm md:col-span-2">
-                        <h3 class="font-bold text-primary mb-2">§ 6 Datenverarbeitung, Cloud-Upload und Live-Sharing</h3>
-                        <p class="text-sm text-secondary/70 leading-relaxed">Der Mieter verpflichtet sich, alle anwesenden Gäste bzw. Mitarbeiter ausdrücklich darauf hinzuweisen, dass die erstellten Aufnahmen bei einer verfügbaren WLAN-Verbindung während der Veranstaltung automatisiert in die Cloud des Drittanbieters <strong>fotoshare.co</strong> hochgeladen werden. Dies dient dem Zweck, den Nutzern die Bilder unmittelbar per Scan eines durch die Software generierten QR-Codes als Download bereitzustellen. Ferner stimmt der Mieter zu, dass die Bilddaten nach Beendigung des Events zur Nachbereitung in einen Cloud-Speicher hochgeladen werden, um sie dem Gastgeber bzw. dem buchenden Unternehmen als Download oder zur Ansicht zur Verfügung zu stellen. Eine anderweitige Verarbeitung, Veräußerung oder Nutzung der Bilddaten durch den Vermieter erfolgt ausdrücklich nicht.</p>
-                    </div>
-                    <div class="bg-primary/5 p-6 rounded-xl border border-primary/20 md:col-span-2">
-                        <h3 class="font-bold text-primary mb-2 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 20" width="20" fill="currentColor"><path d="m424-296 248-248-56-56-192 192-96-96-56 56 152 152Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
-                            Wichtiger Hinweis zum Widerrufsrecht
-                        </h3>
-                        <p class="text-xs text-secondary/80 leading-relaxed">Verbrauchern steht bei Online-Buchungen grundsätzlich ein gesetzliches Widerrufsrecht zu. Da es sich hierbei jedoch um eine Dienstleistung im Zusammenhang mit Freizeitbetätigungen zu einem spezifisch terminierten Zeitpunkt handelt (§ 312g Abs. 2 Nr. 9 BGB), ist das Widerrufsrecht nach verbindlicher Terminbestätigung ausgeschlossen.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
+    <div class="legal-card">
+      <h3>6. Verarbeitung von Fotobox-Aufnahmen</h3>
+      <p>Bei der Nutzung der Fotobox werden Bilddateien zunächst auf dem eingesetzten System gespeichert. Die Verarbeitung dient der Durchführung des gebuchten Fotobox-Vertrags, der Bereitstellung der vereinbarten Druck- und Downloadfunktionen sowie der Übergabe der Aufnahmen an den Auftraggeber.</p>
+      <p>Der Veranstalter ist dafür verantwortlich, seine Gäste vor der Nutzung der Fotobox verständlich über die Fotoaufnahme und die vorgesehenen Bereitstellungswege zu informieren. Die datenschutzrechtliche Rollenverteilung richtet sich nach der konkreten Vereinbarung und dem jeweiligen Verarbeitungszweck. Soweit wir Bilddaten ausschließlich nach dokumentierter Weisung des Veranstalters verarbeiten, kann eine Auftragsverarbeitung vorliegen; erforderlichenfalls wird hierzu eine gesonderte Vereinbarung nach Art. 28 DSGVO geschlossen.</p>
+      <p>Bilddaten werden nicht verkauft und nicht ohne eigenständige Rechtsgrundlage für andere Zwecke verwendet.</p>
+    </div>
 
-    <footer class="bg-white border-t border-outline-variant/20 py-16">
-        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M720-600v-80h160v80H720Zm0 160v-80h160v80H720Zm0 160v-80h160v80H720ZM120-120q-33 0-56.5-23.5T40-200v-560q0-33 23.5-56.5T120-840h480q33 0 56.5 23.5T680-760v560q0 33-23.5 56.5T600-120H120Zm0-80h480v-560H120v560Zm80-120h320l-90-120-70 90-50-60-110 150Zm-80 120v-560 560Z"/></svg>
-                        </div>
-                        <span class="font-headline font-bold text-lg text-primary uppercase tracking-tight">Fotoboxverleih Roßkopf</span>
-                    </div>
-                    <p class="text-secondary/60 text-sm leading-relaxed max-w-xs">
-                        Professioneller Fotoboxverleih für unvergessliche Momente in Titting und Umgebung.
-                    </p>
-                </div>
+    <div class="legal-card">
+      <h3>7. Online-Galerie und fotoShare Cloud</h3>
+      <p>Wenn eine Online-Galerie, ein QR-Download oder eine Online-Bereitstellung vereinbart beziehungsweise am Event aktiviert wird, können Aufnahmen an <strong>fotoShare Cloud</strong>, einen Dienst von Lumasoft, übertragen werden. Abhängig von den Eventeinstellungen können einzelne Aufnahmen oder das Eventalbum über einen Link beziehungsweise einen passwortgeschützten Zugang erreichbar sein.</p>
+      <p>Die Übertragung erfolgt nur, soweit sie für die vereinbarte Bereitstellung erforderlich ist und eine entsprechende Rechtsgrundlage besteht. Der Veranstalter muss seine Gäste über den eingesetzten Übermittlungsweg informieren. Einstellungen wie Gastzugriff, Linkfreigabe und Downloadmöglichkeit werden veranstaltungsbezogen festgelegt.</p>
+      <p>Weitere Informationen zum Dienst: <a href="https://www.lumasoft.co/fotoshare-cloud" target="_blank" rel="noopener noreferrer">fotoShare Cloud von Lumasoft</a>.</p>
+    </div>
 
-                <div class="flex flex-col items-center md:items-start gap-4">
-                    <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Kontakt</h4>
-                    <a href="mailto:info@fotoboxverleih-rosskopf.de" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" class="text-primary group-hover:scale-110 transition-transform" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-                        <span class="text-sm font-medium">info@fotoboxverleih-rosskopf.de</span>
-                    </a>
-                    <a href="tel:+4915228494252" class="flex items-center gap-3 text-secondary/70 hover:text-primary transition-colors group">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" class="text-primary group-hover:scale-110 transition-transform" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-387q31 31 65.5 58.5T524-281l98-97q9-9 20-11.5t27 1.5l140 26q13 2 22.5 13t9.5 25v162q0 18-12 30t-30 12Z"/></svg>
-                        <span class="text-sm font-medium">+49 1522 8494252</span>
-                    </a>
-                </div>
+    <div class="legal-card">
+      <h3>8. Audio-Gästebuch</h3>
+      <p>Bei Buchung des Audio-Gästebuchs werden die von Gästen freiwillig hinterlassenen Sprachnachrichten gespeichert und nach dem Event dem Auftraggeber als MP3-Dateien über einen vereinbarten Cloud-Zugang bereitgestellt. Die Gäste sind vor der Aufnahme durch die Ansage am Telefon über den Beginn der Aufzeichnung zu informieren.</p>
+      <p>Die Aufnahmen werden ausschließlich zur vereinbarten Übergabe an den Auftraggeber verarbeitet und nicht ohne gesonderte Rechtsgrundlage veröffentlicht oder zu Werbezwecken genutzt.</p>
+    </div>
 
-                <div class="flex flex-col items-center md:items-start gap-4">
-                    <h4 class="font-headline font-bold text-primary uppercase text-xs tracking-widest mb-2 border-b border-primary/20 pb-1">Navigation</h4>
-                    <nav class="flex flex-col items-center md:items-start gap-2">
-                        <a href="index.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Startseite</a>
-                        <a href="leistungen.html" class="text-sm text-secondary/70 hover:text-primary transition-colors">Leistungen & Preise</a>
-                        <a href="rechtliches.html" class="text-sm text-primary font-bold underline underline-offset-4 decoration-primary/30">Impressum & Datenschutz</a>
-                    </nav>
-                </div>
-            </div>
+    <div class="legal-card">
+      <h3>9. Marketingaufnahmen und Einwilligung</h3>
+      <p>Aufnahmen, auf denen Personen erkennbar sind, verwenden wir für Website, soziale Medien, Google-Unternehmensprofil oder Printwerbung nur auf Grundlage einer gesonderten, freiwilligen und dokumentierten Einwilligung der jeweils abgebildeten Personen gemäß Art. 6 Abs. 1 lit. a DSGVO. Bei Minderjährigen ist die erforderliche Zustimmung der Sorgeberechtigten einzuholen.</p>
+      <p>Eine Einwilligung kann jederzeit mit Wirkung für die Zukunft über die oben genannten Kontaktdaten widerrufen werden. Die Rechtmäßigkeit der Verarbeitung bis zum Widerruf bleibt unberührt. Eine Verweigerung oder ein Widerruf hat keine Nachteile für die Buchung oder Durchführung des Fotobox-Vertrags.</p>
+    </div>
 
-            <div class="pt-8 border-t border-outline-variant/10 flex justify-center md:justify-start">
-                <p class="text-secondary/40 text-[10px] uppercase tracking-widest">
-                    © 2026 Fotoboxverleih Roßkopf. Alle Rechte vorbehalten.
-                </p>
-            </div>
-        </div>
-    </footer>
+    <div class="legal-card">
+      <h3>10. Speicherdauer</h3>
+      <p>Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Vertrags- und Rechnungsdaten werden entsprechend den gesetzlichen handels- und steuerrechtlichen Fristen aufbewahrt.</p>
+      <p>Fotobox-Aufnahmen und Audio-Nachrichten auf unseren lokalen Arbeits- und Sicherungssystemen sowie in von uns verwalteten Übergabebereichen werden grundsätzlich spätestens 30 Tage nach vollständiger Bereitstellung an den Auftraggeber gelöscht, sofern keine abweichende Vereinbarung, gesetzliche Pflicht oder berechtigte Sicherung von Ansprüchen eine längere Speicherung erfordert. Der Auftraggeber ist dafür verantwortlich, die bereitgestellten Dateien rechtzeitig herunterzuladen und selbst zu sichern.</p>
+    </div>
 
-    <script>
-        const menu = document.getElementById('mobile-menu');
-        const openBtn = document.getElementById('menu-open-btn');
-        const closeBtn = document.getElementById('menu-close-btn');
-        const body = document.body;
+    <div class="legal-card">
+      <h3>11. Empfänger und Übermittlungen in Drittländer</h3>
+      <p>Daten erhalten nur Stellen, die sie zur Erfüllung der genannten Zwecke benötigen. Dazu können Hosting-, Formular-, Software-, Cloud- und E-Mail-Dienstleister gehören. Soweit diese in unserem Auftrag tätig werden, werden sie nach den datenschutzrechtlichen Vorgaben eingebunden.</p>
+      <p>Bei Dienstleistern außerhalb des Europäischen Wirtschaftsraums erfolgt eine Übermittlung nur bei Vorliegen der gesetzlichen Voraussetzungen, beispielsweise auf Grundlage eines Angemessenheitsbeschlusses oder geeigneter Garantien wie den Standardvertragsklauseln der Europäischen Kommission.</p>
+    </div>
 
-        openBtn.addEventListener('click', () => {
-            menu.classList.add('active');
-            body.classList.add('no-scroll');
-        });
+    <div class="legal-card">
+      <h3>12. Deine Datenschutzrechte</h3>
+      <p>Du hast im Rahmen der gesetzlichen Voraussetzungen insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit. Außerdem kannst du einer Verarbeitung auf Grundlage berechtigter Interessen aus Gründen, die sich aus deiner besonderen Situation ergeben, widersprechen. Erteilte Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+      <p>Zur Ausübung deiner Rechte genügt eine Nachricht an <a href="mailto:info@fotoboxverleih-rosskopf.de">info@fotoboxverleih-rosskopf.de</a>.</p>
+    </div>
 
-        const closeMenu = () => {
-            menu.classList.remove('active');
-            body.classList.remove('no-scroll');
-        };
+    <div class="legal-card">
+      <h3>13. Beschwerderecht</h3>
+      <p>Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren. Für nicht-öffentliche Unternehmen in Bayern ist insbesondere das Bayerische Landesamt für Datenschutzaufsicht zuständig:</p>
+      <address>
+        Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br>
+        Promenade 18, 91522 Ansbach<br>
+        <a href="https://www.lda.bayern.de/" target="_blank" rel="noopener noreferrer">www.lda.bayern.de</a>
+      </address>
+    </div>
+  </section>
 
-        closeBtn.addEventListener('click', closeMenu);
+  <section class="legal-section" id="agb">
+    <div class="section-head">
+      <div class="section-number" aria-hidden="true">3</div>
+      <div><h2>Mietbedingungen (AGB)</h2><p>Allgemeine Geschäftsbedingungen für die Vermietung von Fotoboxen und Zubehör</p></div>
+    </div>
 
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-    </script>
+    <div class="notice">
+      <p><strong>Hinweis:</strong> Maßgeblich sind die bei Vertragsschluss einbezogenen Mietbedingungen und das individuelle Angebot. Individuelle Vereinbarungen im Angebot oder Vertrag haben Vorrang vor diesen AGB.</p>
+    </div>
+
+    <div class="agb-list">
+      <div class="legal-card agb-card">
+        <h3>Geltungsbereich und Vertragsschluss</h3>
+        <p>Diese AGB gelten für Verträge über die Vermietung von Fotoboxen und vereinbartem Zubehör durch Tobias Roßkopf, Fotoboxverleih Roßkopf. Der konkrete Leistungsumfang ergibt sich aus dem individuellen Angebot beziehungsweise der Auftragsbestätigung.</p>
+        <p>Eine Anfrage ist unverbindlich. Ein Vertrag kommt erst durch Annahme eines Angebots, eine ausdrückliche Auftragsbestätigung oder eine sonstige eindeutige Vereinbarung beider Parteien zustande.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Vertragsgegenstand und Mietzeit</h3>
+        <p>Gegenstand des Vertrags ist die zeitweise Überlassung der vereinbarten Fotobox einschließlich des gebuchten Zubehörs. Mietzeit, Veranstaltungsort, Übergabe, Aufbau, Abbau und Rückgabe richten sich nach der individuellen Vereinbarung.</p>
+        <p>Eine Verlängerung der Mietzeit bedarf der vorherigen Zustimmung. Entstehen durch eine vom Mieter zu vertretende verspätete Rückgabe oder einen verhinderten Abbau zusätzliche Kosten oder Nutzungsausfälle, können diese nach den gesetzlichen Vorschriften berechnet werden.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Preise, Fahrtkosten und Zahlung</h3>
+        <p>Es gelten die im Angebot oder Vertrag genannten Preise. Fahrtkosten, Zusatzleistungen, Verbrauchsmaterialien und eine gegebenenfalls vereinbarte Kaution werden gesondert ausgewiesen. Die Umsätze sind gemäß § 19 UStG von der Umsatzsteuer befreit.</p>
+        <p>Zahlungszeitpunkt und Zahlungsart ergeben sich aus dem individuellen Angebot beziehungsweise der Rechnung. Der Mieter kommt nach den gesetzlichen Vorschriften in Verzug.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Aufstellung und technische Voraussetzungen</h3>
+        <p>Der Mieter stellt rechtzeitig einen ausreichend großen, ebenen, trockenen und standsicheren Aufstellbereich sowie einen geeigneten Stromanschluss mit 230 V in erreichbarer Nähe bereit. Zugangswege und Veranstaltungsfläche müssen einen gefahrlosen Auf- und Abbau ermöglichen.</p>
+        <p>Im Außenbereich darf die Technik nur nach vorheriger Vereinbarung und vollständig geschützt vor Niederschlag, Feuchtigkeit, Wind, Staub, direkter Sonneneinstrahlung und starken Temperaturschwankungen betrieben werden. Bei einer Gefährdung von Personen oder Technik darf der Betrieb unterbrochen oder der Aufbau abgelehnt werden.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Sorgfaltspflichten des Mieters</h3>
+        <p>Der Mieter behandelt die Mietsachen pfleglich und beachtet Einweisung und Bedienhinweise. Veränderungen, Reparaturversuche, Standortwechsel sowie die Weitergabe an Dritte sind ohne vorherige Zustimmung nicht gestattet. Getränke und andere Flüssigkeiten sind von der Technik fernzuhalten.</p>
+        <p>Der Mieter informiert die Gäste über eine ordnungsgemäße Nutzung und sorgt im Rahmen des Zumutbaren dafür, dass Fotobox und Zubehör vor Beschädigung, Verlust und unbefugtem Zugriff geschützt werden. Erkennbare Störungen oder Schäden sind unverzüglich mitzuteilen.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Schäden, Verlust und Kaution</h3>
+        <p>Der Mieter haftet nach den gesetzlichen Vorschriften für schuldhaft verursachte Schäden und Verluste, die durch ihn, seine Erfüllungsgehilfen oder ihm zurechenbare Nutzer der Mietsachen entstehen. Normale, vertragsgemäße Abnutzung stellt keinen ersatzpflichtigen Schaden dar.</p>
+        <p>Eine Kaution wird nur erhoben, wenn sie individuell vereinbart wurde. Sie kann bis zur Prüfung der vollständigen und unbeschädigten Rückgabe einbehalten und mit fälligen Ansprüchen verrechnet werden. Ein verbleibender Betrag wird anschließend zurückgezahlt.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Technische Störungen und Haftung des Vermieters</h3>
+        <p>Technische Störungen sind unverzüglich zu melden, damit eine Fehlerbehebung oder zumutbare Ersatzlösung versucht werden kann. Gesetzliche Mängelrechte des Mieters bleiben unberührt.</p>
+        <p>Der Vermieter haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei leicht fahrlässiger Verletzung einer wesentlichen Vertragspflicht ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Im Übrigen ist die Haftung für leicht fahrlässig verursachte Schäden ausgeschlossen. Zwingende gesetzliche Haftung bleibt unberührt.</p>
+        <p>Für Ausfälle, die auf fehlende oder instabile Strom- und Internetverbindungen der Location, Eingriffe Dritter, höhere Gewalt oder sonstige nicht vom Vermieter zu vertretende Umstände zurückzuführen sind, haftet der Vermieter nicht.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Stornierung durch den Mieter</h3>
+        <p>Da der Veranstaltungstermin exklusiv reserviert wird, gelten bei einer Stornierung folgende Pauschalen:</p>
+        <ul>
+          <li>bis einschließlich 30 Tage vor dem Event: kostenfrei,</li>
+          <li>29 bis 14 Tage vor dem Event: 50 % des vereinbarten Gesamtpreises,</li>
+          <li>ab 13 Tage vor dem Event oder bei Nichtabnahme: 80 % des vereinbarten Gesamtpreises.</li>
+        </ul>
+        <p>Dem Mieter bleibt ausdrücklich der Nachweis gestattet, dass kein Schaden oder ein wesentlich geringerer Schaden entstanden ist. Ersparte Aufwendungen und eine anderweitige Vermietung werden angerechnet. Gesetzliche Rücktritts- und Kündigungsrechte bleiben unberührt.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Absage und höhere Gewalt</h3>
+        <p>Kann die Leistung aufgrund höherer Gewalt oder anderer von keiner Partei zu vertretender Umstände nicht erbracht werden, informieren sich die Parteien unverzüglich und bemühen sich um eine angemessene Lösung, beispielsweise einen Ersatztermin. Weitergehende Ansprüche bestehen nur nach Maßgabe der gesetzlichen Vorschriften.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Bild-, Audio- und Nutzungsdaten</h3>
+        <p>Der Mieter informiert die Gäste über die Foto- beziehungsweise Audioaufnahme und die vereinbarten Bereitstellungswege. Online-Galerie, QR-Download, Cloud-Upload und Gastzugriff werden nur im vereinbarten Umfang eingesetzt.</p>
+        <p>Eine Nutzung erkennbarer Personen zu Werbezwecken ist nicht Bestandteil dieser AGB und wird nicht allein durch die Nutzung der Fotobox, durch Hinweisschilder, Requisiten oder schlüssiges Verhalten erlaubt. Hierfür ist eine gesonderte, freiwillige und dokumentierte Einwilligung der jeweils abgebildeten Person erforderlich.</p>
+        <p>Sachaufnahmen der Fotobox oder des Zubehörs ohne personenbezogene Inhalte dürfen als Referenz verwendet werden, soweit dadurch keine Rechte des Mieters, der Location oder Dritter verletzt werden. Im Zweifel wird vor einer Veröffentlichung eine Freigabe eingeholt.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Widerrufsrecht bei Verbraucherverträgen</h3>
+        <p>Bei Fernabsatzverträgen steht Verbrauchern grundsätzlich ein gesetzliches Widerrufsrecht zu. Dieses besteht nach § 312g Abs. 2 Nr. 9 BGB unter anderem nicht bei Verträgen über Dienstleistungen im Zusammenhang mit Freizeitbetätigungen, wenn für die Leistung ein spezifischer Termin oder Zeitraum vorgesehen ist. Für fest terminierte Fotobox-Buchungen gilt der Ausschluss, soweit die gesetzlichen Voraussetzungen im konkreten Vertrag erfüllt sind.</p>
+        <p>Gesetzlich erforderliche Verbraucherinformationen werden im Buchungsprozess beziehungsweise mit den Vertragsunterlagen bereitgestellt.</p>
+      </div>
+
+      <div class="legal-card agb-card">
+        <h3>Schlussbestimmungen</h3>
+        <p>Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Bei Verbrauchern gilt diese Rechtswahl nur, soweit dadurch zwingende Schutzvorschriften des Staates ihres gewöhnlichen Aufenthalts nicht entzogen werden.</p>
+        <p>Sollten einzelne Bestimmungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An die Stelle der unwirksamen Regelung treten die gesetzlichen Vorschriften.</p>
+      </div>
+    </div>
+
+    <div class="status">Stand: 19. August 2026</div>
+  </section>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Fotoboxverleih Roßkopf</div>
+        <a href="mailto:info@fotoboxverleih-rosskopf.de">info@fotoboxverleih-rosskopf.de</a>
+        <a href="tel:+4915228494252">+49 1522 8494252</a>
+      </div>
+      <div>
+        <h3>Rechtliches</h3>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutzerklärung</a>
+        <a href="#agb">Mietbedingungen (AGB)</a>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen & Preise</a>
+        <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
+        <a href="fotobox-extras.html">Fotobox-Extras</a>
+        <a href="ueber-paparossi.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Fotoboxverleih Roßkopf – Alle Rechte vorbehalten</div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+const menuIcon=document.getElementById("menuIcon");
+const closeIcon=document.getElementById("closeIcon");
+
+function setMenu(open){
+  mobileMenu.classList.toggle("open",open);
+  document.body.classList.toggle("menu-open",open);
+  menuIcon.style.display=open?"none":"block";
+  closeIcon.style.display=open?"block":"none";
+  menuBtn.setAttribute("aria-expanded",String(open));
+  menuBtn.setAttribute("aria-label",open?"Menü schließen":"Menü öffnen");
+}
+menuBtn.addEventListener("click",()=>setMenu(!mobileMenu.classList.contains("open")));
+mobileMenu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setMenu(false)));
+</script>
 </body>
 </html>

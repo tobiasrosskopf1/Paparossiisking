@@ -107,18 +107,25 @@ li+li{margin-top:6px}
   .footer-grid{grid-template-columns:1fr}
 }
 </style>
+<style>
+.brand{gap:14px}
+.brand img{width:auto;height:54px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(214,184,95,.22))}
+.brand-name,.brand-text{padding-left:14px;border-left:1px solid rgba(255,255,255,.22);font-family:Jakarta,"Plus Jakarta Sans",Arial,sans-serif;font-size:.85rem;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.brand-name span:last-child,.brand-text b{display:block;color:var(--gold-light,var(--light))}
+@media(max-width:720px){.brand img{height:44px}.brand-name,.brand-text{display:flex;font-size:.72rem}}
+</style>
 </head>
 
 <body>
 <header class="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html" aria-label="Fotoboxverleih Roßkopf Startseite">
-      <img src="fotoboxverleih-logo.webp" alt="Fotoboxverleih Roßkopf Logo">
+      <img src="fotoboxverleih-header-logo.svg" alt="Fotoboxverleih Roßkopf Logo">
       <span class="brand-name"><span>Fotoboxverleih</span><span>Roßkopf</span></span>
     </a>
     <nav class="nav-links" aria-label="Hauptnavigation">
       <a href="index.html">Startseite</a>
-      <a href="leistungen.html">Leistungen</a>
+      <a href="leistungen.html">Fotobox</a>
       <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
       <a href="fotobox-extras.html">Extras</a>
       <a href="persoenliches.html">Persönliches</a>
@@ -131,7 +138,7 @@ li+li{margin-top:6px}
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
     <a href="index.html">Startseite</a>
-    <a href="leistungen.html">Leistungen & Preise</a>
+    <a href="leistungen.html">Fotobox</a>
     <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
     <a href="fotobox-extras.html">Extras</a>
     <a href="persoenliches.html">Persönliches</a>
@@ -315,7 +322,7 @@ li+li{margin-top:6px}
 
       <div class="legal-card agb-card">
         <h3>Preise, Fahrtkosten und Zahlung</h3>
-        <p>Es gelten die im Angebot oder Vertrag genannten Preise. Fahrtkosten, Zusatzleistungen, Verbrauchsmaterialien und eine gegebenenfalls vereinbarte Kaution werden gesondert ausgewiesen. Die Umsätze sind gemäß § 19 UStG von der Umsatzsteuer befreit.</p>
+        <p>Es gelten die im Angebot oder Vertrag genannten Preise. Beim Klassik-Paket sind 350 Ausdrucke enthalten; jeder darüber hinaus gedruckte Ausdruck wird mit 0,20 € berechnet. Fahrtkosten, freiwillig gewählte Zusatzleistungen, sonstige Verbrauchsmaterialien und eine gegebenenfalls vereinbarte Kaution werden gesondert ausgewiesen. Die Umsätze sind gemäß § 19 UStG von der Umsatzsteuer befreit.</p>
         <p>Zahlungszeitpunkt und Zahlungsart ergeben sich aus dem individuellen Angebot beziehungsweise der Rechnung. Der Mieter kommt nach den gesetzlichen Vorschriften in Verzug.</p>
       </div>
 
@@ -402,7 +409,7 @@ li+li{margin-top:6px}
       <div>
         <h3>Navigation</h3>
         <a href="index.html">Startseite</a>
-        <a href="leistungen.html">Leistungen & Preise</a>
+        <a href="leistungen.html">Fotobox</a>
         <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
         <a href="fotobox-extras.html">Fotobox-Extras</a>
         <a href="persoenliches.html">Persönliches</a>

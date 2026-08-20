@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 132" role="img" aria-labelledby="title desc">
+  <title id="title">Fotoboxverleih Roßkopf Bildmarke</title>
+  <desc id="desc">Kamera vor einem goldenen Strahlenkranz</desc>
+  <g fill="none" stroke="#d6b85f" stroke-linecap="round">
+    <path stroke-width="5" d="M110 51V7M96 53 83 12M124 53l13-41M83 59 53 20M137 59l30-39M70 69 24 42M150 69l46-27M64 82 9 72M156 82l55-10M68 94l-49 22M152 94l49 22"/>
+    <path stroke-width="3" d="M91 57 70 30M129 57l21-27M75 64 42 51M145 64l33-13M65 75 35-2M155 75l35-2M77 91l-29 17M143 91l29 17"/>
+  </g>
+  <path fill="#fbf8f2" stroke="#d6b85f" stroke-width="2.5" d="M58 61h25l7-11h40l7 11h25c8 0 14 6 14 14v38c0 8-6 14-14 14H58c-8 0-14-6-14-14V75c0-8 6-14 14-14Z"/>
+  <rect x="96" y="44" width="28" height="10" rx="4" fill="#fbf8f2" stroke="#d6b85f" stroke-width="2.5"/>
+  <circle cx="110" cy="92" r="27" fill="#20201c"/>
+  <circle cx="110" cy="92" r="17" fill="none" stroke="#fbf8f2" stroke-width="4"/>
+  <circle cx="110" cy="92" r="6" fill="#d6b85f"/>
+  <rect x="57" y="71" width="20" height="8" rx="4" fill="#20201c"/>
+  <circle cx="65" cy="75" r="2.5" fill="#d6b85f"/>
+  <path d="M151 75h11" fill="none" stroke="#20201c" stroke-width="5" stroke-linecap="round"/>
+</svg>

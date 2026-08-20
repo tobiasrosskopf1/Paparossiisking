@@ -216,7 +216,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   "telephone":"+4915228494252",
   "priceRange":"€€",
   "address":{"@type":"PostalAddress","streetAddress":"Altdorf","addressLocality":"Titting","postalCode":"85135","addressRegion":"Bayern","addressCountry":"DE"},
-  "areaServed":["Titting","Eichstätt","Ingolstadt","Greding","Beilngries"]
+  "areaServed":["Titting","Eichstätt","Ingolstadt","Greding","Beilngries","Weißenburg","Hilpoltstein"]
 }
 </script>
 
@@ -226,7 +226,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   "@type":"FAQPage",
   "mainEntity":[
     {"@type":"Question","name":"Wie funktioniert die Bedienung der Fotobox?","acceptedAnswer":{"@type":"Answer","text":"Über den Touchscreen startet ihr die Aufnahme. Nach einem Countdown von normalerweise fünf Sekunden löst die Kamera aus. Alle Fotos werden digital gespeichert und nach der Veranstaltung über eine Online-Galerie bereitgestellt. Bei einem Paket mit Sofortdruck können die Bilder direkt vor Ort in wenigen Sekunden ausgedruckt werden."}},
-    {"@type":"Question","name":"Gibt es ein Limit bei den Bildern und wie werden sie bereitgestellt?","acceptedAnswer":{"@type":"Answer","text":"Digital könnt ihr unbegrenzt viele Fotos aufnehmen. Nach der Veranstaltung werden die Bilder über eine Online-Galerie beziehungsweise Cloud zum Herunterladen bereitgestellt. Im Klassik-Paket sind 350 Ausdrucke enthalten, beim Premium-Komplettpaket gilt eine Druckflatrate ohne Limit."}},
+    {"@type":"Question","name":"Gibt es ein Limit bei den Bildern und wie werden sie bereitgestellt?","acceptedAnswer":{"@type":"Answer","text":"Digital könnt ihr unbegrenzt viele Fotos aufnehmen. Nach der Veranstaltung werden die Bilder über eine Online-Galerie beziehungsweise Cloud zum Herunterladen bereitgestellt. Im Klassik-Paket sind 350 Ausdrucke enthalten. Jeder weitere Ausdruck kostet 0,20 Euro. Beim Premium-Komplettpaket gilt eine Druckflatrate ohne Limit."}},
     {"@type":"Question","name":"Wie viele Personen passen auf ein Fotobox-Bild?","acceptedAnswer":{"@type":"Answer","text":"Das hängt vor allem vom Abstand zwischen Fotobox und Hintergrund ab. Mindestens vier Personen passen problemlos auf ein Bild, häufig sind auch Gruppen mit bis zu zehn Personen oder mehr möglich. Je größer der Abstand, desto mehr Personen finden Platz."}},
     {"@type":"Question","name":"Wie viel Platz benötigt die Fotobox?","acceptedAnswer":{"@type":"Answer","text":"Empfohlen werden mindestens zwei Meter Breite und zweieinhalb Meter Tiefe. Zusätzlich werden ein Stromanschluss und ein stabiler Beistelltisch für Drucker und Requisiten benötigt. Mehr Platz erleichtert größere Gruppenaufnahmen."}},
     {"@type":"Question","name":"Darf die Fotobox im Freien stehen?","acceptedAnswer":{"@type":"Answer","text":"Ja, wenn Fotobox und Zubehör zuverlässig vor Niederschlag, Feuchtigkeit und direkter starker Sonneneinstrahlung geschützt sind. Dafür sollte mindestens ein geeigneter Pavillon oder ein vergleichbarer Wetterschutz vorhanden sein."}},
@@ -237,18 +237,25 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   ]
 }
 </script>
+<style>
+.brand{gap:14px}
+.brand img{width:auto;height:54px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(214,184,95,.22))}
+.brand-name,.brand-text{padding-left:14px;border-left:1px solid rgba(255,255,255,.22);font-family:Jakarta,"Plus Jakarta Sans",Arial,sans-serif;font-size:.85rem;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.brand-name span:last-child,.brand-text b{display:block;color:var(--gold-light,var(--light))}
+@media(max-width:720px){.brand img{height:44px}.brand-name,.brand-text{display:flex;font-size:.72rem}}
+</style>
 </head>
 
 <body>
 <header class="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html" aria-label="Fotoboxverleih Roßkopf – Startseite">
-      <img src="fotoboxverleih-logo.webp" alt="Logo von Fotoboxverleih Roßkopf">
+      <img src="fotoboxverleih-header-logo.svg" alt="Logo von Fotoboxverleih Roßkopf">
       <span class="brand-name"><span>Fotoboxverleih</span><span>Roßkopf</span></span>
     </a>
     <nav class="nav-links" aria-label="Hauptnavigation">
       <a class="active" href="index.html">Startseite</a>
-      <a href="leistungen.html">Leistungen</a>
+      <a href="leistungen.html">Fotobox</a>
       <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
       <a href="fotobox-extras.html">Extras</a>
       <a href="persoenliches.html">Persönliches</a>
@@ -261,7 +268,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Startseite</a>
-    <a href="leistungen.html">Leistungen & Preise</a>
+    <a href="leistungen.html">Fotobox</a>
     <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
     <a href="fotobox-extras.html">Fotobox-Extras</a>
     <a href="persoenliches.html">Persönliches</a>
@@ -321,28 +328,28 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <article class="package">
         <h3>Einsteiger (Digital)</h3>
         <p class="muted">Dein digitales Party-Upgrade – unbegrenzt Fotos, maximaler Spaß.</p>
-        <div class="price">ab 179 €</div>
+        <div class="price">179 €</div>
         <ul><li>Digitale Fotoflatrate</li><li>Online-Galerie</li><li>Auf- und Abbau inklusive</li></ul>
         <a class="btn btn-outline" href="leistungen.html#einsteiger">Weitere Informationen</a>
       </article>
       <article class="package featured">
         <h3>Klassik mit Sofortdruck</h3>
         <p class="muted">Das volle Erlebnis – schießen, drucken und sofort mitnehmen.</p>
-        <div class="price">ab 299 €</div>
-        <ul><li>Alle Einsteiger-Leistungen</li><li>Fotodrucker inkl. 350 Bilder (10 × 15 cm)</li><li>Individuelles Drucklayout</li></ul>
+        <div class="price">299 €</div>
+        <ul><li>Alle Einsteiger-Leistungen</li><li>Fotodrucker inkl. 350 Bilder (10 × 15 cm)</li><li>Jeder weitere Ausdruck: 0,20 €</li><li>Individuelles Drucklayout</li></ul>
         <a class="btn" href="leistungen.html#klassik">Weitere Informationen</a>
       </article>
       <article class="package">
         <h3>Premium-Komplettpaket</h3>
         <p class="muted">Sorglos-Premium – das volle Programm inklusive Zubehör & Audio-Gästebuch.</p>
-        <div class="price">ab 449 €</div>
+        <div class="price">449 €</div>
         <ul><li>Alle Klassik-Leistungen</li><li>Druckflatrate ohne Limit</li><li>Audio-Gästebuch (Retro-Telefon)</li><li>Hintergrundsystem</li><li>Fotoaufgaben</li><li>Premium Service</li></ul>
         <a class="btn btn-outline" href="leistungen.html#premium">Weitere Informationen</a>
       </article>
     </div>
     <div class="delivery">
       <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div>
-      <p><strong>Anfahrt & Lieferung</strong><br>Pro gefahrenen Kilometer ab <strong>85135 Titting (Ortsteil Altdorf)</strong> berechnen wir eine Fahrtkostenpauschale von <strong>0,40 €</strong>.</p>
+      <p><strong>Transparente Paketpreise</strong><br>Die genannten Paketpreise gelten verbindlich für alle jeweils aufgeführten Leistungen. Beim Klassik-Paket sind 350 Ausdrucke enthalten; jeder weitere Ausdruck kostet 0,20 €. Hinzu kommen die Fahrtkosten von <strong>0,40 € pro gefahrenem Kilometer ab 85135 Titting (Ortsteil Altdorf)</strong> sowie nur freiwillig gewählte Extras.</p>
     </div>
   </div>
 </section>
@@ -361,7 +368,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <div><h3>Einfache Bedienung</h3><p>Gäste können die Fotobox unkompliziert selbst bedienen und direkt loslegen.</p></div>
       </div>
     </div>
-    <div><img src="fotorequisiten.webp" alt="Fotobox-Requisiten für lustige Erinnerungsfotos" loading="lazy"></div>
+    <div><img src="fotobox-ausdrucke-erinnerungen-anonymisiert.webp" alt="Individuelle Fotobox-Ausdrucke als bleibende Erinnerung an eine Hochzeit" width="1200" height="900" loading="lazy"></div>
   </div>
 </section>
 
@@ -384,7 +391,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
 
       <article class="accessory">
-        <img src="hexagon.webp" alt="Hexagon Dekoration als besonderes Event-Zubehör" loading="lazy">
+        <img src="fotohintergrund-kulisse.webp" alt="Fotobox mit weißem Hintergrund, Lichterketten und Pampasgras" width="1400" height="788" loading="lazy">
         <div class="accessory-body">
           <h3>Hintergründe & Hexagon</h3>
           <p>Eine passende Kulisse schafft einen einheitlichen Look und macht die Fotofläche zum Blickfang.</p>
@@ -447,7 +454,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <div><h3>Individuelles Drucklayout</h3><p>Das Druckdesign kann passend zu eurem Event gestaltet werden.</p></div>
         <div><h3>Persönlich betreut</h3><p>Wir kümmern uns um die Vorbereitung und sorgen dafür, dass die Technik für euren Termin bereitsteht.</p></div>
       </div>
-      <a class="btn btn-outline" href="leistungen.html">Leistungen & Preise</a>
+      <a class="btn btn-outline" href="leistungen.html">Fotobox</a>
     </div>
   </div>
 </section>
@@ -497,8 +504,8 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   <div class="narrow">
     <span class="eyebrow">Regional für euch unterwegs</span>
     <h2>Fotobox im Raum Eichstätt & Ingolstadt</h2>
-    <p>Wir bringen die Fotobox zu Hochzeiten, Geburtstagen, Firmenfeiern und Veranstaltungen rund um Titting, Eichstätt, Ingolstadt, Greding und Beilngries sowie in die nähere Umgebung.</p>
-    <p style="margin-top:12px;font-size:.85rem">Weitere Orte gerne auf Anfrage.</p>
+    <p>Von meinem Standort in Titting aus liefere ich bevorzugt im Umkreis von rund 30 Kilometern. Neben Eichstätt und Ingolstadt decke ich damit auch Veranstaltungen im Raum Greding, Beilngries, Weißenburg und Hilpoltstein ab.</p>
+    <p style="margin-top:12px;font-size:.85rem">Weitere Orte sind nach persönlicher Abstimmung ebenfalls möglich.</p>
   </div>
 </section>
 
@@ -540,7 +547,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     </div>
     <div class="faq-list">
       <details><summary>Wie funktioniert die Bedienung der Fotobox?</summary><p>Über den Touchscreen startet ihr die Aufnahme. Nach einem Countdown von normalerweise fünf Sekunden löst die Kamera aus. Alle Fotos werden digital gespeichert und nach der Veranstaltung über eine Online-Galerie bereitgestellt. Bei einem Paket mit Sofortdruck können die Bilder direkt vor Ort in wenigen Sekunden ausgedruckt werden.</p></details>
-      <details><summary>Gibt es ein Limit bei den Bildern und wie werden sie bereitgestellt?</summary><p>Digital könnt ihr unbegrenzt viele Fotos aufnehmen. Nach der Veranstaltung werden die Bilder über eine Online-Galerie beziehungsweise Cloud zum Herunterladen bereitgestellt. Im Klassik-Paket sind 350 Ausdrucke enthalten, beim Premium-Komplettpaket gilt eine Druckflatrate ohne Limit.</p></details>
+      <details><summary>Gibt es ein Limit bei den Bildern und wie werden sie bereitgestellt?</summary><p>Digital könnt ihr unbegrenzt viele Fotos aufnehmen. Nach der Veranstaltung werden die Bilder über eine Online-Galerie beziehungsweise Cloud zum Herunterladen bereitgestellt. Im Klassik-Paket sind 350 Ausdrucke enthalten. Jeder weitere Ausdruck kostet 0,20 €. Beim Premium-Komplettpaket gilt eine Druckflatrate ohne Limit.</p></details>
       <details><summary>Wie viele Personen passen auf ein Fotobox-Bild?</summary><p>Das hängt vor allem vom Abstand zwischen Fotobox und Hintergrund ab. Mindestens vier Personen passen problemlos auf ein Bild, häufig sind auch Gruppen mit bis zu zehn Personen oder mehr möglich. Je größer der Abstand, desto mehr Personen finden Platz.</p></details>
       <details><summary>Wie viel Platz benötigt die Fotobox?</summary><p>Empfohlen werden mindestens zwei Meter Breite und zweieinhalb Meter Tiefe. Zusätzlich werden ein Stromanschluss und ein stabiler Beistelltisch für Drucker und Requisiten benötigt. Mehr Platz erleichtert größere Gruppenaufnahmen.</p></details>
       <details><summary>Darf die Fotobox im Freien stehen?</summary><p>Ja, wenn Fotobox und Zubehör zuverlässig vor Niederschlag, Feuchtigkeit und direkter starker Sonneneinstrahlung geschützt sind. Dafür sollte mindestens ein geeigneter Pavillon oder ein vergleichbarer Wetterschutz vorhanden sein.</p></details>
@@ -578,7 +585,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <div>
         <h3>Navigation</h3>
         <a href="index.html">Startseite</a>
-        <a href="leistungen.html">Leistungen & Preise</a>
+        <a href="leistungen.html">Fotobox</a>
         <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
         <a href="fotobox-extras.html">Fotobox-Extras</a>
         <a href="persoenliches.html">Persönliches</a>

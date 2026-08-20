@@ -161,23 +161,30 @@ p{margin:0 0 18px}
     "telephone":"+4915228494252",
     "email":"info@fotoboxverleih-rosskopf.de",
     "address":{"@type":"PostalAddress","addressLocality":"Titting","postalCode":"85135","addressRegion":"Bayern","addressCountry":"DE"},
-    "areaServed":["Titting","Eichstätt","Ingolstadt","Greding","Beilngries"]
+    "areaServed":["Titting","Eichstätt","Ingolstadt","Greding","Beilngries","Weißenburg","Hilpoltstein"]
   }
 }
 </script>
 
+<style>
+.brand{gap:14px}
+.brand img{width:auto;height:54px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(214,184,95,.22))}
+.brand-name,.brand-text{padding-left:14px;border-left:1px solid rgba(255,255,255,.22);font-family:Jakarta,"Plus Jakarta Sans",Arial,sans-serif;font-size:.85rem;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.brand-name span:last-child,.brand-text b{display:block;color:var(--gold-light,var(--light))}
+@media(max-width:720px){.brand img{height:44px}.brand-name,.brand-text{display:flex;font-size:.72rem}}
+</style>
 </head>
 
 <body>
 <header class="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html" aria-label="Fotoboxverleih Roßkopf – Startseite">
-      <img src="fotoboxverleih-logo.webp" alt="Logo von Fotoboxverleih Roßkopf">
+      <img src="fotoboxverleih-header-logo.svg" alt="Logo von Fotoboxverleih Roßkopf">
       <span class="brand-name"><span>Fotoboxverleih</span><span>Roßkopf</span></span>
     </a>
     <nav class="nav-links" aria-label="Hauptnavigation">
       <a href="index.html">Startseite</a>
-      <a href="leistungen.html">Leistungen</a>
+      <a href="leistungen.html">Fotobox</a>
       <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
       <a href="fotobox-extras.html">Extras</a>
       <a href="persoenliches.html">Persönliches</a>
@@ -190,7 +197,7 @@ p{margin:0 0 18px}
   </div>
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
     <a href="index.html">Startseite</a>
-    <a href="leistungen.html">Leistungen & Preise</a>
+    <a href="leistungen.html">Fotobox</a>
     <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
     <a href="fotobox-extras.html">Extras</a>
     <a href="persoenliches.html">Persönliches</a>
@@ -253,7 +260,7 @@ p{margin:0 0 18px}
           </div>
           <div class="field">
             <label for="ort">Ort der Feier <span class="required">*</span></label>
-            <input id="ort" type="text" name="ort" required autocomplete="address-level2" placeholder="z. B. Titting oder Eichstätt">
+            <input id="ort" type="text" name="ort" required autocomplete="address-level2" placeholder="z. B. Eichstätt, Greding oder Beilngries">
           </div>
           <div class="field">
             <label for="gaeste">Ungefähre Gästezahl</label>
@@ -263,11 +270,12 @@ p{margin:0 0 18px}
             <label for="paket">Gewünschtes Paket</label>
             <select id="paket" name="paket">
               <option value="Beratung gewünscht" selected>Noch unsicher – Beratung gewünscht</option>
-              <option value="Einsteiger Digital">Einsteiger Digital – ab 179 €</option>
-              <option value="Klassik mit Sofortdruck">Klassik mit Sofortdruck – ab 299 €</option>
-              <option value="Premium Komplettpaket">Premium-Komplettpaket – ab 449 €</option>
+              <option value="Einsteiger Digital">Einsteiger Digital – 179 € Fixpreis</option>
+              <option value="Klassik mit Sofortdruck">Klassik mit Sofortdruck – 299 € inkl. 350 Ausdrucke</option>
+              <option value="Premium Komplettpaket">Premium-Komplettpaket – 449 € Fixpreis</option>
               <option value="Nur Zubehör">Nur Zubehör anfragen</option>
             </select>
+            <small>Beim Klassik-Paket sind 350 Ausdrucke enthalten; jeder weitere Ausdruck kostet 0,20 €. Hinzu kommen die Fahrtkosten und freiwillig ausgewählte Extras.</small>
           </div>
 
           <fieldset class="extras">
@@ -319,6 +327,12 @@ p{margin:0 0 18px}
       </div>
 
       <div class="side-card">
+        <span class="eyebrow">Liefergebiet</span>
+        <h2>Rund um Titting unterwegs</h2>
+        <p>Ich liefere bevorzugt im Umkreis von rund 30 Kilometern ab Titting. Damit betreue ich neben Eichstätt und Ingolstadt auch Feiern im Raum Greding, Beilngries, Weißenburg und Hilpoltstein. Hinzu kommen lediglich die vom Veranstaltungsort abhängigen Fahrtkosten.</p>
+      </div>
+
+      <div class="side-card">
         <span class="eyebrow">Direkter Kontakt</span>
         <h2>Noch eine kurze Frage?</h2>
         <p>Du erreichst mich auch direkt per E-Mail oder Telefon.</p>
@@ -357,7 +371,7 @@ p{margin:0 0 18px}
       <div>
         <h3>Navigation</h3>
         <a href="index.html">Startseite</a>
-        <a href="leistungen.html">Leistungen & Preise</a>
+        <a href="leistungen.html">Fotobox</a>
         <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
         <a href="fotobox-extras.html">Fotobox-Extras</a>
         <a href="persoenliches.html">Persönliches</a>

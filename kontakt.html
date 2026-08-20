@@ -11,7 +11,19 @@
 <meta property="og:title" content="Fotobox unverbindlich anfragen | Fotoboxverleih Roßkopf">
 <meta property="og:description" content="Termin, Paket und gewünschte Extras auswählen – Tobias meldet sich persönlich mit einem passenden Angebot.">
 <meta property="og:url" content="https://www.fotoboxverleih-rosskopf.de/kontakt.html">
-<meta property="og:image" content="https://www.fotoboxverleih-rosskopf.de/hero-kontakt.webp">
+<meta property="og:site_name" content="Fotoboxverleih Roßkopf">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://www.fotoboxverleih-rosskopf.de/social-preview-fotoboxverleih-rosskopf.jpg">
+<meta property="og:image:secure_url" content="https://www.fotoboxverleih-rosskopf.de/social-preview-fotoboxverleih-rosskopf.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fotoboxverleih Roßkopf – Fotobox, Sofortdruck und Event-Extras">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fotobox unverbindlich anfragen | Fotoboxverleih Roßkopf">
+<meta name="twitter:description" content="Termin, Paket und gewünschte Extras unverbindlich anfragen.">
+<meta name="twitter:image" content="https://www.fotoboxverleih-rosskopf.de/social-preview-fotoboxverleih-rosskopf.jpg">
+<meta name="twitter:image:alt" content="Fotoboxverleih Roßkopf – Fotobox, Sofortdruck und Event-Extras">
 
 <style>
 @font-face{font-family:Inter;src:url("inter-v20-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
@@ -86,6 +98,7 @@ p{margin:0 0 18px}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(92,67,4,.1)}
 .field small{color:rgba(77,70,57,.72);font-size:.75rem}
 .extras{grid-column:1/-1;border:0;padding:8px 0 0;margin:0}
+.interest-note{margin:10px 0 0;padding:11px 13px;border-left:3px solid var(--gold);border-radius:0 10px 10px 0;background:#f5efe4;color:var(--muted);font-size:.78rem;line-height:1.55}.interest-note strong{color:var(--ink)}
 .extra-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:11px}
 .extra-option{position:relative;display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border:1px solid rgba(209,197,180,.65);border-radius:12px;background:var(--bg);cursor:pointer;transition:.2s ease}
 .extra-option:hover{border-color:var(--gold);background:#fff}
@@ -277,14 +290,15 @@ p{margin:0 0 18px}
 
           <fieldset class="extras">
             <legend class="group-label">Welche Extras interessieren dich?</legend>
+            <p class="interest-note"><strong>Unverbindliche Interessensabfrage:</strong> Deine Auswahl stellt noch keine Buchung dar. Sie hilft mir, ein passendes Angebot vorzubereiten. Verbindlich gebucht wird erst nach der persönlichen Abstimmung und deiner ausdrücklichen Bestätigung.</p>
             <div class="extra-grid">
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Audio-Gästebuch"><span>Audio-Gästebuch<small>Persönliche Sprachnachrichten</small></span></label>
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Fotohintergrund"><span>Fotohintergrund<small>Eine passende Bühne für eure Bilder</small></span></label>
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Hexagon"><span>Hexagon<small>Stilvoller Blickfang für die Location</small></span></label>
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Fotoaufgaben"><span>Fotoaufgaben<small>10 € einzeln, im Premium-Paket inklusive</small></span></label>
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Neon-Schild"><span>Neon-Schild<small>Leuchtendes Highlight für eure Feier</small></span></label>
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Sofortbildkameras"><span>Sofortbildkameras<small>Analoge Erinnerungen zum Mitnehmen</small></span></label>
-              <label class="extra-option"><input type="checkbox" name="extras[]" value="Individuelles Drucklayout"><span>Individuelles Drucklayout<small>Passend zum Design eures Events</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Audio-Gästebuch – 40 €"><span>Audio-Gästebuch<small>40 € einzeln, im Premium-Paket inklusive</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Fotohintergrund – 25 €"><span>Fotohintergrund<small>25 €, im Premium-Paket inklusive</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Holz-Hexagon – 45 €"><span>Holz-Hexagon<small>45 € ohne zusätzliche Dekoration</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Fotoaufgaben – 10 €"><span>Fotoaufgaben<small>10 € einzeln, im Premium-Paket inklusive</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Better Together Neon-Leuchtschilder – 5 €"><span>Better Together Neon-Leuchtschilder<small>5 € als leuchtendes Highlight für eure Feier</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Sofortbildkamera – 25 € zzgl. Film"><span>Sofortbildkamera<small>25 € zzgl. 11 € je 10er-Filmpack</small></span></label>
+              <label class="extra-option"><input type="checkbox" name="extras[]" value="Individuelles Drucklayout – 10 €"><span>Individuelles Drucklayout<small>10 € einzeln, in Klassik und Premium inklusive</small></span></label>
             </div>
           </fieldset>
 

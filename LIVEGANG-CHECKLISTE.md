@@ -14,7 +14,7 @@
 - Prüfen, ob alle Bilder geladen werden und ob das neue Porträt auf der Über-mich-Seite ergänzt werden soll.
 - Die Seiten mit dem Google Rich Results Test kontrollieren.
 - In der Google Search Console `https://www.fotoboxverleih-rosskopf.de/sitemap.xml` einreichen.
-- In der URL-Prüfung die Startseite, Leistungen, Audio-Gästebuch, Extras, Über Paparossi und Kontakt zur Indexierung anstoßen.
+- In der URL-Prüfung die Startseite, Fotobox, Audio-Gästebuch, Extras, Persönliches und Kontakt zur Indexierung anstoßen.
 
 ## Wichtige Bilddateien prüfen
 

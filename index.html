@@ -102,7 +102,7 @@ p{margin:0 0 18px}
 
 .packages{background:var(--bg)}
 .package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
-.included-service{margin:0 0 26px;padding:18px 22px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;background:#f7f2e9;color:var(--ink)}.included-service strong{display:block;font-family:Jakarta;font-size:.95rem;color:var(--gold);margin-bottom:7px}.service-points{display:flex;flex-wrap:wrap;gap:7px 22px}.service-points span{font-size:.84rem;font-weight:600}.service-points span:before{content:"✓";color:var(--green);font-weight:800;margin-right:7px}
+.included-service{margin:0 0 26px;padding:18px 22px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;background:#f7f2e9;color:var(--ink);font-family:Inter,Arial,sans-serif}.included-service strong{display:block;font-family:Inter,Arial,sans-serif;font-size:.95rem;font-weight:600;color:var(--gold);margin-bottom:7px}.service-points{display:flex;flex-wrap:wrap;gap:7px 22px}.service-points span{font-family:Inter,Arial,sans-serif;font-size:.84rem;font-weight:600}.service-points span:before{content:"✓";color:var(--green);font-weight:800;margin-right:7px}
 .package{background:var(--surface);border:1px solid rgba(209,197,180,.35);border-radius:18px;padding:34px;display:flex;flex-direction:column}
 .package.featured{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;transform:scale(1.025);box-shadow:0 24px 50px rgba(92,67,4,.18)}
 .package.featured .muted{color:rgba(255,255,255,.78)}
@@ -184,7 +184,7 @@ details[open] summary::after{transform:rotate(45deg)}
 details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 
 .footer{background:#e5e2dc;border-top:1px solid rgba(209,197,180,.45);padding:75px 0 28px}
-.footer-cta{text-align:center;padding-bottom:55px;margin-bottom:55px;border-bottom:1px solid rgba(209,197,180,.45)}
+.footer-cta{text-align:center;padding-bottom:55px;margin-bottom:55px;border-bottom:1px solid rgba(209,197,180,.45)}.footer-cta-logo{display:block;width:96px;height:auto;margin:-25px auto 17px;opacity:.82}
 .footer-cta .btn-primary{color:#fff}
 .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;margin-bottom:50px}
 .footer h3{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
@@ -338,7 +338,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <h2>Fotobox mieten: Unsere Pakete im Überblick</h2>
       <p>Von der kleinen Feier bis zum großen Event – finde das Paket, das zu eurem Anlass passt.</p>
     </div>
-    <aside class="included-service" aria-label="Inklusivleistungen aller Fotobox-Pakete"><strong>Bei jedem Fotobox-Paket bereits inklusive</strong><div class="service-points"><span>Aufbau & Einrichtung</span><span>Abbau nach dem Event</span><span>Telefonischer Support bei Fragen</span></div></aside>
+    <aside class="included-service" aria-label="Inklusivleistungen aller Fotobox-Pakete"><strong>Bei jedem Fotobox-Paket bereits inklusive</strong><div class="service-points"><span>Aufbau & Einrichtung</span><span>Abbau nach dem Event</span><span>Persönlicher Support</span></div></aside>
     <div class="package-grid">
       <article class="package">
         <h3>Einsteiger (Digital)</h3>
@@ -578,6 +578,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 <footer class="footer">
   <div class="container">
     <div class="footer-cta">
+      <img class="footer-cta-logo" src="paparossi-logo-transparent.png" alt="Logo Fotoboxverleih Roßkopf" width="723" height="750" loading="lazy">
       <h2 style="color:var(--gold);font-style:italic">Bereit für besondere Erinnerungen?</h2>
       <p class="muted">Frag jetzt unverbindlich an und finde heraus, ob deine Fotobox an deinem Wunschtermin verfügbar ist.</p>
       <a class="btn btn-primary" href="kontakt.html">Verfügbarkeit anfragen</a>

@@ -30,8 +30,13 @@
 <meta name="twitter:image:alt" content="Fotoboxverleih Roßkopf – Fotobox, Sofortdruck und Event-Extras">
 
 <style>
-@font-face{font-family:Inter;src:local("Arial");font-weight:400 600;font-display:swap}
-@font-face{font-family:"Plus Jakarta Sans";src:local("Arial");font-weight:400 800;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url("inter-v20-latin-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-700.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("plus-jakarta-sans-v12-latin-800.woff2") format("woff2");font-weight:800;font-display:swap}
 
 :root{
   --bg:#fcf9f3;--surface:#f0eee8;--surface2:#f6f3ed;--ink:#1c1c18;
@@ -300,7 +305,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 
 <main>
 <section class="hero">
-  <div class="hero-bg"><img src="fotobox-mieten-premium.webp" alt="Fotobox mit Sofortdruck auf einer Feier" fetchpriority="high" width="512" height="512"></div>
+  <div class="hero-bg"><img src="fotobox-mieten-premium.webp" alt="Fotobox mit Sofortdruck auf einer Feier" fetchpriority="high"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <span class="eyebrow">Auf- und Abbau inklusive</span>
@@ -391,8 +396,8 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </div>
     </div>
     <div class="experience-media">
-      <img class="setup-shot" src="fotobox-komplettsetup-sofortdruck.webp" alt="Komplettes Fotobox-Setup mit Studioblitz, Profi-Fotodrucker, Requisiten und individuellem Sofortdruck" width="1536" height="1022" loading="lazy">
-      <img class="print-shot" src="fotobox-ausdrucke-erinnerungen-anonymisiert.webp" alt="Individuelle Fotobox-Ausdrucke als bleibende Erinnerung an eine Hochzeit" width="1200" height="900" loading="lazy">
+      <img class="setup-shot" src="fotobox-komplettsetup-sofortdruck.webp" alt="Komplettes Fotobox-Setup mit Studioblitz, Profi-Fotodrucker, Requisiten und individuellem Sofortdruck" loading="lazy" width="1536" height="1022">
+      <img class="print-shot" src="fotobox-ausdrucke-erinnerungen-anonymisiert.webp" alt="Individuelle Fotobox-Ausdrucke als bleibende Erinnerung an eine Hochzeit" loading="lazy" width="1200" height="900">
     </div>
   </div>
 </section>
@@ -407,7 +412,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 
     <div class="accessory-grid">
       <article class="accessory">
-        <img src="audio-gaestebuch.webp" alt="Audio Gästebuch mit Retro-Telefon für Hochzeiten und Feiern" loading="lazy" width="1920" height="1280">
+        <img src="audio-gaestebuch.webp" alt="Audio Gästebuch mit Retro-Telefon für Hochzeiten und Feiern" loading="lazy">
         <div class="accessory-body">
           <h3>Audio-Gästebuch</h3>
           <p>Persönliche Wünsche, Grüße und lustige Sprachnachrichten deiner Gäste als bleibende Erinnerung.</p>
@@ -416,7 +421,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
 
       <article class="accessory">
-        <img src="fotohintergrund-kulisse.webp" alt="Fotobox mit weißem Hintergrund, Lichterketten und Pampasgras" width="1400" height="788" loading="lazy">
+        <img src="fotohintergrund-kulisse.webp" alt="Fotobox mit weißem Hintergrund, Lichterketten und Pampasgras" loading="lazy" width="1400" height="788">
         <div class="accessory-body">
           <h3>Hintergründe & Hexagon</h3>
           <p>Eine passende Kulisse schafft einen einheitlichen Look und macht die Fotofläche zum Blickfang.</p>
@@ -425,7 +430,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
 
       <article class="accessory">
-        <img src="fotorequisiten.webp" alt="Individuell gelaserte Holz-Fotorequisiten für die Fotobox" loading="lazy" width="1400" height="1003">
+        <img src="fotorequisiten.webp" alt="Individuell gelaserte Holz-Fotorequisiten für die Fotobox" loading="lazy">
         <div class="accessory-body">
           <h3>Gelaserte Holz-Fotorequisiten</h3>
           <p>Meine individuell gelaserten Holz-Fotorequisiten sorgen für kreative Posen und passen hochwertig zur Fotobox.</p>
@@ -434,7 +439,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
 
       <article class="accessory">
-        <img src="fotoaufgaben.webp" alt="Kreative Fotoaufgaben für Hochzeiten und Veranstaltungen" loading="lazy" width="1080" height="1080">
+        <img src="fotoaufgaben.webp" alt="Kreative Fotoaufgaben für Hochzeiten und Veranstaltungen" loading="lazy">
         <div class="accessory-body">
           <h3>Fotoaufgaben</h3>
           <p>Kreative Aufgaben bringen Gäste zusammen und sorgen für abwechslungsreiche Bilder. Einzeln 10 €, im Premium-Paket inklusive.</p>
@@ -443,7 +448,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       </article>
 
       <article class="accessory">
-        <img src="zubehoer-neonschild.webp" alt="Neonschild und dekorative Schilder für die Fotobox" loading="lazy" width="1920" height="1355">
+        <img src="zubehoer-neonschild.webp" alt="Neonschild und dekorative Schilder für die Fotobox" loading="lazy">
         <div class="accessory-body">
           <h3>Schilder & Neonschilder</h3>
           <p>Die „Better Together“ Neon-Leuchtschilder setzen für 5 € einen modernen Lichtakzent an deiner Fotobox-Kulisse.</p>
@@ -469,7 +474,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 
 <section class="section">
   <div class="container split">
-    <div><img src="unsere-fotoboxen.webp" alt="Fotoboxen mit professioneller Beleuchtung" loading="lazy" width="1600" height="1252"></div>
+    <div><img src="unsere-fotoboxen.webp" alt="Fotoboxen mit professioneller Beleuchtung" loading="lazy"></div>
     <div class="copy">
       <span class="eyebrow">Ausstattung</span>
       <h2>Alles dabei, damit deine Gäste einfach loslegen können.</h2>
@@ -493,15 +498,15 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     </div>
     <div class="occasion-grid">
       <article class="occasion">
-        <img src="Fotobox-Hochzeit.webp" alt="Weiße Fotobox bei einer stilvollen Hochzeit mit festlicher Ballon- und Holzdekoration" loading="lazy" width="1200" height="900">
+        <img src="Fotobox-Hochzeit.webp" alt="Weiße Fotobox bei einer stilvollen Hochzeit mit festlicher Ballon- und Holzdekoration" loading="lazy">
         <div class="occasion-body"><h3>Hochzeit</h3><p>Für deinen großen Tag und deine Gäste: spontane Fotos, viel Freude und Erinnerungen, die bleiben.</p><a class="occasion-link" href="kontakt.html">Hochzeit anfragen →</a></div>
       </article>
       <article class="occasion">
-        <img src="Fotobox-Geburtstag-weit.webp" alt="Fotobox bei einer festlich beleuchteten Geburtstagsparty" loading="lazy" width="1448" height="1086">
+        <img src="Fotobox-Geburtstag-weit.webp" alt="Fotobox bei einer festlich beleuchteten Geburtstagsparty" loading="lazy">
         <div class="occasion-body"><h3>Geburtstag</h3><p>Ob runder Geburtstag oder große Party – die Fotobox sorgt für Spaß, lockere Stimmung und unvergessliche Schnappschüsse.</p><a class="occasion-link" href="kontakt.html">Geburtstag anfragen →</a></div>
       </article>
       <article class="occasion">
-        <img src="anlass-firmenfeier.webp" alt="Weiße Fotobox bei einer Firmenfeier und einem Teamevent" loading="lazy" width="1200" height="900">
+        <img src="anlass-firmenfeier.webp" alt="Weiße Fotobox bei einer Firmenfeier und einem Teamevent" loading="lazy">
         <div class="occasion-body"><h3>Firmenfeier & Event</h3><p>Für Sommerfeste, Weihnachtsfeiern, Jubiläen und Teamevents – mit Raum für kreative Erinnerungen.</p><a class="occasion-link" href="kontakt.html">Event anfragen →</a></div>
       </article>
     </div>
@@ -587,7 +592,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 <footer class="footer">
   <div class="container">
     <div class="footer-cta">
-      <img class="footer-cta-logo" src="paparossi-logo-transparent.png" alt="Logo Fotoboxverleih Roßkopf" width="723" height="750" loading="lazy">
+      <img class="footer-cta-logo" src="paparossi-logo-transparent.png" alt="Logo Fotoboxverleih Roßkopf" loading="lazy" width="723" height="750">
       <h2 style="color:var(--gold);font-style:italic">Bereit für besondere Erinnerungen?</h2>
       <p class="muted">Frag jetzt unverbindlich an und finde heraus, ob deine Fotobox an deinem Wunschtermin verfügbar ist.</p>
       <a class="btn btn-primary" href="kontakt.html">Verfügbarkeit anfragen</a>

@@ -3,7 +3,7 @@
 ## Dateien veröffentlichen
 
 - Vor dem Austausch eine Sicherung der aktuellen Website erstellen.
-- Die sieben HTML-Seiten sowie `404.html`, `robots.txt` und `sitemap.xml` in das Stammverzeichnis der Website laden.
+- Die acht Inhaltsseiten sowie `404.html`, `robots.txt` und `sitemap.xml` in das Stammverzeichnis der Website laden.
 - Vorhandene Bilder, Logos und Schriftdateien im Stammverzeichnis beibehalten. Sie sind nicht Bestandteil dieses Pakets.
 - Nicht mehr benötigte Testseiten erst löschen, nachdem die Live-Seiten vollständig geprüft wurden.
 
@@ -14,7 +14,7 @@
 - Prüfen, ob alle Bilder geladen werden und ob das neue Porträt auf der Über-mich-Seite ergänzt werden soll.
 - Die Seiten mit dem Google Rich Results Test kontrollieren.
 - In der Google Search Console `https://www.fotoboxverleih-rosskopf.de/sitemap.xml` einreichen.
-- In der URL-Prüfung die Startseite, Fotobox, Audio-Gästebuch, Extras, Persönliches und Kontakt zur Indexierung anstoßen.
+- In der URL-Prüfung die Startseite, Fotobox, die neue Eichstätt-Seite, Audio-Gästebuch, Extras, Persönliches und Kontakt zur Indexierung anstoßen.
 
 ## Wichtige Bilddateien prüfen
 

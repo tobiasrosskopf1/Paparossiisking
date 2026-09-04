@@ -1,4 +1,4 @@
-# Livegang-Checkliste v28
+# Livegang-Checkliste v29
 
 ## Dateien veröffentlichen
 
@@ -11,7 +11,7 @@
 
 - Jede Seite auf Smartphone und Desktop öffnen und Navigation, Buttons sowie Sprungmarken prüfen.
 - Eine echte Testanfrage über `kontakt.html` absenden und Eingang, Pflichtfelder sowie Bestätigungsseite kontrollieren.
-- Prüfen, ob alle Bilder geladen werden und das Candy-Bar-Bild weder gestaucht noch abgeschnitten wirkt.
+- Prüfen, ob alle Bilder geladen werden und das einzelne Candy-Bar-Bild im Header weder gestaucht noch abgeschnitten wirkt.
 - Auf der Seite „Feier-Extras“ kontrollieren, dass die Candy-Bar anfragbar ist und die Slush-Maschine deutlich als „In Planung – noch nicht verbindlich buchbar“ gekennzeichnet wird.
 - Die Seiten mit dem Google Rich Results Test kontrollieren.
 - Die bereits eingereichte Sitemap `https://www.fotoboxverleih-rosskopf.de/sitemap.xml` bleibt bestehen; sie muss nicht gelöscht oder neu angelegt werden.

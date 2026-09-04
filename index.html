@@ -145,6 +145,12 @@ p{margin:0 0 18px}
 .accessory-body p{font-size:.82rem;color:var(--muted);margin-bottom:14px}
 .accessory-link{margin-top:auto;color:var(--gold);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
 .accessory-link:hover{text-decoration:underline}
+.eventmodule-teaser{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#f4ecdf,#ebe0ce);border:1px solid rgba(209,197,180,.5)}
+.eventmodule-teaser img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:15px}
+.eventmodule-teaser h3{font-size:clamp(1.45rem,3vw,2.15rem);margin:9px 0 10px}
+.eventmodule-teaser p{color:var(--muted);font-size:.88rem}
+.eventmodule-status{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 17px}
+.eventmodule-status span{padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--gold);font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
 .accessory-note{margin-top:30px;padding:22px 25px;border-radius:16px;background:var(--surface2);border:1px solid rgba(209,197,180,.35);text-align:center}
 .accessory-note p{margin:0;color:var(--muted);font-size:.88rem}
 
@@ -216,6 +222,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
   .package-grid,.occasion-grid{grid-template-columns:1fr}
   .package.featured{transform:none}
   .split{grid-template-columns:1fr;gap:35px}
+  .eventmodule-teaser{grid-template-columns:1fr}
   .experience-media{max-width:720px;margin:auto;width:100%}
   .review-box{flex-direction:column;align-items:flex-start}
   .footer-grid{grid-template-columns:1fr 1fr}
@@ -289,6 +296,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <a href="leistungen.html">Fotobox</a>
       <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
       <a href="fotobox-extras.html">Extras</a>
+      <a href="eventmodule-mieten.html">Eventmodule</a>
       <a href="persoenliches.html">Persönliches</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
@@ -302,6 +310,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     <a href="leistungen.html">Fotobox</a>
     <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
     <a href="fotobox-extras.html">Fotobox-Extras</a>
+    <a href="eventmodule-mieten.html">Eventmodule</a>
     <a href="persoenliches.html">Persönliches</a>
     <a href="kontakt.html">Kontakt</a>
     <a href="rechtliches.html">Impressum, Datenschutz & AGB</a>
@@ -355,7 +364,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
       <h2>Fotobox mieten: Unsere Pakete im Überblick</h2>
       <p>Von der kleinen Feier bis zum großen Event – finde das Paket, das zu deinem Anlass passt.</p>
     </div>
-    <aside class="included-service" aria-label="Inklusivleistungen aller Fotobox-Pakete"><strong>Bei jedem Fotobox-Paket bereits inklusive</strong><div class="service-points"><span>Aufbau & Einrichtung</span><span>Abbau nach dem Event</span><span>Persönlicher Support</span></div></aside>
+    <aside class="included-service" aria-label="Inklusivleistungen aller Fotobox-Pakete"><strong>Bei jedem Fotobox-Paket bereits inklusive</strong><div class="service-points"><span>Aufbau & Einrichtung</span><span>Abbau nach dem Event</span><span>Persönlicher Support</span><span>Fotorequisiten inklusive selbst gelaserter Holzrequisiten</span></div></aside>
     <div class="package-grid">
       <article class="package">
         <h3>Einsteiger (Digital)</h3>
@@ -470,6 +479,17 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         </div>
       </article>
     </div>
+
+    <article class="eventmodule-teaser">
+      <img src="candybar-holzleiter.webp" alt="Vierstufige Candy-Bar aus Holz mit sechs leeren Bonbongläsern, zwei Schalen und Lichterkette" loading="lazy" width="1440" height="1085">
+      <div>
+        <span class="eyebrow">Neue Eventmodule</span>
+        <h3>Candy-Bar & geplante Slush-Maschine</h3>
+        <div class="eventmodule-status"><span>Candy-Bar ab 45 € in Kombination</span><span>Slush-Maschine in Planung</span></div>
+        <p>Ergänze deine Feier um eine Candy-Bar im rustikalen Holzdesign oder melde unverbindlich dein Interesse an der geplanten Slush-Eismaschine. Die Candy-Bar kannst du auch ohne Fotobox anfragen; bei der Slush-Maschine erfasse ich derzeit ausschließlich unverbindliches Interesse.</p>
+        <a class="accessory-link" href="eventmodule-mieten.html">Candy-Bar und Slush-Planung ansehen →</a>
+      </div>
+    </article>
 
     <div class="accessory-note">
       <p><strong>Schon eine Idee für deine Feier?</strong> Ich berate dich gerne, welche Kombination aus Fotobox und Zubehör zu deinem Event, deiner Location und deinem Budget passt.</p>
@@ -633,6 +653,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
         <a href="leistungen.html">Fotobox</a>
         <a href="audio-gaestebuch-mieten.html">Audio-Gästebuch</a>
         <a href="fotobox-extras.html">Fotobox-Extras</a>
+        <a href="eventmodule-mieten.html">Eventmodule</a>
         <a href="persoenliches.html">Persönliches</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="rechtliches.html">Impressum, Datenschutz & AGB</a>

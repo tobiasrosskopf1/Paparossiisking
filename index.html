@@ -145,8 +145,11 @@ p{margin:0 0 18px}
 .accessory-body p{font-size:.82rem;color:var(--muted);margin-bottom:14px}
 .accessory-link{margin-top:auto;color:var(--gold);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
 .accessory-link:hover{text-decoration:underline}
-.eventmodule-teaser{display:grid;grid-template-columns:.7fr 1.3fr;gap:34px;align-items:center;margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#f4ecdf,#ebe0ce);border:1px solid rgba(209,197,180,.5)}
-.eventmodule-teaser img{width:min(100%,360px);height:auto;justify-self:center;aspect-ratio:4/3;object-fit:cover;border-radius:15px}
+.eventmodule-teaser{display:grid;grid-template-columns:1fr 1.3fr;gap:34px;align-items:center;margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#f4ecdf,#ebe0ce);border:1px solid rgba(209,197,180,.5)}
+.eventmodule-visuals{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.eventmodule-visual{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:10px;border-radius:15px;background:rgba(255,255,255,.52)}
+.eventmodule-visual img{width:100%;height:150px;object-fit:contain;aspect-ratio:auto;border-radius:10px}
+.eventmodule-visual span{display:block;margin-top:6px;text-align:center;color:var(--muted);font-size:.64rem;font-weight:700}
 .eventmodule-teaser h3{font-size:clamp(1.45rem,3vw,2.15rem);margin:9px 0 10px}
 .eventmodule-teaser p{color:var(--muted);font-size:.88rem}
 .eventmodule-status{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 17px}
@@ -285,7 +288,7 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
 </style>
 <style>
 @media (min-width:1051px){.hero h1{font-size:clamp(2.7rem,5vw,4.4rem);line-height:1.08}}
-.eventmodule-teaser img{width:min(100%,250px)}
+.eventmodule-visual img{width:100%;max-width:220px;margin:auto}
 </style>
 <style>
 @media (min-width:1051px){
@@ -494,12 +497,15 @@ details p{padding-top:14px;color:var(--muted);font-size:.9rem;margin:0}
     </div>
 
     <article class="eventmodule-teaser">
-      <img src="candybar-holzleiter-v38.webp" alt="Vierstufige Candy-Bar aus Holz mit großem NaschBAR-Schild, Bonbongläsern, Schalen, Kuchenständer, schwarzen Kreidetafeln, zwei Blumenvasen und warmweißer Lichterkette" loading="lazy" width="1444" height="1089">
+      <div class="eventmodule-visuals">
+        <div class="eventmodule-visual"><img src="candybar-freigestellt-v39.webp" alt="Freigestellte vierstufige Candy-Bar aus Holz mit NaschBAR-Schild, Bonbongläsern, Schalen, Blumendekoration und Lichterkette" loading="lazy" width="1444" height="1089"><span>Candy-Bar</span></div>
+        <div class="eventmodule-visual"><img src="slush-maschine-visualisierung-v38.webp" alt="Slush-Maschine mit rotem und blauem Getränk in zwei Behältern" loading="lazy" width="1448" height="1086"><span>Slush-Maschine</span></div>
+      </div>
       <div>
         <span class="eyebrow">Neue Feier-Extras</span>
-        <h3>Candy-Bar im rustikalen Holzdesign</h3>
-        <div class="eventmodule-status"><span>Ab 45 € in Kombination</span><span>Auf- und Abbau inklusive</span></div>
-        <p>Ergänze deine Hochzeit, deinen Geburtstag oder dein Firmenevent um eine dekorative Candy-Bar mit Gefäßen, Zangen, Beschriftungsschildern und Blumendekoration. Eine Slush-Maschine befindet sich zusätzlich in Vorbereitung; unverbindliches Interesse kannst du bereits melden.</p>
+        <h3>Feier-Extras für deinen Anlass</h3>
+        <div class="eventmodule-status"><span>Candy-Bar ab 45 €</span><span>Slush-Maschine mit 2 × 12 Litern</span></div>
+        <p>Ergänze deine Hochzeit, deinen Geburtstag oder dein Firmenevent um eine dekorative Candy-Bar oder eine Slush-Maschine mit zwei Geschmacksrichtungen. Die Slush-Maschine befindet sich derzeit in Planung und ist voraussichtlich ab 2027 buchbar.</p>
         <a class="accessory-link" href="eventmodule-mieten.html">Feier-Extras ansehen →</a>
       </div>
     </article>

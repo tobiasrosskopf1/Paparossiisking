@@ -3,7 +3,7 @@
 ## Dateien veröffentlichen
 
 - Vor dem Austausch eine Sicherung der aktuellen Website erstellen.
-- Den vollständigen Inhalt dieses Pakets in das Stammverzeichnis der Website laden. Dazu gehören jetzt auch `eventmodule-mieten.html` und `candybar-holzleiter.webp`.
+- Den vollständigen Inhalt dieses Pakets in das Stammverzeichnis der Website laden. Dazu gehören jetzt auch `eventmodule-mieten.html`, `candybar-holzleiter-v38.webp` und `slush-maschine-visualisierung-v38.webp`.
 - Alle Bilder und Logos aus dem Paket ebenfalls beibehalten. Die bereits auf dem Webserver vorhandenen lokalen Schriftdateien (`inter-…woff2` und `plus-jakarta-…woff2`) nicht löschen; die HTML-Seiten verweisen weiterhin darauf.
 - Nicht mehr benötigte Testseiten erst löschen, nachdem die Live-Seiten vollständig geprüft wurden.
 
